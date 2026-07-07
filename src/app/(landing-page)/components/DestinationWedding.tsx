@@ -29,6 +29,9 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
         <div className="lg:pr-4 space-y-2 text-white">
           <p className=" tracking-widest uppercase">{tag}</p>
           <SectionHeading title={title} titleColor="white" />
+          <div className="w-full relative aspect-4/3.5 lg:hidden border border-white rounded-lg overflow-hidden">
+            <Image src={image} alt={title} fill className="object-cover" />
+          </div>
           <p>{description}</p>
           <ul className="space-y-2 mt-6">
             {list?.map((item, i) => (
@@ -56,7 +59,7 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
             ))}
           </ul>
         </div>
-        <div className="w-full relative aspect-4/3.5 border border-white rounded-lg overflow-hidden">
+        <div className="w-full relative aspect-4/3.5 lg:block hidden border border-white rounded-lg overflow-hidden">
           <Image src={image} alt={title} fill className="object-cover" />
         </div>
       </div>

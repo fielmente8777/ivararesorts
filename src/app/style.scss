@@ -100,5 +100,10 @@
     height: 25%;
     rotate: 180deg;
     opacity: 0.8;
+    @media (width < 668px) {
+      height: 8%;
+      rotate: -180deg;
+      width: 200%;
+    }
   }
 }
