@@ -26,7 +26,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         <LandingNavbar />
       </div>
       <Image src={image} alt={title} fill className="object-cover" />
-      <div className="absolute inset-0 z-10 bg-linear-[-20deg] from-[#1c1010]/72 from-0% via-40% via-[#1c1010]/45 to-100%  to-black/95 " />
+      <div className="absolute inset-0 z-10 bg-black/60 " />
 
       <div className="absolute inset-0  z-20 flex items-end pb-10 justify-center">
         <Container>
