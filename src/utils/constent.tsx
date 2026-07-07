@@ -1,4 +1,4 @@
-export const enCodeText = encodeURIComponent(`Hello zen events,
+export const enCodeText = encodeURIComponent(`Hello Ivara Resorts,
 I want to know more about your services,
 Thank you.`);
 
@@ -6,7 +6,7 @@ Thank you.`);
 export const contact = {
   email: "reservations@ivararesorts.com",
   mapUrl: "",
-  phone: ["+44 77740 90167"],
+  phone: ["+91 93183 66456"],
   address:
     "Next to Dulhadeva Temple, Khudar Bridge, Khajuraho, Madhya Pradesh, 471606. 7 min from Khajuraho Airport",
   addressLink: "",
@@ -14,8 +14,8 @@ export const contact = {
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
   },
-  callCta: `tel:+447774090167`,
-  WhatsappCta: `https://wa.me/+447774090167?text=${enCodeText}`,
+  callCta: `tel:+919318366456`,
+  WhatsappCta: `https://wa.me/+919318366456?text=${enCodeText}`,
   // formDomain: "",
   formDomain: "testmulti", //for testing
   formHid: "",
