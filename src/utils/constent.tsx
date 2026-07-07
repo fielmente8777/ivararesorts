@@ -16,8 +16,8 @@ export const contact = {
   },
   callCta: `tel:+919318366456`,
   WhatsappCta: `https://wa.me/+919318366456?text=${enCodeText}`,
-  // formDomain: "",
-  formDomain: "testmulti", //for testing
+  formDomain: "ivararesort",
+  // formDomain: "testmulti", //for testing
   formHid: "",
   // formHid: "",
 };
