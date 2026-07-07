@@ -24,7 +24,17 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
   list,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-tertiary">
+    <SectionWithContainer sectionClassName="bg-tertiary relative">
+      <div className="absolute top-0 left-0 z-10">
+        <div className="md:w-20 w-12 aspect-square relative">
+          <Image src={"/bg-2.png"} alt="bg-image" fill className="object-cover" />
+        </div>
+      </div>
+      <div className="absolute bottom-0 right-0 z-10">
+        <div className="md:w-15 w-8 aspect-4/4.5 relative">
+          <Image src={"/bg-1.png"} alt="bg-image" fill className="object-cover" />
+        </div>
+      </div>
       <div className=" grid lg:grid-cols-2 grid-cols-1 items-center gap-10">
         <div className="lg:pr-4 space-y-2 text-white">
           <p className=" tracking-widest uppercase">{tag}</p>
