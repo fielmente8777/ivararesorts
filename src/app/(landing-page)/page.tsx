@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <ImageBanner {...landingPageData.banner} />
       <div
-        className="bg-background py-6 px-1.5 flex flex-col gap-5 max-w-6xl w-full mx-auto"
+        className="bg-background lg:hidden py-6 px-1.5 flex flex-col gap-5 max-w-6xl w-full mx-auto"
         id="form"
       >
         <Form1 />
