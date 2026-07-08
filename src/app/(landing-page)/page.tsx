@@ -28,7 +28,7 @@ export default function Home() {
       <DestinationWedding {...landingPageData.destinationWedding} />
       <CuratedExcursion {...landingPageData.curatedExcursion} />
       <Gallery images={landingPageData.gallery} />
-      <Testimonials {...landingPageData.testimonials} />
+      {/* <Testimonials {...landingPageData.testimonials} /> */}
     </main>
   );
 }
