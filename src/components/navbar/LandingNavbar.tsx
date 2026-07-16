@@ -52,7 +52,7 @@ const LandingNavbar = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-primary text-white px-2 md:px-6 py-2 md:py-3"
+                  className="flex items-center uppercase gap-2 rounded-lg bg-primary text-white px-2 md:px-6 py-2 md:py-3"
                 >
                   <span className="lg:hidden block">
                     <CalendarIcon />

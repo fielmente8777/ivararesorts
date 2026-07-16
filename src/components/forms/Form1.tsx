@@ -196,7 +196,7 @@ const Form1 = ({ gridView }: Props) => {
             {/* <span className="">
               <BookingCalenderIcon />
             </span>{" "} */}
-            BOOK YOUR STAY
+            Enquire now
           </span>
         )}
       </button>

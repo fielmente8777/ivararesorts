@@ -213,7 +213,7 @@ const Form2: React.FC<Form2Props> = ({
       {/* Submit Button */}
       <button
         type="submit"
-        aria-label={singleDate ? "BOOK YOUR EVENT" : "Book Now"}
+        aria-label={singleDate ? "BOOK YOUR EVENT" : "Enquire now"}
         className="bg-primary text-white w-full rounded-full text-lg py-3 disabled:opacity-50"
         disabled={isSubmitting}
       >
@@ -224,7 +224,7 @@ const Form2: React.FC<Form2Props> = ({
         ) : (
           <span className="flex items-center justify-center gap-2.5">
             <BookingCalenderIcon />
-            {singleDate ? "BOOK YOUR EVENT" : "Book Now"}
+            {singleDate ? "BOOK YOUR EVENT" : "Enquire now"}
           </span>
         )}
       </button>

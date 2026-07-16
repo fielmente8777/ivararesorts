@@ -39,7 +39,7 @@ export const footerData: FooterData = {
       href: contact.WhatsappCta,
     },
     {
-      label: "BOOK NOW",
+      label: "Enquire now",
       href: "#form",
     },
   ],
