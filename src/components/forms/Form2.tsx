@@ -213,7 +213,7 @@ const Form2: React.FC<Form2Props> = ({
       {/* Submit Button */}
       <button
         type="submit"
-        aria-label={singleDate ? "BOOK YOUR EVENT" : "Enquire now"}
+        aria-label={singleDate ? "BOOK YOUR EVENT" : "ENQUIRE NOW"}
         className="bg-primary text-white w-full rounded-full text-lg py-3 disabled:opacity-50"
         disabled={isSubmitting}
       >

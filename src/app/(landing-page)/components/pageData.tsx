@@ -54,7 +54,7 @@ export const landingPageData = {
         href: contact.callCta,
       },
       {
-        label: "Enquiry Now",
+        label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
       },
     ],
@@ -114,7 +114,7 @@ export const landingPageData = {
         href: contact.callCta,
       },
       {
-        label: "Enquiry Now",
+        label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
       },
     ],
@@ -164,7 +164,7 @@ export const landingPageData = {
         href: contact.callCta,
       },
       {
-        label: "Enquiry Now",
+        label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
       },
     ],
@@ -186,7 +186,7 @@ export const landingPageData = {
         href: contact.callCta,
       },
       {
-        label: "Enquiry Now",
+        label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
       },
     ],
