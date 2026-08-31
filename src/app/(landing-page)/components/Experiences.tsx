@@ -1,72 +1,91 @@
-import { ExperiencesProps } from "@/@types/landingPageTypes";
-import LinkButton from "@/components/buttons/LinkButton";
-import { SectionWithContainer } from "@/components/sectionComponants";
-import { SectionHeading } from "@/components/typography";
+import React from "react";
 import Image from "next/image";
-import ExperiencesSlider from "./slider/ExperiencesSlider";
+import LinkButton from "@/components/buttons/LinkButton";
+import { Container, Section } from "@/components/sectionComponants";
+import { SectionHeading } from "@/components/typography";
+
+interface ExperienceCard {
+  image: string;
+  title: string;
+  description: string;
+}
+
+interface ExperiencesProps {
+  tagline: string;
+  title: string;
+  description: string;
+  image: string;
+  cta: {
+    label: string;
+    href: string;
+  }[];
+  cards: ExperienceCard[];
+}
+
+const badgeLabels = ["GOLF", "CURATED DINING", "POOL"];
 
 const Experiences: React.FC<ExperiencesProps> = ({
   tagline,
   title,
-  description,
-  cta,
   cards,
-  image,
+  cta,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-background">
-      <div className=" grid lg:grid-cols-2 grid-cols-1 gap-8">
-        <div className="flex flex-col gap-4">
-          <p className="uppercase tracking-widest text-tertiary">{tagline}</p>
-          <SectionHeading title={title} />
-          <ul className="lg:flex hidden flex-wrap lg:gap-4 gap-2 w-full items-center">
-            {cta.map((button, i) => (
-              <li key={i} className="max-md:w-full">
-                <LinkButton
-                  {...button}
-                  target={i !== 2 ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  className={` max-md:w-full justify-center rounded-lg py-3 px-6! uppercase ${
-                    i === 0
-                      ? "text-white bg-primary border-primary"
-                      : "text-primary"
-                  }`}
-                  whatsAppIcon={i === 1}
-                  callIcon={i === 0}
+    <Section className="bg-[#FAF6F2] py-16 lg:py-24 border-t border-[#EAE3DA]">
+      <Container>
+        <div className="flex flex-col items-center gap-10 text-center">
+          <div>
+            <p className="uppercase tracking-[0.25em] text-xs font-semibold text-[#8B6E52] mb-2">
+              {tagline}
+            </p>
+            <SectionHeading
+              title={title}
+              titleClassName="text-3xl md:text-5xl font-primary text-primary"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {cards.map((card, idx) => (
+              <div
+                key={idx}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-[#E3D9CD] group"
+              >
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </li>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-6 inset-x-6 text-center text-white">
+                  <span className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] tracking-widest uppercase py-1 px-3 rounded-full mb-2">
+                    {badgeLabels[idx] || "EXPERIENCE"}
+                  </span>
+                  <h3 className="font-primary text-xl font-medium">
+                    {card.title}
+                  </h3>
+                </div>
+              </div>
             ))}
-          </ul>
-          <div className="w-[179px] relative mt-auto aspect-4/3.25">
-            <Image src={image} alt={title} fill className="object-cover" />
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
+            {cta.map((button, i) => (
+              <LinkButton
+                key={i}
+                href={button.href}
+                label={button.label}
+                className={`rounded-lg py-3 px-8 uppercase text-xs tracking-widest ${
+                  i === 0
+                    ? "bg-transparent text-[#263725] border-[#263725] hover:bg-[#263725] hover:text-white"
+                    : "bg-[#263725] text-white border-[#263725] hover:bg-[#1a2619]"
+                }`}
+              />
+            ))}
           </div>
         </div>
-        <div className="flex flex-col gap-6">
-          <p>{description}</p>
-          <div className="w-full h-px bg-background-2" />
-          <ExperiencesSlider cards={cards} />
-
-          <ul className="lg:hidden flex  flex-wrap lg:gap-4 gap-2 w-full items-center">
-            {cta.map((button, i) => (
-              <li key={i} className="max-md:w-full">
-                <LinkButton
-                  {...button}
-                  target={i !== 2 ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  className={` max-md:w-full justify-center rounded-lg py-3 px-6! uppercase ${
-                    i === 0
-                      ? "text-white bg-primary border-primary"
-                      : "text-primary"
-                  }`}
-                  whatsAppIcon={i === 1}
-                  callIcon={i === 0}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </SectionWithContainer>
+      </Container>
+    </Section>
   );
 };
 

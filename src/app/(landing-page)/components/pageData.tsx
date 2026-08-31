@@ -12,14 +12,36 @@ import {
 } from "@/utils/landingIcon";
 
 export const landingPageData = {
+  offerTicker: {
+    text: "LIMITED TIME OFFER: UP TO 10% OFF – ENDS THIS SEPTEMBER!",
+  },
+
   banner: {
-    tag: "A 14-Acre Riverfront Sanctuary · Khajuraho",
-    title: "Luxury Resort in Khajuraho, anchored in heritage.",
-    description:
-      "22 private cottages along the Khudar River. A rare golf course. Restorative wellness. And a UNESCO World Heritage backdrop, just seven minutes from Khajuraho Airport.",
+    tag: "A 14-Acre Riverfront Sanctuary · Khajuraho Nainital",
+    title: "Luxury Resort in Khajuraho, Anchored in Heritage",
+    description: "",
     image: "/landing-page/banner.png",
-    benefits:
-      "Save 15% when you book direct · No prepayment · Free cancellation",
+    benefits: "Save 15% when you book direct · Free cancellation on most dates*",
+  },
+
+  aboutResort: {
+    tag: "ABOUT IVARA RESORT",
+    title: "An Editorial Approach to Luxury, <i class='text-secondary'>in the Heart of Khajuraho.</i>",
+    paragraphs: [
+      "Set amidst the timeless landscapes of Khajuraho, IVARA brings together refined hospitality, natural beauty, and the rich cultural heritage of Central India. Here, every space is designed to feel grand yet personal, elegant yet effortless.",
+      "Whether you are planning a romantic escape, a family holiday, a celebration, or simply time away from the noise, IVARA offers something increasingly rare: the luxury of privacy, time, and complete stillness.",
+    ],
+    subtitle: "Your Private Escape Awaits",
+    cta: [
+      {
+        label: "ENQUIRE NOW",
+        href: contact.WhatsappCta,
+      },
+      {
+        label: "BOOK NOW",
+        href: contact.callCta,
+      },
+    ],
   },
 
   milestones: [
@@ -41,39 +63,32 @@ export const landingPageData = {
     },
   ],
 
-  experiences: {
-    image: "/landing-page/avtar.png",
-    tagline: "The Ivara Experience",
-    title:
-      "An editorial approach to luxury, <i class='text-secondary'>in the heart of Khajuraho.</i>",
-    description:
-      "Built to endure, not to impress. Ivara is a rare intersection of riverfront landscapes, championship golf, restorative wellness and centuries-old cultural heritage, curated for a limited few.",
-    cta: [
+  accommodations: {
+    tag: "ACCOMMODATIONS",
+    title: "Private Cottages. <i class='text-secondary'>Uncompromised Comfort.</i>",
+    caption: "22 Private Riverfront Cottages, thoughtfully Designed for Privacy, Comfort and a Quiet Connection with Nature.",
+    cards: [
       {
-        label: "Call Now",
-        href: contact.callCta,
+        image: "/rooms/1.png",
+        title: "Riverfront View Cottage",
       },
+      {
+        image: "/rooms/2.png",
+        title: "Luxury Suite",
+      },
+      {
+        image: "/rooms/3.png",
+        title: "Garden Villa",
+      },
+    ],
+    cta: [
       {
         label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
       },
-    ],
-    cards: [
       {
-        image: "/landing-page/banner.png",
-        title: "22 Riverfront Cottages",
-        description: "Bespoke, low-density living along the Khudar River.",
-      },
-      {
-        image: "/landing-page/Rectangle-34624269.png",
-        title: "Golf & Leisure",
-        description:
-          "A signature golf course, rare in the region  with poolside lounges and landscaped grounds.",
-      },
-      {
-        image: "/landing-page/Rectangle-34624284.png",
-        title: "Spa & Wellness",
-        description: "Zen gardens, yoga pavilions and restorative therapies.",
+        label: "BOOK NOW",
+        href: contact.callCta,
       },
     ],
   },
@@ -102,20 +117,19 @@ export const landingPageData = {
   ],
 
   destinationWedding: {
-    tag: "Destination Weddings",
-    title:
-      "A wedding venue as <i class='text-primary'>unforgettable as the vows.</i>",
-    description:
-      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike. A 400-capacity banquet hall, riverfront ceremony lawns for 500+ guests, and 20 luxury cottages for your closest circle.",
+    tag: "DESTINATION WEDDINGS",
+    title: "A wedding venue as <i class='text-primary'>unforgettable as the vows.</i>",
+    description: "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike. A 400-capacity banquet hall, riverfront ceremony lawns for 500+ guests, and 20 luxury cottages for your closest circle.",
     image: "/landing-page/Weddings.png",
+    images: ["/landing-page/Weddings.png", "/landing-page/Rectangle-34624269.png"],
     cta: [
-      {
-        label: "Call Now",
-        href: contact.callCta,
-      },
       {
         label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
+      },
+      {
+        label: "BOOK NOW",
+        href: contact.callCta,
       },
     ],
     list: [
@@ -126,46 +140,75 @@ export const landingPageData = {
     ],
   },
 
+  experiences: {
+    tagline: "EXPERIENCES",
+    title: "Moments Beyond <i class='text-secondary'>the Stay</i>",
+    description: "Built to endure, not to impress. Ivara is a rare intersection of riverfront landscapes, championship golf, restorative wellness and centuries-old cultural heritage, curated for a limited few.",
+    image: "/landing-page/avtar.png",
+    cta: [
+      {
+        label: "ENQUIRE NOW",
+        href: contact.WhatsappCta,
+      },
+      {
+        label: "BOOK NOW",
+        href: contact.callCta,
+      },
+    ],
+    cards: [
+      {
+        image: "/landing-page/Rectangle-34624269.png",
+        title: "Golf & Leisure",
+        description: "A signature golf course, rare in the region with poolside lounges and landscaped grounds.",
+      },
+      {
+        image: "/landing-page/banner.png",
+        title: "Curated Dining",
+        description: "Editorial fine dining experience in the heart of Khajuraho.",
+      },
+      {
+        image: "/landing-page/Rectangle-34624284.png",
+        title: "Spa & Wellness",
+        description: "Zen gardens, yoga pavilions and restorative therapies.",
+      },
+    ],
+  },
+
   curatedExcursion: {
-    tag: "Curated Excursions",
-    title:
-      "Explore Khajuraho & <i class='text-secondary'>the wilderness beyond.</i>",
-    description:
-      "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, every excursion is arranged by our concierge.",
+    tag: "CURATED EXCURSIONS",
+    title: "Explore Khajuraho & <i class='text-secondary'>the wilderness beyond.</i>",
+    description: "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, every excursion is arranged by our concierge.",
     cards: [
       {
         tagLin: "Khajuraho · MP",
         icon: <AdjacentIcon />,
         title: "Khajuraho UNESCO Monuments",
-        description:
-          "Adjacent to the historic Dulhadev Temple, a moment away from India's most extraordinary 10th-century temple heritage.",
+        description: "Adjacent to the historic Dulhadev Temple, a moment away from India's most extraordinary 10th-century temple heritage.",
         image: "/landing-page/Rectangle-34624272.png",
       },
       {
         tagLin: "Khajuraho · MP",
         icon: <TreeIcon />,
         title: "Panna Tiger Reserve",
-        description:
-          "A short journey to Bengal tiger safaris, ancient forests and the serene Ken River.",
+        description: "A short journey to Bengal tiger safaris, ancient forests and the serene Ken River.",
         image: "/landing-page/Khajuraho-UNESCO-Monuments.png",
       },
       {
         tagLin: "Khajuraho · MP",
         icon: <AcreRiverfrontIcon />,
         title: "Raneh & Pandav Falls",
-        description:
-          "Canyons of red, pink and grey granite carved by the Ken River, a natural spectacle minutes away.",
+        description: "Canyons of red, pink and grey granite carved by the Ken River, a natural spectacle minutes away.",
         image: "/landing-page/Raneh-&-Pandav-Falls.png",
       },
     ],
     cta: [
       {
-        label: "Call Now",
-        href: contact.callCta,
-      },
-      {
         label: "ENQUIRE NOW",
         href: contact.WhatsappCta,
+      },
+      {
+        label: "BOOK NOW",
+        href: contact.callCta,
       },
     ],
   },
@@ -174,28 +217,62 @@ export const landingPageData = {
     "/rooms/1.png",
     "/rooms/2.png",
     "/rooms/3.png",
+    "/landing-page/Weddings.png",
     "/rooms/4.png",
     "/rooms/5.png",
   ],
-  testimonials: {
-    title: "Guest Experiences",
-    images: "/Rectangle-34624274.png",
-    cta: [
+
+  faqs: {
+    title: "FAQs",
+    questions: [
       {
-        label: "Call Now",
-        href: contact.callCta,
+        question: "What are the check-in and check-out timings?",
+        answer: "Check-in is at 2:00 PM and check-out is at 11:00 AM.",
       },
       {
-        label: "ENQUIRE NOW",
-        href: contact.WhatsappCta,
+        question: "How can I book destination wedding?",
+        answer: "You can enquire via our form or call our team directly for bespoke wedding packages.",
+      },
+      {
+        question: "Is complimentary Wi-Fi available?",
+        answer: "Yes, high-speed complimentary Wi-Fi is available across the resort property.",
+      },
+      {
+        question: "Does the resort have a restaurant?",
+        answer: "Yes, we feature multi-cuisine fine dining with organic locally sourced ingredients.",
+      },
+      {
+        question: "Is parking available at the resort?",
+        answer: "Yes, complimentary secure valet and self-parking is available for all guests.",
+      },
+      {
+        question: "How can I make a reservation?",
+        answer: "You can book directly using our website form or contact us via Call/WhatsApp.",
       },
     ],
+  },
+
+  testimonials: {
+    tag: "TESTIMONIALS",
+    title: "Guest Experiences",
+    images: "/landing-page/banner.png",
     reviews: [
       {
         author: "Heaven on earth.",
         review:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       },
     ],
+    cta: [
+      {
+        label: "ENQUIRE NOW",
+        href: contact.WhatsappCta,
+      },
+      {
+        label: "BOOK NOW",
+        href: contact.callCta,
+      },
+    ],
+    benefits: "Save 15% when you book direct · Free cancellation on most dates*",
   },
 };
