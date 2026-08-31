@@ -20,13 +20,13 @@ export const landingPageData = {
     tag: "A 14-Acre Riverfront Sanctuary · Khajuraho Nainital",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
-    image: "/landing-page/banner.png",
+    images: ["/images/img1.jpg","/images/img2.jpg","/images/img3.jpg","/images/img4.jpg"],
     benefits: "Save 15% when you book direct · Free cancellation on most dates*",
   },
 
   aboutResort: {
     tag: "ABOUT IVARA RESORT",
-    title: "An Editorial Approach to Luxury, <i class='text-secondary'>in the Heart of Khajuraho.</i>",
+    title: "An Editorial Approach to Luxury, <br /><i class='text-secondary'>in the Heart of Khajuraho.</i>",
     paragraphs: [
       "Set amidst the timeless landscapes of Khajuraho, IVARA brings together refined hospitality, natural beauty, and the rich cultural heritage of Central India. Here, every space is designed to feel grand yet personal, elegant yet effortless.",
       "Whether you are planning a romantic escape, a family holiday, a celebration, or simply time away from the noise, IVARA offers something increasingly rare: the luxury of privacy, time, and complete stillness.",
@@ -65,8 +65,8 @@ export const landingPageData = {
 
   accommodations: {
     tag: "ACCOMMODATIONS",
-    title: "Private Cottages. <i class='text-secondary'>Uncompromised Comfort.</i>",
-    caption: "22 Private Riverfront Cottages, thoughtfully Designed for Privacy, Comfort and a Quiet Connection with Nature.",
+    title: "Private Cottages. <br /><i class='text-secondary'>Uncompromised Comfort.</i>",
+    caption: "22 Private Riverfront Cottages, thoughtfully Designed for Privacy, <br />Comfort and a Quiet Connection with Nature.",
     cards: [
       {
         image: "/rooms/1.png",
@@ -118,8 +118,9 @@ export const landingPageData = {
 
   destinationWedding: {
     tag: "DESTINATION WEDDINGS",
-    title: "A wedding venue as <i class='text-primary'>unforgettable as the vows.</i>",
-    description: "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike. A 400-capacity banquet hall, riverfront ceremony lawns for 500+ guests, and 20 luxury cottages for your closest circle.",
+    title: "A wedding venue as <br /><i class='text-[#4A5A3E] font-serif italic'>unforgettable as the vows.</i>",
+    description:
+      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike.",
     image: "/landing-page/Weddings.png",
     images: ["/landing-page/Weddings.png", "/landing-page/Rectangle-34624269.png"],
     cta: [
@@ -143,7 +144,7 @@ export const landingPageData = {
   experiences: {
     tagline: "EXPERIENCES",
     title: "Moments Beyond <i class='text-secondary'>the Stay</i>",
-    description: "Built to endure, not to impress. Ivara is a rare intersection of riverfront landscapes, championship golf, restorative wellness and centuries-old cultural heritage, curated for a limited few.",
+    description: "",
     image: "/landing-page/avtar.png",
     cta: [
       {
@@ -157,27 +158,38 @@ export const landingPageData = {
     ],
     cards: [
       {
-        image: "/landing-page/Rectangle-34624269.png",
-        title: "Golf & Leisure",
-        description: "A signature golf course, rare in the region with poolside lounges and landscaped grounds.",
+        image: "/images/img5.jpg",
+        title: "Golf",
+        description: "",
       },
       {
-        image: "/landing-page/banner.png",
+        image: "/images/img8.jpg",
         title: "Curated Dining",
-        description: "Editorial fine dining experience in the heart of Khajuraho.",
+        description: "",
       },
       {
-        image: "/landing-page/Rectangle-34624284.png",
-        title: "Spa & Wellness",
-        description: "Zen gardens, yoga pavilions and restorative therapies.",
+        image: "/images/img6.jpg",
+        title: "Pool",
+        description: "",
+      },
+        {
+        image: "/images/img7.jpg",
+        title: "Wellness & Yoga",
+        description: "",
+      },
+        {
+        image: "/images/img9.jpg",
+        title: "Gym & Fitness",
+        description: "",
       },
     ],
   },
 
   curatedExcursion: {
     tag: "CURATED EXCURSIONS",
-    title: "Explore Khajuraho & <i class='text-secondary'>the wilderness beyond.</i>",
-    description: "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, every excursion is arranged by our concierge.",
+    title: "Explore Khajuraho & <br /><i class='text-[#C4A482] font-serif italic'>the wilderness beyond.</i>",
+    description:
+      "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, <br />every excursion is arranged by our concierge.",
     cards: [
       {
         tagLin: "Khajuraho · MP",
@@ -260,7 +272,7 @@ export const landingPageData = {
       {
         author: "Heaven on earth.",
         review:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       },
     ],
     cta: [

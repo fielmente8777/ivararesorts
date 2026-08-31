@@ -4,15 +4,22 @@ import "./sliding.title.scss";
 export default function SlidingTitle({
   items,
   ariaHidden = false,
+  bgColor,
+  textColor,
+  iconColor,
 }: {
   items: { icon: JSX.Element; title: string }[];
   ariaHidden?: boolean;
+  bgColor?:string; textColor?:string; iconColor?:string;
 }) {
   const titles = [...items, ...items, ...items];
 
   return (
     <div
-      className="relative overflow-hidden py-6 border border-secondary text-secondary max_screen_width bg-white box-shadow"
+      className={`relative overflow-hidden py-6 border border-secondary max_screen_width  box-shadow 
+        ${bgColor? bgColor : "bg-white"}
+        ${textColor? textColor : "text-secondary"}
+        `}
       aria-hidden={ariaHidden}
     >
       <div className="marquee-wrapper">
@@ -24,7 +31,7 @@ export default function SlidingTitle({
               className="marquee-item  uppercase tracking-widest"
             >
               <span className="flex items-center gap-2.5 w-fit">
-                <span>
+                <span className={iconColor}>
                   {t.icon}
                 </span>
                 {t.title}</span>

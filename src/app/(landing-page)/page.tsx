@@ -49,7 +49,7 @@ export default function Home() {
       <Accommodations {...landingPageData.accommodations} />
 
       {/* 6. Amenities Ticker */}
-      <SlidingTitle items={landingPageData.about} />
+      <SlidingTitle bgColor="bg-[#1F2523]" textColor="text-white" iconColor="text-[#CA9D4C]" items={landingPageData.about} />
 
       {/* 7. Destination Weddings Section */}
       <DestinationWedding {...landingPageData.destinationWedding} />
@@ -76,7 +76,7 @@ export default function Home() {
       <OfferTicker text={landingPageData.offerTicker.text} />
 
       {/* 15. Testimonials Section */}
-      <Testimonials {...landingPageData.testimonials} />
+      {/* <Testimonials {...landingPageData.testimonials} /> */}
     </main>
   );
 }

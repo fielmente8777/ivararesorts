@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
-import Form1 from "@/components/forms/Form1";
-import { Container, Section } from "@/components/sectionComponants";
-import { SectionHeading } from "@/components/typography";
 
 interface TestimonialsProps {
   tag?: string;
@@ -17,85 +14,66 @@ interface TestimonialsProps {
     author?: string;
     review: string;
   }[];
-  benefits?: string;
 }
 
 const Testimonials: React.FC<TestimonialsProps> = ({
   tag = "TESTIMONIALS",
   title,
-  images,
+  images = "/landing-page/Rectangle-34624269.png",
   cta,
   reviews,
-  benefits = "Save 15% when you book direct · Free cancellation on most dates*",
 }) => {
-  const currentReview = reviews[0]?.review || "";
+  const currentReview =
+    reviews[0]?.review ||
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   return (
-    <Section className="bg-[#FAF6F2] py-16 lg:py-24 border-t border-[#EAE3DA]">
-      <Container>
-        <div className="flex flex-col gap-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Left Image */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-[#E3D9CD]">
-              <Image
-                src={images}
-                alt="Guest experience"
-                fill
-                className="object-cover"
-              />
-            </div>
+    /* Frame 1381 Hug x 600 Hug Specs: 100% Full-Bleed Width, Joined cleanly with 0 gaps */
+    <div className="w-full bg-[#FAF7F1] grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-[#EAE3DA]">
+      {/* Left Column: Full-Bleed Image (Height 600px) */}
+      <div className="relative w-full h-[380px] lg:h-[600px] overflow-hidden">
+        <Image
+          src={images || "/landing-page/Rectangle-34624269.png"}
+          alt="Guest Experiences"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
-            {/* Right Review */}
-            <div className="flex flex-col gap-6">
-              <div>
-                <p className="uppercase tracking-[0.25em] text-xs font-semibold text-[#8B6E52] mb-2">
-                  {tag}
-                </p>
-                <SectionHeading
-                  title={title}
-                  titleClassName="text-3xl md:text-5xl font-primary text-primary"
-                />
-              </div>
-
-              <blockquote className="font-body text-base md:text-lg text-[#55524E] leading-relaxed italic border-l-2 border-[#8B6E52] pl-4">
-                &ldquo;{currentReview}&rdquo;
-              </blockquote>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-4 mt-4">
-                {cta.map((button, index) => (
-                  <LinkButton
-                    key={index}
-                    href={button.href}
-                    label={button.label}
-                    whatsAppIcon={index === 0}
-                    calendarIcon={index === 1}
-                    className={`justify-center
-                                           rounded-md
-                                           w-full! py-2 px-7 uppercase text-xs tracking-widest ${
-                                             index === 0
-                                               ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
-                                               : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
-                                           }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Form Bar */}
-          {/* <div className="bg-[#4A5A3E] border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col gap-5 text-white shadow-2xl">
-            <Form1
-              buttonText="Book Now"
-              buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
-              showCalendarIcon={true}
-            />
-            <p className="text-xs text-[#D8C2A5] text-center tracking-widest uppercase">
-              {benefits}
-            </p>
-          </div> */}
+      {/* Right Column: Content Box (Zero gap from image on left) */}
+      <div className="flex flex-col justify-center px-6 md:pl-8 md:pr-14 py-10 bg-[#FAF7F1] gap-5">
+        <div>
+          <p className="uppercase tracking-[0.25em] text-xs font-semibold text-[#8B6E52] mb-2">
+            {tag}
+          </p>
+          <h2 className="text-3xl md:text-5xl font-primary text-[#1F2523] leading-tight">
+            {title}
+          </h2>
         </div>
-      </Container>
-    </Section>
+
+        <p className="font-body text-sm md:text-base text-[#55524E] leading-relaxed max-w-xl">
+          {currentReview}
+        </p>
+
+        <div className="flex flex-wrap items-center gap-4 mt-2">
+          {cta.map((button, i) => (
+            <LinkButton
+              key={i}
+              href={button.href}
+              label={button.label}
+              whatsAppIcon={i === 0}
+              calendarIcon={i === 1}
+              className={`rounded-lg py-3 px-8 uppercase text-xs tracking-widest ${
+                i === 0
+                  ? "bg-transparent text-[#263725] border-[#263725] hover:bg-[#263725] hover:text-white"
+                  : "bg-[#263725] text-white border-[#263725] hover:bg-[#1a2619]"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
