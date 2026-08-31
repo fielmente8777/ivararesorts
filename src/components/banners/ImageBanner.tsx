@@ -98,7 +98,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
 
       {/* 3. Form Section (Figma Specs: Color #4A5A3E, Width 1440px, Height 120px) */}
       <div className="w-full bg-[#4A5A3E] py-6 px-4 md:px-14 text-white border-t border-[#5b6e4d]" id="form">
-        <div className="max-w-[1320px] max-md hidden mx-auto flex flex-col gap-3">
+        <div className="max-w-[1320px] mx-auto flex flex-col gap-3">
           <Form1
             buttonText="Book Now"
             buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
