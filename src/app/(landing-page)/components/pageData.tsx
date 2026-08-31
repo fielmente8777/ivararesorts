@@ -69,15 +69,27 @@ export const landingPageData = {
     caption: "22 Private Riverfront Cottages, thoughtfully Designed for Privacy, <br />Comfort and a Quiet Connection with Nature.",
     cards: [
       {
-        image: "/rooms/1.png",
+        image: "/private-cottage1.jpg",
         title: "Riverfront View Cottage",
       },
       {
-        image: "/rooms/2.png",
+        image: "/private-cottage2.jpg",
         title: "Luxury Suite",
       },
       {
-        image: "/rooms/3.png",
+        image: "/private-cottage3.jpg",
+        title: "Garden Villa",
+      },
+      {
+        image: "/private-cottage4.jpg",
+        title: "Riverfront View Cottage",
+      },
+      {
+        image: "/private-cottage5.jpg",
+        title: "Luxury Suite",
+      },
+      {
+        image: "/private-cottage6.jpg",
         title: "Garden Villa",
       },
     ],
@@ -121,8 +133,10 @@ export const landingPageData = {
     title: "A wedding venue as <br /><i class='text-[#4A5A3E] font-serif italic'>unforgettable as the vows.</i>",
     description:
       "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike.",
-    image: "/landing-page/Weddings.png",
-    images: ["/landing-page/Weddings.png", "/landing-page/Rectangle-34624269.png"],
+    image: "/wedding2.png",
+    images: ["/wedding1.png", "/wedding2.png"],
+    images1: ["/wedding1.png", "/wedding2.png", "/landing-page/Weddings.png"],
+    images2: ["/wedding2.png", "/wedding1.png", "/landing-page/Rectangle-34624269.png"],
     cta: [
       {
         label: "ENQUIRE NOW",
@@ -216,12 +230,18 @@ export const landingPageData = {
   },
 
   gallery: [
-    "/rooms/1.png",
-    "/rooms/2.png",
-    "/rooms/3.png",
-    "/landing-page/Weddings.png",
-    "/rooms/4.png",
-    "/rooms/5.png",
+    "/gallery1.jpg",
+    "/gallery2.jpg",
+    "/gallery3.jpg",
+    "/gallery4.jpg",
+    "/gallery5.jpg",
+    "/gallery6.jpg",
+    "/gallery7.jpg",
+    "/gallery8.jpg",
+    "/gallery9.jpg",
+    "/gallery10.jpg",
+    "/gallery11.jpg",
+    "/gallery12.jpg",
   ],
 
   faqs: {

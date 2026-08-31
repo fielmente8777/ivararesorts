@@ -98,8 +98,8 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                   href={button.href}
                   label={button.label}
                   className={`rounded-lg py-3 px-8 uppercase text-xs tracking-widest ${i === 0
-                      ? "bg-transparent text-[#263725] border-[#263725] hover:bg-[#263725] hover:text-white"
-                      : "bg-[#263725] text-white border-[#263725] hover:bg-[#1a2619]"
+                    ? "bg-transparent text-[#263725] border-[#263725] hover:bg-[#263725] hover:text-white"
+                    : "bg-[#263725] text-white border-[#263725] hover:bg-[#1a2619]"
                     }`}
                 />
               ))}
