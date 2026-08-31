@@ -30,7 +30,7 @@ export default function Home() {
       >
         <Form1
           buttonText="Book Now"
-          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
+          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f]"
           showCalendarIcon={true}
         />
         <p

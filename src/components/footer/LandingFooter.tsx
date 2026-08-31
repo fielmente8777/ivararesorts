@@ -7,6 +7,7 @@ import LazyLoadedMap from "../map/LazyLoadedMap";
 import { Container } from "../sectionComponants";
 import { footerData } from "./footerdata";
 import LinkButton from "../buttons/LinkButton";
+import Form1 from "../forms/Form1";
 
 const LandingFooter = () => {
   const pathName = usePathname();
@@ -14,7 +15,17 @@ const LandingFooter = () => {
     return null;
   }
   return (
-    <footer className="max_screen_width bg-tertiary text-white">
+    <footer className="max_screen_width bg-[#4A5A3E]">
+      <div className="bg-[#4A5A3E] border border-white/20 p-6 md:p-8 gap-5 shadow-2xl">
+        <Form1
+          buttonText="Book Now"
+          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
+          showCalendarIcon={true}
+        />
+        <p className="mt-2 text-xs text-[#D8C2A5] text-center tracking-widest uppercase">
+          Save 15% when you book direct · Free cancellation on most dates*
+        </p>
+      </div>
       <Container>
         <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_.5fr] gap-12 md:gap-16">
           <div className=" flex flex-col w-full lg:max-w-xl gap-6">
@@ -30,9 +41,7 @@ const LandingFooter = () => {
                 className="object-contain"
               />
             </div>
-            <p className=" text-white/60">
-              {footerData.description}
-            </p>
+            <p className=" text-white/60">{footerData.description}</p>
           </div>
 
           {footerData.lists.map((list, index) => (
