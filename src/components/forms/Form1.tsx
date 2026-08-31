@@ -118,7 +118,7 @@ const Form1 = ({
         <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
-              className={`lg:bg-white flex items-center gap-2.5 lg:shadow border-light/30 lg:rounded-lg ${
+              className={`flex bg-[#FFFCF7] items-center gap-2.5 border border-[#E8DFC0]/40 rounded-lg ${
                 gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
               }`}
               key={index}
@@ -135,13 +135,13 @@ const Form1 = ({
                 placeholderText={field.label}
                 calendarClassName="!z-[99999]"
                 popperClassName="!z-[99999]"
-                className="pointer-events-auto placeholder:text-secondarya outline-none w-full h-full bg-transparent text-base text-secondarya cursor-pointer"
+                className="pointer-events-auto placeholder:text-[#666666] outline-none w-full h-full bg-transparent text-sm md:text-base text-[#383838] cursor-pointer font-medium"
                 wrapperClassName="w-full h-full !flex items-center"
               />
             </div>
           ) : field.type === "tel" ? (
             <div
-              className={`flex lg:bg-white items-center gap-2.5 lg:shadow border-light/30 lg:rounded-lg ${
+              className={`flex bg-[#FFFCF7] items-center gap-2.5 shadow-sm border border-[#E3D9CD] rounded-lg ${
                 gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
               }`}
               key={index}
@@ -149,7 +149,7 @@ const Form1 = ({
               <label className="text-secondary">{field.icon}</label>
               <div className="relative">
                 <select
-                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-secondarya focus:outline-none text-secondarya"
+                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
@@ -162,7 +162,7 @@ const Form1 = ({
                     </option>
                   ))}
                 </select>
-                <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-[#383838]">
                   <IoIosArrowDown />
                 </span>
               </div>
@@ -170,14 +170,14 @@ const Form1 = ({
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className="w-full placeholder:text-secondarya focus:outline-none text-secondarya"
+                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent"
                 value={field.value}
                 onChange={field.onChange}
               />
             </div>
           ) : (
             <div
-              className={`flex lg:bg-white items-center gap-2.5 lg:shadow border-light/30 lg:rounded-lg ${
+              className={`flex bg-[#FFFCF7] items-center gap-2.5 shadow-sm border border-[#E3D9CD] rounded-lg ${
                 gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
               }`}
               key={index}
@@ -188,7 +188,7 @@ const Form1 = ({
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className="w-full placeholder:text-secondarya focus:outline-none text-secondarya"
+                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium"
                 value={field.value}
                 onChange={field.onChange}
               />

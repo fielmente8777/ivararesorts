@@ -22,9 +22,10 @@ export default function AboutSection({
   cta,
 }: AboutSectionProps) {
   return (
-    <Section className="bg-[#FAF6F2] py-16 lg:py-24 text-center border-t border-[#EAE3DA]">
+    <Section className="bg-[#FAF7F1] py-16 lg:py-24 text-center border-t border-[#EAE3DA]">
       <Container>
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
+        {/* Frame 1707480220: Width 948px, Vertical Flow, Gap 24px */}
+        <div className="max-w-[948px] mx-auto flex flex-col items-center gap-[24px]">
           <p className="uppercase tracking-[0.25em] text-xs font-semibold text-[#8B6E52]">
             {tag}
           </p>
@@ -32,19 +33,19 @@ export default function AboutSection({
             title={title}
             titleClassName="text-3xl md:text-5xl font-primary text-primary"
           />
-          <div className="space-y-4 text-base md:text-lg text-[#55524E] font-body leading-relaxed max-w-3xl">
+          <div className="flex flex-col gap-4 text-base md:text-lg text-[#55524E] font-body leading-relaxed max-w-[948px]">
             {paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
 
           {subtitle && (
-            <p className="font-primary italic text-xl md:text-2xl text-[#8B6E52] mt-2">
+            <p className="font-primary italic text-xl md:text-2xl text-[#8B6E52]">
               {subtitle}
             </p>
           )}
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             {cta.map((button, i) => (
               <LinkButton
                 key={i}

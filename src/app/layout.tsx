@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import "./style.scss";
 import LandingFooter from "@/components/footer/LandingFooter";
@@ -11,6 +11,12 @@ import Call from "@/components/ContactButton/Call";
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
   subsets: ["latin"],
+});
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 const manrope = Manrope({
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${cormorant.variable} ${manrope.variable} h-full antialiased`}
+      className={` ${cormorant.variable} ${fraunces.variable} ${manrope.variable} h-full antialiased`}
       suppressHydrationWarning={true}
     >
       <head>

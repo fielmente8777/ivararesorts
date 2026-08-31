@@ -1,28 +1,110 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
+import SwiperCarousel from "@/components/sliders/SwiperCarousel";
+import { Autoplay, Navigation } from "swiper/modules";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import LinkButton from "@/components/buttons/LinkButton";
 import { Container, Section } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 
-interface ExperienceCard {
+export interface ExperienceCardProps {
   image: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
-interface ExperiencesProps {
+export interface ExperiencesProps {
   tagline: string;
   title: string;
-  description: string;
-  image: string;
+  description?: string;
+  image?: string;
+  cards: ExperienceCardProps[];
   cta: {
     label: string;
     href: string;
   }[];
-  cards: ExperienceCard[];
 }
 
-const badgeLabels = ["GOLF", "CURATED DINING", "POOL"];
+const ExperienceCardItem: React.FC<
+  ExperienceCardProps & { active: number; index: number }
+> = ({ image, title, index, active }) => {
+  return (
+    <div>
+      <div
+        className={`w-full relative aspect-square rounded-lg overflow-hidden transition-all duration-300 ease-in-out ${
+          index === active ? "md:aspect-[4/5.5]" : "md:aspect-[4/5.1] md:mt-5"
+        }`}
+      >
+        <Image src={image} alt={title} fill className="object-cover" />
+        <div className="absolute z-10 inset-2 border border-white rounded-lg pointer-events-none" />
+        <div className="absolute bottom-2 inset-x-2 py-1.5 px-4 bg-black/50 rounded-b-lg z-20">
+          <p className="text-center capitalize text-white md:text-lg text-nowrap font-medium">
+            {title}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ExperienceSlider: React.FC<{ cards: ExperienceCardProps[] }> = ({
+  cards,
+}) => {
+  const displayCards = cards.length < 5 ? [...cards, ...cards] : cards;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  return (
+    <div className="flex flex-col gap-6 w-full">
+      <div className="relative md:aspect-[4/1.78] w-full">
+        <SwiperCarousel
+          data={displayCards}
+          slidesPerView={1}
+          spaceBetween={20}
+          loop
+          modules={[Navigation, Autoplay]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          navigation={{
+            nextEl: ".experience-next",
+            prevEl: ".experience-prev",
+          }}
+          centeredSlides={true}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 3 },
+          }}
+          swiperSlideClassName=""
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          renderSlide={(card, index) => (
+            <ExperienceCardItem
+              {...card}
+              active={activeIndex}
+              index={index || 0}
+            />
+          )}
+        />
+      </div>
+
+      {/* Navigation Arrow Buttons Below Slider */}
+      <div className="flex items-center justify-center gap-4 text-[#263725]">
+        <button
+          className="experience-prev text-2xl p-2 rounded-full border border-[#263725]/20 hover:bg-[#263725] hover:text-white transition-all cursor-pointer"
+          aria-label="Previous Experience"
+        >
+          <GoArrowLeft />
+        </button>
+        <button
+          className="experience-next text-2xl p-2 rounded-full border border-[#263725]/20 hover:bg-[#263725] hover:text-white transition-all cursor-pointer"
+          aria-label="Next Experience"
+        >
+          <GoArrowRight />
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const Experiences: React.FC<ExperiencesProps> = ({
   tagline,
@@ -31,7 +113,7 @@ const Experiences: React.FC<ExperiencesProps> = ({
   cta,
 }) => {
   return (
-    <Section className="bg-[#FAF6F2] py-16 lg:py-24 border-t border-[#EAE3DA]">
+    <Section className="bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA]">
       <Container>
         <div className="flex flex-col items-center gap-10 text-center">
           <div>
@@ -44,31 +126,10 @@ const Experiences: React.FC<ExperiencesProps> = ({
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {cards.map((card, idx) => (
-              <div
-                key={idx}
-                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-[#E3D9CD] group"
-              >
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 inset-x-6 text-center text-white">
-                  <span className="inline-block bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] tracking-widest uppercase py-1 px-3 rounded-full mb-2">
-                    {badgeLabels[idx] || "EXPERIENCE"}
-                  </span>
-                  <h3 className="font-primary text-xl font-medium">
-                    {card.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Swiper Slider Section */}
+          <ExperienceSlider cards={cards} />
 
+          {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
             {cta.map((button, i) => (
               <LinkButton

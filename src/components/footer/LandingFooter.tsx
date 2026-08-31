@@ -1,138 +1,115 @@
 "use client";
-import { contact } from "@/utils/constent";
+
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import LazyLoadedMap from "../map/LazyLoadedMap";
-import { Container } from "../sectionComponants";
-import { footerData } from "./footerdata";
-import LinkButton from "../buttons/LinkButton";
+import Form1 from "../forms/Form1";
+import { contact } from "@/utils/constent";
+import { CallIcon, MailIcon } from "@/utils/formIcons";
+import { IoLocationOutline } from "react-icons/io5";
 
 const LandingFooter = () => {
   const pathName = usePathname();
   if (pathName === "/thank-you/") {
     return null;
   }
+
   return (
-    <footer className="max_screen_width bg-tertiary text-white">
-      <Container>
-        <div className="grid md:py-14 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_.5fr] gap-12 md:gap-16">
-          <div className=" flex flex-col w-full lg:max-w-xl gap-6">
-            <div
-              className={`relative 
-                  w-35 aspect-[4/2.95] md:w-40`}
-            >
-              <Image
-                src={footerData.logo}
-                alt="logo"
-                fill
-                sizes="100%"
-                className="object-contain"
-              />
+    <footer className="w-full bg-[#4A5A3E] text-white flex flex-col">
+      {/* 1. Full-Width Form Bar (Color #4A5A3E) */}
+      <div className="w-full bg-[#4A5A3E] py-8 px-4 md:px-14 border-t border-[#5b6e4d]" id="form">
+        <div className="max-w-[1320px] mx-auto flex flex-col gap-3">
+          <Form1
+            buttonText="Book Now"
+            buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
+            showCalendarIcon={true}
+          />
+          <p className="text-xs text-[#D8C2A5] text-center tracking-widest uppercase font-medium mt-1">
+            SAVE 15% WHEN YOU BOOK DIRECT · FREE CANCELLATION ON MOST DATES*
+          </p>
+        </div>
+      </div>
+
+      {/* 2. Middle Footer Content Section (Frame 1707480099: Width 1440px, Height 260px, Padding: Top/Bottom 56px, Left/Right 60px) */}
+      <div className="w-full bg-[#4A5A3E] py-[56px] px-6 md:px-[60px] border-t border-white/10">
+        <div className="max-w-[1440px] mx-auto min-h-[260px] flex flex-col md:flex-row items-center justify-between gap-10">
+          {/* Column 1: Gold Logo Card Frame (Dev Mode Specs: 246px x 148px, Radius 8px, Padding: py-10px px-16px, Gap 16px) */}
+          <div className="flex flex-col items-center md:items-start flex-shrink-0">
+            <div className="border border-[#C4A482]/40 rounded-[8px] py-[10px] px-[16px] bg-[#435237]/40 flex flex-col items-center justify-center gap-[16px] w-[246px] h-[148px] shadow-inner">
+              <div className="relative w-36 h-14">
+                <Image
+                  src="/logo.png"
+                  alt="IVARA Resorts Khajuraho"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-[11px] tracking-[0.25em] text-[#C4A482] uppercase font-semibold text-center">
+                RESORTS · KHAJURAHO
+              </p>
             </div>
-            <p className=" text-white/60">
-              {footerData.description}
-            </p>
           </div>
 
-          {footerData.lists.map((list, index) => (
-            <div className={` flex flex-col gap-4 md:gap-6`} key={index}>
-              <h2
-                className="text-3xl text-white font-primary"
-                dangerouslySetInnerHTML={{ __html: list.title ?? "" }}
-              />
-              <ul className={`flex flex-col md:gap-2 gap-4`}>
-                {list.links.map((item, suIndex) => (
-                  <li
-                    className={`flex gap-2 ${suIndex === 1 ? "flex-wrap" : ""}`}
-                    key={suIndex}
-                  >
-                    <span
-                      className={`mt-1 ${
-                        index === 1
-                          ? "text-white flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
-                          : "text-white inline-block"
-                      }`}
-                    >
-                      {item.icon}
-                      <span className="sr-only">{item.label}</span>
-                    </span>
-                    {/* {item.title && (
-                      <span
-                        className={`${
-                          index === 1
-                            ? "text-white font-aboreto text-2xl my-auto"
-                            : "md:text-lg text-white inline-block"
-                        }`}
-                      >
-                        {item.title}
-                      </span>
-                    )} */}
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={item.href}
-                      className="flex gap-2"
-                    >
-                      <span
-                        className={`${
-                          index === 1
-                            ? "text-white font-mont text-2xl my-auto"
-                            : "md:text-lg text-white inline-block"
-                        }`}
-                      >
-                        {item.label}
-                      </span>
-                    </Link>
-                    {item.label2 && <span className="text-white -ml-1">,</span>}
-                    {item.label2 && item.href2 && (
-                      <Link
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={item.href2}
-                        className="flex gap-2 max-md:ml-0"
-                      >
-                        <span
-                          className={`${
-                            index === 1
-                              ? "text-white font-aboreto text-2xl my-auto"
-                              : "md:text-lg text-white"
-                          }`}
-                        >
-                          {item.label2}
-                        </span>
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
+          {/* Column 2: LOCATION (Gold Title, White Text & White Icon) */}
+          <div className="flex flex-col gap-3 text-center md:text-left max-w-md">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C4A482]">
+              LOCATION
+            </h3>
+            <div className="flex items-start gap-3 text-sm text-white leading-relaxed">
+              <IoLocationOutline size={20} className="text-white flex-shrink-0 mt-0.5" />
+              <span>
+                Next to Dulhadeva Temple, Khudar Bridge, Khajuraho, Madhya Pradesh, 471606. 7 min from Khajuraho Airport
+              </span>
             </div>
-          ))}
+          </div>
+
+          {/* Column 3: CONTACT (Gold Title, White Text & White Icons) */}
+          <div className="flex flex-col gap-3 text-center md:text-left flex-shrink-0">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C4A482]">
+              CONTACT
+            </h3>
+            <div className="flex flex-col gap-2.5 text-sm text-white">
+              <Link
+                href={contact.callCta}
+                className="flex items-center gap-3 hover:text-[#D8C2A5] transition-colors"
+              >
+                <span className="text-white">
+                  <CallIcon />
+                </span>
+                <span>{contact.phone[0]}</span>
+              </Link>
+              <Link
+                href={`mailto:${contact.email}`}
+                className="flex items-center gap-3 hover:text-[#D8C2A5] transition-colors"
+              >
+                <span className="text-white">
+                  <MailIcon />
+                </span>
+                <span>{contact.email}</span>
+              </Link>
+            </div>
+          </div>
         </div>
-      </Container>
-      <div className="bg-white h-px w-full" />
-      <Container className="py-4 flex max-md:flex-col items-center gap-3.5 justify-between">
-        <div className="md:flex max-md:space-x-2 text-center flex-wrap items-center justify-center gap-2 text-white text-sm">
-          {" "}
-          <span className="text-white">
-            © {new Date().getFullYear()} Ivara Resorts
-          </span>
-          <span className="md:block hidden">.</span>
-          <span className="text-white">All Rights Reserved</span>
-          {/* <span className="md:block hidden">|</span> */}
+      </div>
+
+      {/* 3. Bottom Copyright Bar (#1D261A) */}
+      <div className="w-full bg-[#1D261A] py-4 px-6 md:px-[60px] border-t border-white/10 text-white/80 text-xs">
+        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <p>© {new Date().getFullYear()} Ivara Resorts. All rights reserved.</p>
+          <p className="text-white/70">
+            Luxury resort in Khajuraho · Destination wedding in Madhya Pradesh · Resort near Panna Tiger Reserve · Powered by{" "}
+            <Link
+              href="https://www.fielmente.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-white hover:underline"
+            >
+              Fielmente
+            </Link>
+          </p>
         </div>
-        <p className="text-white! max-md:text-center text-sm">
-          Luxury resort in Khajuraho · Destination wedding in Madhya Pradesh ·
-          Resort near Panna Tiger Reserve · Powered by {""}
-          <Link
-            href="https://www.fielmente.com/"
-            className="font-bold"
-            target="_blank"
-          >
-            Fielmente
-          </Link>
-        </p>
-      </Container>
+      </div>
     </footer>
   );
 };

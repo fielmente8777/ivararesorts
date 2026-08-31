@@ -62,34 +62,36 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         {/* Hero Title & Arrows Bar (Frame 1707480219 layout - space-between) */}
         <div className="absolute bottom-12 inset-x-0 z-20 px-6 md:px-14">
           <div className="max-w-[1320px] mx-auto flex items-end justify-between gap-6">
-            {/* Left Title Box */}
-            <div className="flex flex-col gap-3 max-w-3xl">
-              <div className="w-fit bg-black/35 backdrop-blur-sm border border-white/20 px-3 py-1 rounded text-[11px] md:text-xs text-white/90 uppercase tracking-[0.2em] font-medium">
+            {/* Left Title Box (Frame 1707480163: Hug 780px x 174px, Gap 12px) */}
+            <div className="flex flex-col gap-[12px] max-w-[780px]">
+              <div className="w-fit bg-black/30 backdrop-blur-md border border-white/25 px-4 py-1.5 rounded-full text-[11px] md:text-xs text-white/95 uppercase tracking-[0.2em] font-medium">
                 {tag}
               </div>
-              <h1 className="font-primary text-3xl md:text-5xl lg:text-6xl/tight text-white font-normal drop-shadow-md">
-                Luxury Resort in <br />
-                <i className="font-serif italic font-normal text-[#F5EBE1]">
+              <h1 className="flex flex-col">
+                <span className="font-primary text-3xl md:text-5xl lg:text-[56px] font-bold lg:leading-[64px] tracking-normal text-white drop-shadow-md">
+                  Luxury Resort in
+                </span>
+                <i className="font-serif italic font-light text-3xl md:text-5xl lg:text-[56px] lg:leading-[64px] tracking-normal text-white drop-shadow-md whitespace-nowrap">
                   Khajuraho, Anchored in Heritage
                 </i>
               </h1>
             </div>
 
-            {/* Right Navigation Arrows (< >) */}
-            <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
+            {/* Right Navigation Arrows (Frame 1707479802: 88px x 40px, Gap 8px) */}
+            <div className="hidden sm:flex items-center gap-[8px] flex-shrink-0 w-[88px] h-[40px]">
               <button
                 onClick={() => setActiveSlide((prev) => (prev === 0 ? 1 : 0))}
-                className="w-11 h-11 rounded-full bg-white/90 hover:bg-white text-[#4A5A3E] flex items-center justify-center transition-all shadow-md"
+                className="w-[40px] h-[40px] rounded-full bg-white hover:bg-[#F3ECE5] text-[#1F2523] flex items-center justify-center transition-all shadow-md flex-shrink-0"
                 aria-label="Previous Slide"
               >
-                <IoChevronBack size={20} />
+                <IoChevronBack size={18} />
               </button>
               <button
                 onClick={() => setActiveSlide((prev) => (prev === 1 ? 0 : 1))}
-                className="w-11 h-11 rounded-full bg-white/90 hover:bg-white text-[#4A5A3E] flex items-center justify-center transition-all shadow-md"
+                className="w-[40px] h-[40px] rounded-full bg-white hover:bg-[#F3ECE5] text-[#1F2523] flex items-center justify-center transition-all shadow-md flex-shrink-0"
                 aria-label="Next Slide"
               >
-                <IoChevronForward size={20} />
+                <IoChevronForward size={18} />
               </button>
             </div>
           </div>
