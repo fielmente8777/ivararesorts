@@ -30,11 +30,11 @@ export default function Home() {
       >
         <Form1
           buttonText="Book Now"
-          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f]"
+          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
           showCalendarIcon={true}
         />
         <p
-          className="text-xs text-[#D8C2A5] tracking-widest text-center uppercase"
+          className="text-xs text-[#D8C2A5] tracking-wide text-center font-normal"
           dangerouslySetInnerHTML={{ __html: landingPageData.banner.benefits }}
         />
       </div>
@@ -54,8 +54,8 @@ export default function Home() {
       {/* 7. Destination Weddings Section */}
       <DestinationWedding {...landingPageData.destinationWedding} />
 
-      {/* 8. Milestones Ticker 2 */}
-      <SlidingTitle items={landingPageData.milestones} />
+      {/* 8. Milestones Ticker 2 (Dark background with white text & golden icons) */}
+      <SlidingTitle bgColor="bg-[#1F2523]" textColor="text-white" iconColor="text-[#CA9D4C]" items={landingPageData.milestones} />
 
       {/* 9. Experiences Section */}
       <Experiences {...landingPageData.experiences} />

@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
 import { Container, Section } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
+import SwiperCarousel from "@/components/sliders/SwiperCarousel";
+import { Autoplay, Navigation } from "swiper/modules";
 
 interface CardItem {
   image: string;
@@ -45,45 +47,42 @@ export default function Accommodations({
   cards,
   cta,
 }: AccommodationsProps) {
-  const [cardList, setCardList] = useState<CardItem[]>(cards);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const nextSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCardList((prev) => {
-      if (prev.length <= 1) return prev;
-      return [...prev.slice(1), prev[0]];
-    });
-    setTimeout(() => setIsAnimating(false), 300);
-  };
-
-  const prevSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCardList((prev) => {
-      if (prev.length <= 1) return prev;
-      return [prev[prev.length - 1], ...prev.slice(0, prev.length - 1)];
-    });
-    setTimeout(() => setIsAnimating(false), 300);
-  };
+  const displayCards = cards.length < 6 ? [...cards, ...cards] : cards;
 
   return (
-    <Section className="bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA]">
-      <Container>
+    <Section className="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden">
+      {/* Background Mask Overlay */}
+      <div
+        className="absolute top-0 left-0 right-0 w-full h-[180px] pointer-events-none opacity-15 z-0 overflow-hidden"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+          maskImage:
+            "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+        }}
+      >
+        <Image
+          src="/maske-image.png"
+          alt="Mask Overlay"
+          fill
+          className="object-cover -rotate-180"
+        />
+      </div>
+      <Container className="relative z-10">
         <div className="flex flex-col gap-10">
           {/* Header Row: Title on Left, CTAs centered vertically on Right */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <p className="uppercase tracking-[0.25em] text-xs font-semibold text-[#8B6E52] mb-2">
+              <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
                 {tag}
               </p>
               <SectionHeading
                 title={title}
-                titleClassName="text-3xl md:text-5xl font-primary text-primary"
+                titleClassName="text-[22px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-4 mt-4">
+            {/* Desktop CTAs */}
+            <div className="hidden md:grid md:grid-cols-2 max-w-[400px] gap-4">
               {cta.map((button, index) => (
                 <LinkButton
                   key={index}
@@ -93,32 +92,46 @@ export default function Accommodations({
                   calendarIcon={index === 1}
                   className={`justify-center
                               rounded-md
-                              w-full! py-2 px-7 uppercase text-xs tracking-widest ${
-                                index === 0
-                                  ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
-                                  : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
-                              }`}
+                              w-full py-2 px-7 uppercase text-xs tracking-widest ${index === 0
+                      ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
+                      : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
+                    }`}
                 />
               ))}
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative w-full">
             {/* Left Arrow Button (50% overlapping image edge) */}
             <button
-              onClick={prevSlide}
               aria-label="Previous Slide"
-              className="absolute -left-4 md:-left-5 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
+              className="accommodations-prev absolute -left-4 md:-left-5 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
             >
               <ArrowSvg className="rotate-180 w-9 h-9 md:w-10 md:h-10 drop-shadow-md" />
             </button>
 
-            {/* Image Cards Grid (Renders 3 visible sliding cards) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 overflow-hidden">
-              {cardList.slice(0, 3).map((card, idx) => (
+            {/* Swiper Cards Carousel */}
+            <SwiperCarousel
+              data={displayCards}
+              slidesPerView={1}
+              spaceBetween={24}
+              loop={true}
+              modules={[Navigation, Autoplay]}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              speed={600}
+              navigation={{
+                nextEl: ".accommodations-next",
+                prevEl: ".accommodations-prev",
+              }}
+              breakpoints={{
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 3 },
+              }}
+              renderSlide={(card, idx) => (
                 <div
-                  key={`${card.image}-${idx}`}
-                  className="relative w-full h-[352px] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group transition-all duration-300 animate-fadeIn"
+                  key={idx}
+                  className="relative w-full h-[352px] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
                 >
                   <Image
                     src={card.image}
@@ -127,14 +140,13 @@ export default function Accommodations({
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-              ))}
-            </div>
+              )}
+            />
 
             {/* Right Arrow Button (50% overlapping image edge) */}
             <button
-              onClick={nextSlide}
               aria-label="Next Slide"
-              className="absolute -right-4 md:-right-5 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
+              className="accommodations-next absolute -right-4 md:-right-5 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
             >
               <ArrowSvg className="w-9 h-9 md:w-10 md:h-10 drop-shadow-md" />
             </button>
@@ -142,9 +154,30 @@ export default function Accommodations({
 
           {/* Caption with line break after Privacy */}
           <p
-            className="font-primary italic text-center text-lg md:text-xl text-[#756250] max-w-3xl mx-auto"
-            dangerouslySetInnerHTML={{ __html: caption }}
+            className="font-primary italic text-center text-xs sm:text-sm md:text-2xl text-[#4A5A3E] max-w-3xl mx-auto leading-snug"
+            dangerouslySetInnerHTML={{
+              __html: caption.replace(/<br\s*\/?>/gi, "<br class='hidden md:inline' />"),
+            }}
           />
+
+          {/* Mobile CTAs: Displayed below images and caption on mobile */}
+          <div className="grid grid-cols-2 md:hidden max-w-[400px] w-full gap-3 mt-2 mx-auto">
+            {cta.map((button, index) => (
+              <LinkButton
+                key={index}
+                href={button.href}
+                label={button.label}
+                whatsAppIcon={index === 0}
+                calendarIcon={index === 1}
+                className={`justify-center
+                              rounded-md
+                              w-full py-2.5 px-2 uppercase text-[10px] sm:text-xs tracking-wider ${index === 0
+                    ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
+                    : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
+                  }`}
+              />
+            ))}
+          </div>
         </div>
       </Container>
     </Section>

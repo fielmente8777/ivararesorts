@@ -112,18 +112,18 @@ const Form1 = ({
         gridView
           ? "flex flex-col gap-3"
           : "grid md:grid-cols-5 items-center gap-3.5"
-      } font-body px-4 bg-transparent max-md:divide-y divide-p1`}
+      } font-body bg-transparent`}
     >
       {formFields.map((field, index) => (
         <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
               className={`flex bg-[#FFFCF7] items-center gap-2.5 border border-[#E8DFC0]/40 rounded-lg ${
-                gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
+                gridView ? "p-4" : "py-3 px-3.5 lg:px-2"
               }`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+              <label className="text-secondary flex items-center justify-center flex-shrink-0">{field.icon}</label>
               <DatePicker
                 selected={startDate}
                 onChange={handleDateChange}
@@ -142,18 +142,18 @@ const Form1 = ({
           ) : field.type === "tel" ? (
             <div
               className={`flex bg-[#FFFCF7] items-center gap-2.5 shadow-sm border border-[#E3D9CD] rounded-lg ${
-                gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
+                gridView ? "p-4" : "py-3 px-3.5 lg:px-2"
               }`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
-              <div className="relative">
+              <label className="text-secondary flex items-center justify-center flex-shrink-0">{field.icon}</label>
+              <div className="relative flex items-center flex-shrink-0">
                 <select
-                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent"
+                  className="ps-1 pe-4 cursor-pointer border-p1 appearance-none w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent text-sm md:text-base"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
-                  style={{ width: `${formData.countryCode.length * 2}ch` }}
+                  style={{ width: `${formData.countryCode.length * 2.2}ch` }}
                   aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
@@ -170,7 +170,7 @@ const Form1 = ({
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent"
+                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent text-sm md:text-base"
                 value={field.value}
                 onChange={field.onChange}
               />
@@ -178,17 +178,17 @@ const Form1 = ({
           ) : (
             <div
               className={`flex bg-[#FFFCF7] items-center gap-2.5 shadow-sm border border-[#E3D9CD] rounded-lg ${
-                gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"
+                gridView ? "p-4" : "py-3 px-3.5 lg:px-2"
               }`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+              <label className="text-secondary flex items-center justify-center flex-shrink-0">{field.icon}</label>
               <input
                 key={index}
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium"
+                className="w-full placeholder:text-[#666666] focus:outline-none text-[#383838] font-medium bg-transparent text-sm md:text-base"
                 value={field.value}
                 onChange={field.onChange}
               />

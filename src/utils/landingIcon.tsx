@@ -9,35 +9,35 @@ export const AIStarIcon = () => (
     <g clipPath="url(#clip0_6_1680)">
       <path
         d="M6.62467 10.3334C6.56515 10.1026 6.44489 9.89209 6.27641 9.72361C6.10793 9.55513 5.89738 9.43488 5.66667 9.37536L1.57667 8.32069C1.50689 8.30088 1.44547 8.25886 1.40174 8.20099C1.35801 8.14312 1.33435 8.07256 1.33435 8.00002C1.33435 7.92749 1.35801 7.85693 1.40174 7.79906C1.44547 7.74119 1.50689 7.69916 1.57667 7.67936L5.66667 6.62402C5.8973 6.56456 6.1078 6.44441 6.27627 6.27605C6.44474 6.10769 6.56504 5.89728 6.62467 5.66669L7.67933 1.57669C7.69894 1.50664 7.74092 1.44492 7.79888 1.40095C7.85684 1.35699 7.92759 1.33319 8.00033 1.33319C8.07308 1.33319 8.14383 1.35699 8.20179 1.40095C8.25974 1.44492 8.30173 1.50664 8.32133 1.57669L9.37533 5.66669C9.43485 5.8974 9.55511 6.10795 9.72359 6.27644C9.89207 6.44492 10.1026 6.56517 10.3333 6.62469L14.4233 7.67869C14.4937 7.69809 14.5557 7.74003 14.5999 7.79807C14.6441 7.85612 14.668 7.92706 14.668 8.00002C14.668 8.07298 14.6441 8.14393 14.5999 8.20197C14.5557 8.26002 14.4937 8.30196 14.4233 8.32136L10.3333 9.37536C10.1026 9.43488 9.89207 9.55513 9.72359 9.72361C9.55511 9.89209 9.43485 10.1026 9.37533 10.3334L8.32067 14.4234C8.30106 14.4934 8.25908 14.5551 8.20112 14.5991C8.14316 14.6431 8.07241 14.6669 7.99967 14.6669C7.92692 14.6669 7.85617 14.6431 7.79821 14.5991C7.74026 14.5551 7.69827 14.4934 7.67867 14.4234L6.62467 10.3334Z"
-        stroke="#4A5A3E"
+        stroke="currentColor"
         strokeWidth="1.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M13.3333 2V4.66667"
-        stroke="#4A5A3E"
+        stroke="currentColor"
         strokeWidth="1.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M14.6667 3.33331H12"
-        stroke="#4A5A3E"
+        stroke="currentColor"
         strokeWidth="1.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M2.66666 11.3333V12.6666"
-        stroke="#4A5A3E"
+        stroke="currentColor"
         strokeWidth="1.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M3.33333 12H2"
-        stroke="#4A5A3E"
+        stroke="currentColor"
         strokeWidth="1.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -61,7 +61,6 @@ export const AcreRiverfrontIcon = () => (
   >
     <path
       d="M1.33334 3.99998C1.73334 4.33331 2.13334 4.66665 3.00001 4.66665C4.66668 4.66665 4.66668 3.33331 6.33334 3.33331C8.06668 3.33331 7.93334 4.66665 9.66668 4.66665C11.3333 4.66665 11.3333 3.33331 13 3.33331C13.8667 3.33331 14.2667 3.66665 14.6667 3.99998"
-      
       stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
@@ -94,7 +93,7 @@ export const AirportIcon = () => (
   >
     <path
       d="M11.8667 12.8L10.6667 7.33333L13 5C14 4 14.3333 2.66667 14 2C13.3333 1.66667 12 2 11 3L8.66667 5.33333L3.2 4.13333C2.86667 4.06667 2.6 4.2 2.46667 4.46667L2.26667 4.8C2.13333 5.13333 2.2 5.46667 2.46667 5.66667L6 8L4.66667 10H2.66667L2 10.6667L4 12L5.33333 14L6 13.3333V11.3333L8 10L10.3333 13.5333C10.5333 13.8 10.8667 13.8667 11.2 13.7333L11.5333 13.6C11.8 13.4 11.9333 13.1333 11.8667 12.8Z"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -112,42 +111,42 @@ export const AdjacentIcon = () => (
   >
     <path
       d="M6.66663 12V7.33331"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M7.41328 1.46531C7.59621 1.37645 7.79704 1.33061 8.00041 1.33131C8.20378 1.332 8.40429 1.37921 8.58661 1.46931L13.8306 4.03398C14.1479 4.18931 14.0373 4.66664 13.6839 4.66664H2.31595C1.96261 4.66664 1.85261 4.18931 2.16928 4.03398L7.41328 1.46531Z"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M9.33337 12V7.33331"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M12 12V7.33331"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2 14.6667H14"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M4 12V7.33331"
-      stroke="#4A5A3E"
+      stroke="currentColor"
       strokeWidth="1.33333"
       strokeLinecap="round"
       strokeLinejoin="round"

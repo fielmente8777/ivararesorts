@@ -10,15 +10,15 @@ export default function SlidingTitle({
 }: {
   items: { icon: JSX.Element; title: string }[];
   ariaHidden?: boolean;
-  bgColor?:string; textColor?:string; iconColor?:string;
+  bgColor?: string; textColor?: string; iconColor?: string;
 }) {
   const titles = [...items, ...items, ...items];
 
   return (
     <div
       className={`relative overflow-hidden py-6 border border-secondary max_screen_width  box-shadow 
-        ${bgColor? bgColor : "bg-white"}
-        ${textColor? textColor : "text-secondary"}
+        ${bgColor ? bgColor : "bg-white"}
+        ${textColor ? textColor : "text-secondary"}
         `}
       aria-hidden={ariaHidden}
     >

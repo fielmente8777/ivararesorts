@@ -6,7 +6,7 @@ import Link from "next/link";
 import Form1 from "../forms/Form1";
 import { contact } from "@/utils/constent";
 import { CalendarIcon } from "@/utils/formIcons";
-import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import SwiperCarousel from "../sliders/SwiperCarousel";
 import { Navigation } from "swiper/modules";
 
@@ -62,7 +62,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
           loop={true}
           speed={800}
           renderSlide={(image) => (
-            <div className="relative w-full aspect-auto  h-[550px] md:h-[700px] lg:h-[800px]">
+            <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px]">
               <Image
                 src={image}
                 alt="ivara"
@@ -75,37 +75,37 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         />
         {/* <div className="absolute inset-0 bg-black/35" /> */}
 
-        {/* Hero Title & Arrows Bar (Frame 1707480219 layout - space-between) */}
-        <div className="absolute bottom-12 inset-x-0 z-20 px-6 md:px-14">
-          <div className="max-w-[1320px] mx-auto flex items-end justify-between gap-6">
-            {/* Left Title Box */}
-            <div className="flex flex-col gap-3 max-w-3xl">
-              <div className="w-fit rounded-2xl bg-white/20 backdrop-blur-lg border border-white/20 px-3 py-1.5 rounded text-[11px] md:text-xs text-white/90 uppercase tracking-[0.2em] font-medium">
+        {/* Hero Title & Arrows Bar (Mobile: Prominent text, clean spacing, 28px buttons | Desktop: 100% Original) */}
+        <div className="absolute bottom-5 sm:bottom-8 md:bottom-12 inset-x-0 z-20 px-4 sm:px-6 md:px-14">
+          <div className="max-w-[1320px] mx-auto flex items-end justify-between gap-2 sm:gap-4 md:gap-6">
+            {/* Left Title Box (Increased font sizes & vertical gap on mobile) */}
+            <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-[calc(100%-70px)] sm:max-w-3xl">
+              <div className="w-fit max-w-full rounded-2xl bg-white/20 backdrop-blur-lg border border-white/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[8.5px] min-[340px]:text-[9.5px] min-[380px]:text-[10.5px] sm:text-[11px] md:text-xs text-white/90 uppercase tracking-normal min-[360px]:tracking-wider md:tracking-[0.2em] font-medium leading-none whitespace-nowrap overflow-hidden">
                 {tag}
               </div>
-              <h1 className="flex flex-col">
-                <span className="font-primary text-3xl md:text-5xl lg:text-[56px] font-bold lg:leading-[64px] tracking-normal text-white drop-shadow-md">
+              <h1 className="flex flex-col max-w-full">
+                <span className="font-fraunces text-xl min-[360px]:text-2xl min-[440px]:text-3xl sm:text-3xl md:text-5xl lg:text-[56px] font-bold leading-tight sm:leading-snug lg:leading-[64px] tracking-normal text-white drop-shadow-md whitespace-nowrap">
                   Luxury Resort in
                 </span>
-                <i className="font-serif italic font-light text-3xl md:text-5xl lg:text-[56px] lg:leading-[64px] tracking-normal text-white drop-shadow-md whitespace-nowrap">
-                  Khajuraho, Anchored in Heritage
-                </i>
+                <span className="font-fraunces font-light text-base min-[360px]:text-lg min-[440px]:text-xl sm:text-3xl md:text-5xl lg:text-[56px] leading-tight sm:leading-snug lg:leading-[64px] tracking-normal text-white drop-shadow-md whitespace-nowrap sm:whitespace-normal lg:whitespace-nowrap">
+                  <i className="italic">Khajuraho</i>, Anchored in Heritage
+                </span>
               </h1>
             </div>
 
-            {/* Right Navigation Arrows (Frame 1707479802: 88px x 40px, Gap 8px) */}
-            <div className="hidden sm:flex items-center gap-[8px] flex-shrink-0 w-[88px] h-[40px]">
+            {/* Right Navigation Arrows (Compact 22px buttons on bottom-right of mobile image) */}
+            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0 z-30 pb-0.5">
               <button
-                className=" image-banner-prev w-[40px] h-[40px] rounded-full bg-white hover:bg-[#F3ECE5] text-[#1F2523] flex items-center justify-center transition-all shadow-md flex-shrink-0"
+                className="image-banner-prev w-[22px] h-[22px] sm:w-[40px] sm:h-[40px] rounded-full bg-white text-[#1F2523] shadow-md flex items-center justify-center hover:bg-white/90 hover:scale-105 transition-all cursor-pointer flex-shrink-0"
                 aria-label="Previous Slide"
               >
-                <IoChevronBack size={18} />
+                <GoArrowLeft className="w-3 h-3 sm:w-5 sm:h-5 stroke-[0.5]" />
               </button>
               <button
-                className=" image-banner-next w-[40px] h-[40px] rounded-full bg-white hover:bg-[#F3ECE5] text-[#1F2523] flex items-center justify-center transition-all shadow-md flex-shrink-0"
+                className="image-banner-next w-[22px] h-[22px] sm:w-[40px] sm:h-[40px] rounded-full bg-white text-[#1F2523] shadow-md flex items-center justify-center hover:bg-white/90 hover:scale-105 transition-all cursor-pointer flex-shrink-0"
                 aria-label="Next Slide"
               >
-                <IoChevronForward size={18} />
+                <GoArrowRight className="w-3 h-3 sm:w-5 sm:h-5 stroke-[0.5]" />
               </button>
             </div>
           </div>
@@ -114,7 +114,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
 
       {/* 3. Form Section (Figma Specs: Color #4A5A3E, Width 1440px, Height 120px) */}
       <div
-        className="w-full bg-[#4A5A3E] py-6 px-4 md:px-14 text-white border-t border-[#5b6e4d]"
+        className="hidden lg:block w-full bg-[#4A5A3E] py-6 px-4 md:px-14 text-white border-t border-[#5b6e4d]"
         id="form"
       >
         <div className="max-w-[1320px] mx-auto flex flex-col gap-3">

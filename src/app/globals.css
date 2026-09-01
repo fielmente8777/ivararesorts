@@ -9,7 +9,7 @@
   --tertiary: #1F2523;
 }
 
-@theme inline {
+@theme {
   --color-background: #F9FCEE;
   --color-background-2: #E4DDD1;
   --color-background-3: #FAF7F1;
@@ -17,10 +17,23 @@
   --color-secondary: #4A5A3E;
   --color-tertiary: #1F2523;
 
-
   --font-primary: var(--font-cormorant-garamond);
+  --font-fraunces: var(--font-fraunces);
+  --font-manrope: var(--font-manrope);
+}
+
+.font-fraunces {
+  font-family: var(--font-fraunces), serif !important;
+}
+
+.font-primary {
+  font-family: var(--font-cormorant-garamond), serif !important;
+}
+
+.font-manrope {
+  font-family: var(--font-manrope), sans-serif !important;
 }
 
 body {
-  font-family: var(--font-manrope);
+  font-family: var(--font-manrope), sans-serif;
 }

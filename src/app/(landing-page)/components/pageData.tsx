@@ -20,7 +20,7 @@ export const landingPageData = {
     tag: "A 14-Acre Riverfront Sanctuary · Khajuraho Nainital",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
-    images: ["/images/img1.jpg","/images/img2.jpg","/images/img3.jpg","/images/img4.jpg"],
+    images: ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"],
     benefits: "Save 15% when you book direct · Free cancellation on most dates*",
   },
 
@@ -130,13 +130,13 @@ export const landingPageData = {
 
   destinationWedding: {
     tag: "DESTINATION WEDDINGS",
-    title: "A wedding venue as <br /><i class='text-[#4A5A3E] font-serif italic'>unforgettable as the vows.</i>",
+    title: "A wedding venue as <br /><i class='text-secondary'>unforgettable as the vows.</i>",
     description:
-      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike.",
+      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand <br />celebrations alike.",
     image: "/wedding2.png",
     images: ["/wedding1.png", "/wedding2.png"],
-    images1: ["/wedding1.png", "/wedding2.png", "/landing-page/Weddings.png"],
-    images2: ["/wedding2.png", "/wedding1.png", "/landing-page/Rectangle-34624269.png"],
+    images1: ["/wedding1.png", "/wedding3.jpg", "/wedding6.jpg",],
+    images2: ["/wedding2.png", "/wedding4.jpg", "/wedding5.jpg",],
     cta: [
       {
         label: "ENQUIRE NOW",
@@ -186,12 +186,12 @@ export const landingPageData = {
         title: "Pool",
         description: "",
       },
-        {
+      {
         image: "/images/img7.jpg",
         title: "Wellness & Yoga",
         description: "",
       },
-        {
+      {
         image: "/images/img9.jpg",
         title: "Gym & Fitness",
         description: "",
@@ -201,7 +201,7 @@ export const landingPageData = {
 
   curatedExcursion: {
     tag: "CURATED EXCURSIONS",
-    title: "Explore Khajuraho & <br /><i class='text-[#C4A482] font-serif italic'>the wilderness beyond.</i>",
+    title: "Explore Khajuraho & <br /><i class='text-[#C4A482]'>the wilderness beyond.</i>",
     description:
       "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, <br />every excursion is arranged by our concierge.",
     cards: [
