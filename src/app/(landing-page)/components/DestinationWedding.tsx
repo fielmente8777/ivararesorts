@@ -90,11 +90,11 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                   loop={true}
                   speed={800}
                   className="w-full h-full"
-                  renderSlide={(imgSrc, i) => (
+                  renderSlide={(imgSrc) => (
                     <div className="relative w-full aspect-[16/10]">
                       <Image
                         src={imgSrc}
-                        alt={`Banquet Hall Slide ${i + 1}`}
+                        alt={`Banquet Hall Slide`}
                         fill
                         className="object-cover"
                       />
@@ -119,11 +119,11 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                   loop={true}
                   speed={800}
                   className="w-full h-full"
-                  renderSlide={(imgSrc, i) => (
+                  renderSlide={(imgSrc) => (
                     <div className="relative w-full aspect-[16/10]">
                       <Image
                         src={imgSrc}
-                        alt={`Celebration Lawns Slide ${i + 1}`}
+                        alt={`Celebration Lawns Slide`}
                         fill
                         className="object-cover"
                       />

@@ -128,14 +128,14 @@ export default function Accommodations({
                 768: { slidesPerView: 3 },
                 1024: { slidesPerView: 3 },
               }}
-              renderSlide={(card, idx) => (
+              renderSlide={(card) => (
                 <div
-                  key={idx}
+                 
                   className="relative w-full h-[352px] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
                 >
                   <Image
                     src={card.image}
-                    alt={card.title || `Accommodation image ${idx + 1}`}
+                    alt={card.title || `Accommodation image`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
