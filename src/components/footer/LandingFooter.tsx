@@ -18,7 +18,7 @@ const LandingFooter = () => {
   return (
     <footer className="w-full bg-[#4A5A3E] text-white flex flex-col">
       {/* 1. Full-Width Form Bar (Color #4A5A3E) */}
-      <div className="w-full bg-[#4A5A3E] py-8 px-4 md:px-14 border-t border-[#5b6e4d]" id="form">
+      <div className="w-full bg-[#4A5A3E] py-8 px-4 md:px-8 border-t border-[#5b6e4d]" id="form">
         <div className="max-w-[1320px] mx-auto flex flex-col gap-3">
           <Form1
             buttonText="Book Now"

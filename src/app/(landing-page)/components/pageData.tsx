@@ -130,7 +130,7 @@ export const landingPageData = {
 
   destinationWedding: {
     tag: "DESTINATION WEDDINGS",
-    title: "A wedding venue as <br /><i class='text-secondary'>unforgettable as the vows.</i>",
+    title: "A Wedding Venue as <br/><i class='text-secondary'>Unforgettable as the Vows.</i>",
     description:
       "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand <br />celebrations alike.",
     image: "/wedding2.png",
