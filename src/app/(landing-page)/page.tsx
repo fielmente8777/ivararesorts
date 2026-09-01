@@ -20,6 +20,8 @@ export default function Home() {
       {/* 1. Top Offer Ticker */}
       <OfferTicker text={landingPageData.offerTicker.text} />
 
+
+
       {/* 2. Hero Banner */}
       <ImageBanner {...landingPageData.banner} />
 
