@@ -20,7 +20,7 @@ export const landingPageData = {
     tag: "A 14-Acre Riverfront Sanctuary · Khajuraho Nainital",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
-    image: "/landing-page/banner.png",
+    images: ["/images/img1.jpg","/images/img2.jpg","/images/img3.jpg","/images/img4.jpg"],
     benefits: "Save 15% when you book direct · Free cancellation on most dates*",
   },
 
@@ -158,7 +158,7 @@ export const landingPageData = {
   experiences: {
     tagline: "EXPERIENCES",
     title: "Moments Beyond <i class='text-secondary'>the Stay</i>",
-    description: "Built to endure, not to impress. Ivara is a rare intersection of riverfront landscapes, championship golf, restorative wellness and centuries-old cultural heritage, curated for a limited few.",
+    description: "",
     image: "/landing-page/avtar.png",
     cta: [
       {
@@ -172,19 +172,29 @@ export const landingPageData = {
     ],
     cards: [
       {
-        image: "/landing-page/Rectangle-34624269.png",
-        title: "Golf & Leisure",
-        description: "A signature golf course, rare in the region with poolside lounges and landscaped grounds.",
+        image: "/images/img5.jpg",
+        title: "Golf",
+        description: "",
       },
       {
-        image: "/landing-page/banner.png",
+        image: "/images/img8.jpg",
         title: "Curated Dining",
-        description: "Editorial fine dining experience in the heart of Khajuraho.",
+        description: "",
       },
       {
-        image: "/landing-page/Rectangle-34624284.png",
-        title: "Spa & Wellness",
-        description: "Zen gardens, yoga pavilions and restorative therapies.",
+        image: "/images/img6.jpg",
+        title: "Pool",
+        description: "",
+      },
+        {
+        image: "/images/img7.jpg",
+        title: "Wellness & Yoga",
+        description: "",
+      },
+        {
+        image: "/images/img9.jpg",
+        title: "Gym & Fitness",
+        description: "",
       },
     ],
   },

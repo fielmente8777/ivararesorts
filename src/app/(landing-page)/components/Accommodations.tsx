@@ -83,17 +83,21 @@ export default function Accommodations({
                 titleClassName="text-3xl md:text-5xl font-primary text-primary"
               />
             </div>
-            <div className="flex items-center gap-3">
-              {cta.map((button, i) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-4 mt-4">
+              {cta.map((button, index) => (
                 <LinkButton
-                  key={i}
+                  key={index}
                   href={button.href}
                   label={button.label}
-                  className={`rounded-lg py-2.5 px-6 uppercase text-xs tracking-widest ${
-                    i === 0
-                      ? "bg-transparent text-[#263725] border-[#263725] hover:bg-[#263725] hover:text-white"
-                      : "bg-[#263725] text-white border-[#263725] hover:bg-[#1a2619]"
-                  }`}
+                  whatsAppIcon={index === 0}
+                  calendarIcon={index === 1}
+                  className={`justify-center
+                              rounded-md
+                              w-full! py-2 px-7 uppercase text-xs tracking-widest ${
+                                index === 0
+                                  ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
+                                  : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
+                              }`}
                 />
               ))}
             </div>
