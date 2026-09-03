@@ -72,7 +72,7 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                   {tag}
                 </p>
                 <h2
-                  className="text-[22px] sm:text-3xl md:text-5xl font-primary text-[#1F2523] leading-tight"
+                  className="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-[#1F2523] leading-tight"
                   dangerouslySetInnerHTML={{ __html: title }}
                 />
               </div>
@@ -94,7 +94,7 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                     <div className="relative w-full aspect-[16/10]">
                       <Image
                         src={imgSrc}
-                        alt={`Banquet Hall Slide ${i + 1}`}
+                        alt={`Banquet Hall Slide ${(i ?? 0) + 1}`}
                         fill
                         className="object-cover"
                       />
@@ -123,7 +123,7 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
                     <div className="relative w-full aspect-[16/10]">
                       <Image
                         src={imgSrc}
-                        alt={`Celebration Lawns Slide ${i + 1}`}
+                        alt={`Celebration Lawns Slide ${(i ?? 0) + 1}`}
                         fill
                         className="object-cover"
                       />
@@ -150,9 +150,9 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
           {/* Bottom Full-Width Section: Center-Aligned Description & CTAs */}
           <div className="flex flex-col items-center text-center gap-4 lg:gap-6 border-t border-[#E8DFC0]/40 pt-4 lg:pt-8">
             <p
-              className="font-primary italic text-xs sm:text-sm md:text-2xl text-[#CA9D4C] leading-snug max-w-5xl lg:max-w-full text-center mx-auto"
+              className="font-primary italic text-[17px] sm:text-xl md:text-[28px] lg:text-[32px] text-[#CA9D4C] leading-snug max-w-full text-center mx-auto"
               dangerouslySetInnerHTML={{
-                __html: description.replace(/<br\s*\/?>/gi, "<br class='hidden md:inline' />"),
+                __html: description,
               }}
             />
 

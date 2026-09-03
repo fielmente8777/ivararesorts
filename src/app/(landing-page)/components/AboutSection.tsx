@@ -49,7 +49,7 @@ export default function AboutSection({
           </p>
           <SectionHeading
             title={title}
-            titleClassName="text-[22px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
+            titleClassName="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
           />
           <div className="flex flex-col gap-4 text-[15px] md:text-lg text-[#55524E] font-body leading-relaxed max-w-[948px]">
             {paragraphs.map((p, i) => (

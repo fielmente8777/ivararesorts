@@ -8,7 +8,7 @@ import { contact } from "@/utils/constent";
 import { CalendarIcon } from "@/utils/formIcons";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import SwiperCarousel from "../sliders/SwiperCarousel";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 interface ImageBannerProps {
   tag: string;
@@ -54,10 +54,14 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
           data={images}
           slidesPerView={1}
           spaceBetween={0}
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: ".image-banner-next",
             prevEl: ".image-banner-prev",
+          }}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
           }}
           loop={true}
           speed={800}

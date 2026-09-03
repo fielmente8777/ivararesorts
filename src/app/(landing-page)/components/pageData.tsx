@@ -26,7 +26,7 @@ export const landingPageData = {
 
   aboutResort: {
     tag: "ABOUT IVARA RESORT",
-    title: "An Editorial Approach to Luxury, <br /><i class='text-secondary'>in the Heart of Khajuraho.</i>",
+    title: "<span class='block whitespace-nowrap'>An Editorial Approach to Luxury,</span><span class='block whitespace-nowrap'><i class='text-secondary'>in the Heart of Khajuraho.</i></span>",
     paragraphs: [
       "Set amidst the timeless landscapes of Khajuraho, IVARA brings together refined hospitality, natural beauty, and the rich cultural heritage of Central India. Here, every space is designed to feel grand yet personal, elegant yet effortless.",
       "Whether you are planning a romantic escape, a family holiday, a celebration, or simply time away from the noise, IVARA offers something increasingly rare: the luxury of privacy, time, and complete stillness.",
@@ -65,7 +65,7 @@ export const landingPageData = {
 
   accommodations: {
     tag: "ACCOMMODATIONS",
-    title: "Private Cottages. <br /><i class='text-secondary'>Uncompromised Comfort.</i>",
+    title: "<span class='block whitespace-nowrap'>Private Cottages.</span><span class='block whitespace-nowrap'><i class='text-secondary'>Uncompromised Comfort.</i></span>",
     caption: "22 Private Riverfront Cottages, thoughtfully Designed for Privacy, <br />Comfort and a Quiet Connection with Nature.",
     cards: [
       {
@@ -130,9 +130,9 @@ export const landingPageData = {
 
   destinationWedding: {
     tag: "DESTINATION WEDDINGS",
-    title: "A wedding venue as <br /><i class='text-secondary'>unforgettable as the vows.</i>",
+    title: "<span class='block whitespace-nowrap'>A wedding venue as</span><span class='block whitespace-nowrap'><i class='text-secondary'>unforgettable as the vows.</i></span>",
     description:
-      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand <br />celebrations alike.",
+      "Ivara is a complete destination wedding venue in Madhya Pradesh, built for intimate ceremonies and grand celebrations alike.",
     image: "/wedding2.png",
     images: ["/wedding1.png", "/wedding2.png"],
     images1: ["/wedding1.png", "/wedding3.jpg", "/wedding6.jpg",],
@@ -157,7 +157,7 @@ export const landingPageData = {
 
   experiences: {
     tagline: "EXPERIENCES",
-    title: "Moments Beyond <i class='text-secondary'>the Stay</i>",
+    title: "<span class='block whitespace-nowrap'>Moments Beyond</span><span class='block whitespace-nowrap'><i class='text-secondary'>the Stay</i></span>",
     description: "",
     image: "/landing-page/avtar.png",
     cta: [
@@ -201,7 +201,7 @@ export const landingPageData = {
 
   curatedExcursion: {
     tag: "CURATED EXCURSIONS",
-    title: "Explore Khajuraho & <br /><i class='text-[#C4A482]'>the wilderness beyond.</i>",
+    title: "<span class='block whitespace-nowrap'>Explore Khajuraho &</span><span class='block whitespace-nowrap'><i class='text-[#C4A482]'>the wilderness beyond.</i></span>",
     description:
       "From UNESCO-listed temples to Bengal tigers and dramatic granite canyons, <br />every excursion is arranged by our concierge.",
     cards: [
