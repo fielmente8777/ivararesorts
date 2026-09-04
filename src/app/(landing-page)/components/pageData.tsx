@@ -17,7 +17,7 @@ export const landingPageData = {
   },
 
   banner: {
-    tag: "A 14-Acre Riverfront Sanctuary · Khajuraho Nainital",
+    tag: "A 14-Acre Riverfront Sanctuary · Khajuraho",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
     images: ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg", "/images/img4.jpg"],
