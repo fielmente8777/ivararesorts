@@ -61,7 +61,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
           }}
           loop={true}
           autoplay={{
-            delay: 4000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           speed={800}
