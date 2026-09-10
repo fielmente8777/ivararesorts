@@ -77,7 +77,7 @@ export const landingPageData = {
         title: "Luxury Suite",
       },
       {
-        image: "/private-cottage3.jpg",
+        image: "/private-cottage9.jpg",
         title: "Garden Villa",
       },
       {
@@ -251,7 +251,7 @@ export const landingPageData = {
     "/gallery9.jpg",
     "/gallery10.jpg",
     "/gallery11.jpg",
-    "/gallery12.jpg",
+    "/gallery19.jpg",
   ],
 
   faqs: {
