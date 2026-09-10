@@ -130,7 +130,7 @@ export default function Accommodations({
               }}
               renderSlide={(card, idx) => (
                 <div
-                  key={idx}
+                 
                   className="relative w-full h-[352px] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
                 >
                   <Image
