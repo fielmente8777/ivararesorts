@@ -59,6 +59,10 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             nextEl: ".image-banner-next",
             prevEl: ".image-banner-prev",
           }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
           loop={true}
           autoplay={{
             delay: 2000,

@@ -78,7 +78,7 @@ export default function Accommodations({
               </p>
               <SectionHeading
                 title={title}
-                titleClassName="text-[22px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
+                titleClassName="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
               />
             </div>
             {/* Desktop CTAs */}
@@ -128,14 +128,14 @@ export default function Accommodations({
                 768: { slidesPerView: 3 },
                 1024: { slidesPerView: 3 },
               }}
-              renderSlide={(card) => (
+              renderSlide={(card, idx) => (
                 <div
                  
                   className="relative w-full h-[352px] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
                 >
                   <Image
                     src={card.image}
-                    alt={card.title || `Accommodation image`}
+                    alt={card.title || `Accommodation image ${(idx ?? 0) + 1}`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -154,7 +154,7 @@ export default function Accommodations({
 
           {/* Caption with line break after Privacy */}
           <p
-            className="font-primary italic text-center text-xs sm:text-sm md:text-2xl text-[#4A5A3E] max-w-3xl mx-auto leading-snug"
+            className="font-primary italic text-center text-[17px] sm:text-xl md:text-[32px] text-[#4A5A3E] max-w-5xl mx-auto leading-snug"
             dangerouslySetInnerHTML={{
               __html: caption.replace(/<br\s*\/?>/gi, "<br class='hidden md:inline' />"),
             }}

@@ -11,8 +11,10 @@
 
 .marquee-item {
   display: inline-flex;
-  align-items: center; /* vertical center */
-  gap: 32px; /* spacing like image */
+  align-items: center;
+  /* vertical center */
+  gap: 32px;
+  /* spacing like image */
   margin-right: 32px;
   // font-size: 42px;
   // font-weight: 600;
@@ -33,6 +35,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }

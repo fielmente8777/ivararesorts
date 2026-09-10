@@ -3,16 +3,21 @@ import React from "react";
 
 interface OfferTickerProps {
   text?: string;
+  speed?: number;
 }
 
 export default function OfferTicker({
   text = "LIMITED TIME OFFER: UP TO 10% OFF – ENDS THIS SEPTEMBER!",
+  speed = 35,
 }: OfferTickerProps) {
   const items = Array(6).fill(text);
 
   return (
     <div className="bg-[#1C2618] text-[#F3ECE5] py-2.5 overflow-hidden border-y border-[#354330] uppercase text-xs sm:text-sm tracking-[0.2em] font-medium">
-      <div className="marquee-wrapper flex whitespace-nowrap gap-12 animate-marquee">
+      <div 
+        className="marquee-wrapper flex whitespace-nowrap gap-12 animate-marquee"
+        style={{ animationDuration: `${speed}s` }}
+      >
         {items.map((item, idx) => (
           <span key={idx} className="flex items-center gap-6 font-primary text-2xl">
             <span>{item}</span>

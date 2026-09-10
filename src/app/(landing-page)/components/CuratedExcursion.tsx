@@ -44,7 +44,7 @@ const CuratedExcursion: React.FC<CuratedExcursionProps> = ({
                 {tag}
               </p>
               <h2
-                className="text-[22px] sm:text-3xl md:text-5xl font-primary text-white leading-tight max-w-xl"
+                className="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-white leading-tight max-w-xl"
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             </div>

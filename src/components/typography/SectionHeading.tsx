@@ -58,13 +58,13 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
           <Headings
             level={titleLevel}
             heading={title}
-            className={`${titleClassName} ${
+            className={`text-tertiary md:text-5xl/tight text-[2rem]/tight font-primary ${
               mdTextCenter ? "md:text-center" : ""
             } ${textCenter ? "text-center" : ""} ${
               smTextCenter ? "max-md:text-center" : ""
             } ${
-              titleColor ? `text-${titleColor}` : "text-tertiary"
-            } md:text-5xl/tight text-[2rem]/tight  font-primary `}
+              titleColor ? `text-${titleColor}` : ""
+            } ${titleClassName}`}
           />
         )}
 

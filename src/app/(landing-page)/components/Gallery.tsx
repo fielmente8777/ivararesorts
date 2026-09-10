@@ -67,9 +67,9 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
             <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
               EXPLORE GALLERY
             </p>
-            <h2 className="text-[22px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight">
-              Step inside, Before <br />
-              <i className="text-secondary">You Arrive.</i>
+            <h2 className="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight">
+              <span className="block whitespace-nowrap">Step inside, Before</span>
+              <span className="block whitespace-nowrap"><i className="text-secondary">You Arrive.</i></span>
             </h2>
           </div>
 

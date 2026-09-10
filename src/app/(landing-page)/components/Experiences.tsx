@@ -154,7 +154,7 @@ const Experiences: React.FC<ExperiencesProps> = ({
             </p>
             <SectionHeading
               title={title}
-              titleClassName="text-[22px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
+              titleClassName="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
             />
           </div>
 
