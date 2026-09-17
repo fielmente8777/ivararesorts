@@ -21,6 +21,49 @@ export const WebsiteNavData = {
   links: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about-us/" },
-   
   ],
+};
+
+export const newNavData = {
+  navLinks: [
+    {
+      label: "Home",
+      href: "/website/",
+    },
+    {
+      label: "Stay",
+      href: "/website/refined-living-spaces/",
+    },
+    {
+      label: "Experiences",
+      href: "/website/experiences/",
+    },
+    {
+      label: "Weddings & Events",
+      href: "/website/destination-wedding/",
+    },
+    {
+      label: "Explore Khajuraho",
+      href: "/website/nearby-places/",
+    },
+    {
+      label: "Gallery",
+      href: "/website/gallery/",
+    },
+    {
+      label: "Contact",
+      href: "/website/contact-us/",
+    },
+  ],
+
+  logo: {
+    default: "/logo.png",
+    scrolled: "/logo.png",
+    alt: "IVARA Logo",
+  },
+
+  bookingButton: {
+    label: "Book Stay",
+    href: "#form",
+  },
 };

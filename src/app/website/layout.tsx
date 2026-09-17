@@ -7,12 +7,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://therudrakshretreat.com"),
   title:
-    "The Rudraksh Retreat | Best Resort in Tehri Garhwal, Uttarakhand - Escape to The Rudraksh Retreat, a peaceful hideaway in Tehri Garhwal. Enjoy breathtaking views, yoga retreats, and a pure vegetarian stay near Rishikesh!",
+    "",
   description:
-    "Escape to The Rudraksh Retreat, a peaceful hideaway in Tehri Garhwal. Enjoy breathtaking views, yoga retreats, and a pure vegetarian stay near Rishikesh!",
+    "",
 
   keywords: [
-    "The Rudraksh Retreat",
+    "",
     "Luxury retreat Uttarakhand",
     "Wellness retreat Tehri Garhwal",
     "Yoga retreat near Rishikesh",
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://therudrakshretreat.com",
+    canonical: "",
   },
 
   openGraph: {
     title:
-      "The Rudraksh Retreat | Best Resort in Tehri Garhwal, Uttarakhand - Escape to The Rudraksh Retreat, a peaceful hideaway in Tehri Garhwal. Enjoy breathtaking views, yoga retreats, and a pure vegetarian stay near Rishikesh!",
+      "",
     description:
-      "Escape to The Rudraksh Retreat, a peaceful hideaway in Tehri Garhwal. Enjoy breathtaking views, yoga retreats, and a pure vegetarian stay near Rishikesh!",
-    url: "https://therudrakshretreat.com",
-    siteName: "The Rudraksh Retreat",
+      "",
+    url: "",
+    siteName: "",
     type: "website",
   },
 

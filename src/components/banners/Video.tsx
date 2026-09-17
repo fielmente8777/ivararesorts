@@ -2,6 +2,7 @@ import { Container, Section } from "@/components/sectionComponants";
 import { LazyLoadedVideo } from "@/components/Video";
 import LandingNavbar from "../navbar/LandingNavbar";
 import Form1 from "../forms/Form1";
+import NewNav from "../navbar/NewNav";
 
 // interface VideoProps {
 //   video: {
@@ -28,7 +29,7 @@ const Video: React.FC<VideoProps> = ({
       className="relative w-full lg:aspect-[16/7.7] aspect-[4/3.7] overflow-hidden"
     >
       <div className="inset-x-0 absolute z-30 ">
-        <LandingNavbar />
+        <NewNav />
       </div>
       <LazyLoadedVideo src={video} poster={videoPoster} />
       <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80  to-black/10" />

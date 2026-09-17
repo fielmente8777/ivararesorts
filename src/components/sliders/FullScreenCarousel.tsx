@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { LeftLinesIcon, RightLinesIcon } from "@/utils/icons";
 import { Section } from "../sectionComponants";
 import SwiperCarousel from "./SwiperCarousel";
+import NewNav from "../navbar/NewNav";
 
 
 
@@ -23,6 +24,9 @@ const FullScreenCarousel: React.FC<FullScreenCarouselProps> = ({
 
   return (
     <Section  className="w-full relative !py-0">
+        <div className="inset-x-0 absolute z-30 ">
+              <NewNav />
+            </div>
       <SwiperCarousel
         data={images}
         slidesPerView={1}

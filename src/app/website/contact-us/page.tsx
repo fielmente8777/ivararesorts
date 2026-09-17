@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <main>
-      {/* <ImageBanner {...contactPageData?.heroSection} /> */}
+      {/* <Image {...contactPageData?.heroSection} /> */}
       <ImageBanner
         title={contactPageData.heroSection.title}
         tag="Luxury Resort"
