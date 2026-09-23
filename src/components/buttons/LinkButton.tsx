@@ -7,6 +7,7 @@ interface LinkButtonProps {
   label: string;
   className?: string;
   labelClass?: string;
+  whatsAppIcon2?: boolean;
   whatsAppIcon?: boolean;
   callIcon?: boolean;
   calendarIcon?: boolean;
@@ -24,14 +25,21 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   labelClass = "",
   arrowIcon = false,
   whatsAppIcon = false,
+  whatsAppIcon2 = false,
   callIcon = false,
   calendarIcon = false,
   ...props
 }) => {
   const { setIsOpenFormPopUp } = useWebContext();
   const upperLabel = (label || "").toUpperCase();
-  const showWhatsApp = whatsAppIcon || upperLabel.includes("ENQUIRE") || upperLabel.includes("WHATSAPP");
-  const showCalendar = calendarIcon || upperLabel.includes("BOOK") || upperLabel.includes("RESERVE");
+  const showWhatsApp =
+    whatsAppIcon ||
+    upperLabel.includes("ENQUIRE") ||
+    upperLabel.includes("WHATSAPP");
+  const showCalendar =
+    calendarIcon ||
+    upperLabel.includes("BOOK") ||
+    upperLabel.includes("RESERVE");
 
   return (
     <>

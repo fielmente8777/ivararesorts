@@ -71,6 +71,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             disableOnInteraction: false,
           }}
           loop={true}
+         
           speed={800}
           renderSlide={(image) => (
             <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px]">

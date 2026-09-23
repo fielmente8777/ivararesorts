@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.facebook.com",
       },
+      {
+        protocol: "https",
+        hostname: "eazotel-clients-images.s3.ap-south-1.amazonaws.com",
+      },
     ],
     formats: ["image/avif", "image/webp"],
 

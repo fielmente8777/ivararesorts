@@ -32,3 +32,4 @@ export interface CuratedExcursionProps {
     href: string;
   }[];
 }
+
