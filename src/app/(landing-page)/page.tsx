@@ -4,6 +4,7 @@ import SlidingTitle from "@/components/sliders/SlidingTitle";
 import Form1 from "@/components/forms/Form1";
 
 import { landingPageData } from "./components/pageData";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import OfferTicker from "./components/OfferTicker";
 import AboutSection from "./components/AboutSection";
 import Accommodations from "./components/Accommodations";
@@ -26,20 +27,23 @@ export default function Home() {
       <ImageBanner {...landingPageData.banner} />
 
       {/* Mobile Form View */}
-      <div
-        className="bg-[#4A5A3E] lg:hidden py-6 px-4 flex flex-col gap-4 max-w-6xl w-full mx-auto"
-        id="form"
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="bg-[#4A5A3E] lg:hidden py-6"
+        sectionId="form"
       >
-        <Form1
-          buttonText="Book Now"
-          buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
-          showCalendarIcon={true}
-        />
-        <p
-          className="text-xs text-[#D8C2A5] tracking-wide text-center font-normal"
-          dangerouslySetInnerHTML={{ __html: landingPageData.banner.benefits }}
-        />
-      </div>
+        <div className="flex flex-col gap-4 max-w-6xl w-full mx-auto">
+          <Form1
+            buttonText="Book Now"
+            buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
+            showCalendarIcon={true}
+          />
+          <p
+            className="text-xs text-[#D8C2A5] tracking-wide text-center font-normal"
+            dangerouslySetInnerHTML={{ __html: landingPageData.banner.benefits }}
+          />
+        </div>
+      </SectionWithContainer>
 
       {/* 3. About Section */}
       <AboutSection {...landingPageData.aboutResort} />

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
-import { Container, Section } from "@/components/sectionComponants";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import { contact } from "@/utils/constent";
 
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
@@ -42,7 +42,10 @@ const ctaButtons = [
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
   return (
-    <Section className="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden">
+    <SectionWithContainer
+      defaultPadding={false}
+      sectionClassName="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden"
+    >
       {/* Background Mask Overlay */}
       <div
         className="absolute top-0 left-0 right-0 w-full h-[180px] pointer-events-none opacity-15 z-0 overflow-hidden"
@@ -60,100 +63,97 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
           className="object-cover -rotate-180"
         />
       </div>
-      <Container className="relative z-10">
-        {/* Frame 1707480227 Specs: Max Width 1264px, Gap 40px */}
-        <div className="max-w-[1264px] mx-auto flex flex-col items-center gap-[40px] text-center">
-          <div>
-            <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
-              EXPLORE GALLERY
-            </p>
-            <h2 className="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight">
-              <span className="block whitespace-nowrap">Step inside, Before</span>
-              <span className="block whitespace-nowrap"><i className="text-secondary">You Arrive.</i></span>
-            </h2>
-          </div>
+      <div className="relative z-10 max-w-[1264px] mx-auto flex flex-col items-center gap-[40px] text-center">
+        <div>
+          <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
+            EXPLORE GALLERY
+          </p>
+          <h2 className="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight">
+            <span className="block whitespace-nowrap">Step inside, Before</span>
+            <span className="block whitespace-nowrap"><i className="text-secondary">You Arrive.</i></span>
+          </h2>
+        </div>
 
-          {/* Mobile View Only: Swiper Slider with Navigation Buttons */}
-          <div className="block md:hidden relative w-full px-2">
-            <button
-              aria-label="Previous Slide"
-              className="gallery-prev absolute -left-2 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
-            >
-              <ArrowSvg className="rotate-180 w-8 h-8 drop-shadow-md" />
-            </button>
+        {/* Mobile View Only: Swiper Slider with Navigation Buttons */}
+        <div className="block md:hidden relative w-full px-2">
+          <button
+            aria-label="Previous Slide"
+            className="gallery-prev absolute -left-2 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
+          >
+            <ArrowSvg className="rotate-180 w-8 h-8 drop-shadow-md" />
+          </button>
 
-            <SwiperCarousel
-              data={images}
-              slidesPerView={1}
-              spaceBetween={16}
-              loop={true}
-              modules={[Navigation, Autoplay]}
-              autoplay={{ delay: 2500, disableOnInteraction: false }}
-              navigation={{
-                nextEl: ".gallery-next",
-                prevEl: ".gallery-prev",
-              }}
-              renderSlide={(img, idx) => (
-                <div
-                  key={idx}
-                  className="relative aspect-[4/3] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] w-full"
-                >
-                  <Image
-                    src={img}
-                    alt={`Gallery image ${(idx ?? 0) + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              )}
-            />
-
-            <button
-              aria-label="Next Slide"
-              className="gallery-next absolute -right-2 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
-            >
-              <ArrowSvg className="w-8 h-8 drop-shadow-md" />
-            </button>
-          </div>
-
-          {/* Desktop View Only: 3-Column Grid (100% UNTOUCHED) */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 w-full">
-            {images.map((img, idx) => (
+          <SwiperCarousel
+            data={images}
+            slidesPerView={1}
+            spaceBetween={16}
+            loop={true}
+            modules={[Navigation, Autoplay]}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            navigation={{
+              nextEl: ".gallery-next",
+              prevEl: ".gallery-prev",
+            }}
+            renderSlide={(img, idx) => (
               <div
                 key={idx}
-                className="relative aspect-[4/3] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
+                className="relative aspect-[4/3] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] w-full"
               >
                 <Image
                   src={img}
-                  alt={`Gallery image ${idx + 1}`}
+                  alt={`Gallery image ${(idx ?? 0) + 1}`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover"
                 />
               </div>
-            ))}
-          </div>
+            )}
+          />
 
-          <div className="grid grid-cols-2 max-w-[400px] w-full gap-3 sm:gap-4 mt-4 mx-auto">
-            {ctaButtons.map((button, index) => (
-              <LinkButton
-                key={index}
-                href={button.href}
-                label={button.label}
-                whatsAppIcon={index === 0}
-                calendarIcon={index === 1}
-                className={`justify-center
-                                        rounded-md
-                                        w-full py-2.5 px-2 sm:px-4 uppercase text-[10px] sm:text-xs tracking-wider sm:tracking-widest ${
-                                          index === 0
-                                            ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
-                                            : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
-                                        }`}
-              />
-            ))}
-          </div>
+          <button
+            aria-label="Next Slide"
+            className="gallery-next absolute -right-2 top-1/2 -translate-y-1/2 z-30 transition-transform hover:scale-110 cursor-pointer"
+          >
+            <ArrowSvg className="w-8 h-8 drop-shadow-md" />
+          </button>
         </div>
-      </Container>
-    </Section>
+
+        {/* Desktop View Only: 3-Column Grid (100% UNTOUCHED) */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6 w-full">
+          {images.map((img, idx) => (
+            <div
+              key={idx}
+              className="relative aspect-[4/3] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group"
+            >
+              <Image
+                src={img}
+                alt={`Gallery image ${idx + 1}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 max-w-[400px] w-full gap-3 sm:gap-4 mt-4 mx-auto">
+          {ctaButtons.map((button, index) => (
+            <LinkButton
+              key={index}
+              href={button.href}
+              label={button.label}
+              whatsAppIcon={index === 0}
+              calendarIcon={index === 1}
+              className={`justify-center
+                                      rounded-md
+                                      w-full py-2.5 px-2 sm:px-4 uppercase text-[10px] sm:text-xs tracking-wider sm:tracking-widest ${
+                                        index === 0
+                                          ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
+                                          : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
+                                      }`}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionWithContainer>
   );
 };
 

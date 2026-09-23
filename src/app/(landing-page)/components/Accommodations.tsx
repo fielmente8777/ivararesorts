@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
-import { Container, Section } from "@/components/sectionComponants";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -50,7 +50,10 @@ export default function Accommodations({
   const displayCards = cards.length < 6 ? [...cards, ...cards] : cards;
 
   return (
-    <Section className="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden">
+    <SectionWithContainer
+      defaultPadding={false}
+      sectionClassName="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden"
+    >
       {/* Background Mask Overlay */}
       <div
         className="absolute top-0 left-0 right-0 w-full h-[180px] pointer-events-none opacity-15 z-0 overflow-hidden"
@@ -68,8 +71,7 @@ export default function Accommodations({
           className="object-cover -rotate-180"
         />
       </div>
-      <Container className="relative z-10">
-        <div className="flex flex-col gap-10">
+      <div className="relative z-10 flex flex-col gap-10">
           {/* Header Row: Title on Left, CTAs centered vertically on Right */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
@@ -179,7 +181,6 @@ export default function Accommodations({
             ))}
           </div>
         </div>
-      </Container>
-    </Section>
+    </SectionWithContainer>
   );
 }

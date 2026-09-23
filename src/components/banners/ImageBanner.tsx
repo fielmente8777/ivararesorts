@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Form1 from "../forms/Form1";
@@ -9,6 +9,7 @@ import { CalendarIcon } from "@/utils/formIcons";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import SwiperCarousel from "../sliders/SwiperCarousel";
 import { Autoplay, Navigation } from "swiper/modules";
+import { SectionWithContainer, Container } from "../sectionComponants";
 
 interface ImageBannerProps {
   tag: string;
@@ -24,32 +25,38 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
   tag,
   benefits,
 }) => {
-
   return (
     <div className="w-full flex flex-col">
       {/* 1. Header Bar (Figma Specs: Height 144px, Light Cream Background #FAF6F2) */}
-      <header className="w-full bg-[#FAF6F2] py-4 px-6 md:px-14 flex items-center justify-between border-b border-[#E8E0D5] z-30 min-h-[80px]">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-32 md:w-36 h-12">
-            <Image
-              src="/logo.png"
-              alt="IVARA Resorts"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </Link>
+      <header className="w-full bg-[#FAF6F2] border-b border-[#E8E0D5] z-30 min-h-[80px]">
+        <Container className="py-4 px-6 md:px-14 flex items-center justify-between !max-w-[1440px]">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative w-32 md:w-36 h-12">
+              <Image
+                src="/logo.png"
+                alt="IVARA Resorts"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </Link>
 
-        <Link
-          href={contact.callCta}
-          className="bg-[#4A5A3E] hover:bg-[#3d4b33] text-white px-6 py-3 rounded-md font-semibold text-xs tracking-widest uppercase flex items-center gap-2 transition-all shadow-sm"
-        >
-          <CalendarIcon />
-          <span>BOOK NOW</span>
-        </Link>
+          <Link
+            href={contact.callCta}
+            className="bg-[#4A5A3E] hover:bg-[#3d4b33] text-white px-6 py-3 rounded-md font-semibold text-xs tracking-widest uppercase flex items-center gap-2 transition-all shadow-sm"
+          >
+            <CalendarIcon />
+            <span>BOOK NOW</span>
+          </Link>
+        </Container>
       </header>
 
-      <div className="relative w-full overflow-hidden">
+      {/* 2. Hero Section */}
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="relative w-full overflow-hidden"
+        containerClassName="!p-0 !max-w-none relative"
+      >
         <SwiperCarousel
           data={images}
           slidesPerView={1}
@@ -77,7 +84,6 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             </div>
           )}
         />
-        {/* <div className="absolute inset-0 bg-black/35" /> */}
 
         {/* Hero Title & Arrows Bar (Mobile: Prominent text, clean spacing, 28px buttons | Desktop: 100% Original) */}
         <div className="absolute bottom-5 sm:bottom-8 md:bottom-12 inset-x-0 z-20 px-4 sm:px-6 md:px-14">
@@ -114,14 +120,16 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             </div>
           </div>
         </div>
-      </div>
+      </SectionWithContainer>
 
       {/* 3. Form Section (Figma Specs: Color #4A5A3E, Width 1440px, Height 120px) */}
-      <div
-        className="hidden lg:block w-full bg-[#4A5A3E] py-6 px-4 md:px-14 text-white border-t border-[#5b6e4d]"
-        id="form"
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="hidden lg:block w-full bg-[#4A5A3E] py-6 text-white border-t border-[#5b6e4d]"
+        containerClassName="max-w-[1320px] mx-auto px-4 md:px-14"
+        sectionId="form"
       >
-        <div className="max-w-[1320px] mx-auto flex flex-col gap-3">
+        <div className="flex flex-col gap-3">
           <Form1
             buttonText="Book Now"
             buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
@@ -131,7 +139,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             {benefits}
           </p>
         </div>
-      </div>
+      </SectionWithContainer>
     </div>
   );
 };

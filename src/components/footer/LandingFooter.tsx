@@ -8,6 +8,7 @@ import Form1 from "../forms/Form1";
 import { contact } from "@/utils/constent";
 import { CallIcon, MailIcon } from "@/utils/formIcons";
 import { IoLocationOutline } from "react-icons/io5";
+import { SectionWithContainer } from "../sectionComponants";
 
 const LandingFooter = () => {
   const pathName = usePathname();
@@ -18,8 +19,13 @@ const LandingFooter = () => {
   return (
     <footer className="w-full bg-[#4A5A3E] text-white flex flex-col">
       {/* 1. Full-Width Form Bar (Color #4A5A3E) */}
-      <div className="w-full bg-[#4A5A3E] py-8 px-4 md:px-8 border-t border-[#5b6e4d]" id="form">
-        <div className="max-w-[1320px] mx-auto flex flex-col gap-3">
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="w-full bg-[#4A5A3E] py-8 border-t border-[#5b6e4d]"
+        containerClassName="max-w-[1320px] mx-auto !p-0"
+        sectionId="form"
+      >
+        <div className="flex flex-col gap-3 px-4 md:px-8">
           <Form1
             buttonText="Book Now"
             buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
@@ -29,11 +35,15 @@ const LandingFooter = () => {
             Save 15% when you book direct · Free cancellation on most dates*
           </p>
         </div>
-      </div>
+      </SectionWithContainer>
 
       {/* 2. Middle Footer Content Section (Frame 1707480099: Width 1440px, Height 260px, Padding: Top/Bottom 56px, Left/Right 60px) */}
-      <div className="w-full bg-[#4A5A3E] py-[56px] px-6 md:px-[60px] border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto min-h-[260px] flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="w-full bg-[#4A5A3E] py-[56px] border-t border-white/10"
+        containerClassName="max-w-[1440px] mx-auto px-6 md:px-[60px]"
+      >
+        <div className="min-h-[260px] flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           {/* Column 1: Gold Logo Card Frame (Dev Mode Specs: 246px x 148px, Radius 8px, Padding: py-10px px-16px, Gap 16px) */}
           <div className="flex flex-col items-start flex-shrink-0">
             <div className="border border-[#C4A482]/40 rounded-[8px] py-[10px] px-[16px] bg-[#435237]/40 flex flex-col items-center justify-center gap-[16px] w-[246px] h-[148px] shadow-inner">
@@ -91,11 +101,15 @@ const LandingFooter = () => {
             </div>
           </div>
         </div>
-      </div>
+      </SectionWithContainer>
 
       {/* 3. Bottom Copyright Bar (#1D261A) */}
-      <div className="w-full bg-[#1D261A] py-4 px-6 md:px-[60px] border-t border-white/10 text-white/80 text-xs">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-left">
+      <SectionWithContainer
+        defaultPadding={false}
+        sectionClassName="w-full bg-[#1D261A] py-4 border-t border-white/10 text-white/80 text-xs"
+        containerClassName="max-w-[1440px] mx-auto px-6 md:px-[60px]"
+      >
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-left">
           <p>© {new Date().getFullYear()} Ivara Resorts. All rights reserved.</p>
           <p className="text-white/70 text-left">
             Luxury resort in Khajuraho · Destination wedding in Madhya Pradesh · Resort near Panna Tiger Reserve · Powered by{" "}
@@ -109,7 +123,7 @@ const LandingFooter = () => {
             </Link>
           </p>
         </div>
-      </div>
+      </SectionWithContainer>
     </footer>
   );
 };

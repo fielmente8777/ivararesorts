@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import LinkButton from "@/components/buttons/LinkButton";
-import { Container, Section } from "@/components/sectionComponants";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { Autoplay, Controller } from "swiper/modules";
 
@@ -50,7 +50,10 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
   const listImages2 = images2.length > 0 ? images2 : [images[1] || "/landing-page/Rectangle-34624269.png"];
 
   return (
-    <Section className="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden">
+    <SectionWithContainer
+      defaultPadding={false}
+      sectionClassName="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden"
+    >
       {/* Top Left Leaf Decoration (Mobile: 28x32px, Desktop: 43.6x50px) */}
       <div className="absolute top-0 left-0 w-[28px] h-[32px] sm:w-[43.6px] sm:h-[50px] pointer-events-none z-10">
         <Image
@@ -60,9 +63,8 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
           className="object-contain"
         />
       </div>
-      <Container>
-        {/* Frame 1707480220 Specs: Max Width 1320px, Gap 56px */}
-        <div className="max-w-[1320px] mx-auto flex flex-col gap-6 lg:gap-[56px]">
+      {/* Frame 1707480220 Specs: Max Width 1320px, Gap 56px */}
+      <div className="relative z-10 max-w-[1320px] mx-auto flex flex-col gap-6 lg:gap-[56px]">
           {/* Top 2-Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Left Column: Tag, Title, Image 1 */}
@@ -175,8 +177,7 @@ const DestinationWedding: React.FC<DestinationWeddingProps> = ({
             </div>
           </div>
         </div>
-      </Container>
-    </Section>
+    </SectionWithContainer>
   );
 };
 

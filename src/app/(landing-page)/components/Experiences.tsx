@@ -6,7 +6,7 @@ import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { Autoplay, Navigation } from "swiper/modules";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import LinkButton from "@/components/buttons/LinkButton";
-import { Container, Section } from "@/components/sectionComponants";
+import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 
 export interface ExperienceCardProps {
@@ -128,7 +128,10 @@ const Experiences: React.FC<ExperiencesProps> = ({
   cta,
 }) => {
   return (
-    <Section className="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden">
+    <SectionWithContainer
+      defaultPadding={false}
+      sectionClassName="relative bg-[#FAF7F1] py-16 lg:py-24 border-t border-[#EAE3DA] overflow-hidden"
+    >
       {/* Background Mask Overlay */}
       <div
         className="absolute top-0 left-0 right-0 w-full h-[180px] pointer-events-none opacity-15 z-0 overflow-hidden"
@@ -146,41 +149,39 @@ const Experiences: React.FC<ExperiencesProps> = ({
           className="object-cover -rotate-180"
         />
       </div>
-      <Container className="relative z-10">
-        <div className="flex flex-col items-center gap-10 text-center">
-          <div>
-            <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
-              {tagline}
-            </p>
-            <SectionHeading
-              title={title}
-              titleClassName="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
-            />
-          </div>
-
-          {/* Swiper Slider Section */}
-          <ExperienceSlider cards={cards} />
-
-          <div className="grid grid-cols-2 max-w-[400px] w-full gap-3 sm:gap-4 mt-4 mx-auto">
-            {cta.map((button, index) => (
-              <LinkButton
-                key={index}
-                href={button.href}
-                label={button.label}
-                whatsAppIcon={index === 0}
-                calendarIcon={index === 1}
-                className={`justify-center
-                              rounded-md
-                              w-full py-2.5 px-2 sm:px-4 uppercase text-[10px] sm:text-xs tracking-wider sm:tracking-widest ${index === 0
-                    ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
-                    : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
-                  }`}
-              />
-            ))}
-          </div>
+      <div className="relative z-10 flex flex-col items-center gap-10 text-center">
+        <div>
+          <p className="uppercase tracking-[0.25em] text-[10px] sm:text-xs font-semibold text-[#8B6E52] mb-2">
+            {tagline}
+          </p>
+          <SectionHeading
+            title={title}
+            titleClassName="text-[26px] min-[390px]:text-[28px] sm:text-3xl md:text-5xl font-primary text-tertiary leading-tight whitespace-normal"
+          />
         </div>
-      </Container>
-    </Section>
+
+        {/* Swiper Slider Section */}
+        <ExperienceSlider cards={cards} />
+
+        <div className="grid grid-cols-2 max-w-[400px] w-full gap-3 sm:gap-4 mt-4 mx-auto">
+          {cta.map((button, index) => (
+            <LinkButton
+              key={index}
+              href={button.href}
+              label={button.label}
+              whatsAppIcon={index === 0}
+              calendarIcon={index === 1}
+              className={`justify-center
+                            rounded-md
+                            w-full py-2.5 px-2 sm:px-4 uppercase text-[10px] sm:text-xs tracking-wider sm:tracking-widest ${index === 0
+                  ? "bg-white text-[#4A5A3E] border-[#4A5A3E] hover:bg-[#4A5A3E] hover:text-white"
+                  : "bg-[#4A5A3E] text-white hover:bg-[#4A5A3E]/60"
+                }`}
+            />
+          ))}
+        </div>
+      </div>
+    </SectionWithContainer>
   );
 };
 
