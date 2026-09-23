@@ -17,10 +17,38 @@ export const navData = {
 };
 
 export const WebsiteNavData = {
-  logo: "/images/logo.png",
+  logo: "/logo.png",
   links: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about-us/" },
+    // { label: "Home", href: "/" },
+    // { label: "About", href: "/about-us/" },
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Stay",
+      href: "/refined-living-spaces/",
+    },
+    {
+      label: "Experiences",
+      href: "/experiences/",
+    },
+    {
+      label: "Weddings & Events",
+      href: "/destination-wedding/",
+    },
+    {
+      label: "Explore Khajuraho",
+      href: "/nearby-places/",
+    },
+    {
+      label: "Gallery",
+      href: "/gallery/",
+    },
+    {
+      label: "Contact",
+      href: "/contact-us/",
+    },
   ],
 };
 
@@ -28,31 +56,31 @@ export const newNavData = {
   navLinks: [
     {
       label: "Home",
-      href: "/website/",
+      href: "/",
     },
     {
       label: "Stay",
-      href: "/website/refined-living-spaces/",
+      href: "/refined-living-spaces/",
     },
     {
       label: "Experiences",
-      href: "/website/experiences/",
+      href: "/experiences/",
     },
     {
       label: "Weddings & Events",
-      href: "/website/destination-wedding/",
+      href: "/destination-wedding/",
     },
     {
       label: "Explore Khajuraho",
-      href: "/website/nearby-places/",
+      href: "/nearby-places/",
     },
     {
       label: "Gallery",
-      href: "/website/gallery/",
+      href: "/gallery/",
     },
     {
       label: "Contact",
-      href: "/website/contact-us/",
+      href: "/contact-us/",
     },
   ],
 

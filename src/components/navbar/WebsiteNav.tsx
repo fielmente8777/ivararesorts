@@ -5,9 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import LinkButton from "../buttons/LinkButton";
 import MenuButton from "./MenuButton";
 import NavMenu from "./NavMenu";
+import { contact } from "@/utils/constent";
+import Link from "next/link";
+import { WebsiteNavData } from "./navData";
+import { usePathname } from "next/navigation";
+import { useWebContext } from "@/context-api/WebContext";
 
 const WebsiteNav = () => {
-  // const pathname = usePathname();
+  const pathname = usePathname();
+  const { isOpenNavBar } = useWebContext();
 
   // const paths = ["/", "/rooms/"];
   // const isTransparent = paths.includes(pathname);
@@ -59,46 +65,69 @@ const WebsiteNav = () => {
         ${
           // isTransparent
           // ?
-          scrolled ? "bg-secondary backdrop-blur-xl" : "bg-transparent"
+          scrolled ? "bg-secondary/70  backdrop-blur-sm" : "bg-transparent"
           // : "bg-background"
         }
       `}
       >
         {/* Top Navbar */}
-        <nav className="max_width flex items-center justify-between py-4">
-          <div className="flex items-center gap-1 text-white">
-            <MenuButton
-            //  color={isTransparent ? "white" : "primary"}
-            />
-            <span>Menu</span>
-          </div>
-
-          <div className="relative aspect-4/4 w-full max-w-25 lg:ml-20">
+        <nav className="max_width flex items-center justify-between gap-5 py-4">
+          <Link href="/" className="relative block aspect-4/4 lg:w-25 w-15">
             <Image
-              src={scrolled ? "/logo-white.png" : "/logo-yellow.png"}
+              src={!scrolled ? "/logo.png" : "/logo.png"}
               alt="Logo"
               fill
               priority
+              sizes="(max-width: 1024px) 60px, 100px"
               className="object-contain"
             />
-          </div>
+          </Link>
+
+          <ul className="hidden lg:flex items-center gap-8">
+            {WebsiteNavData.links.slice(1).map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  className={`
+                  xl:text-lg! text-xs! text-nowrap font-primary uppercase group font-medium
+                  ${scrolled ? "text-primary" : "text-white"}
+                   transition-colors duration-300
+                   hover:text-primary/80
+                   focus:text-primary/80
+                 `}
+                >
+                  {link.label}
+                  <span
+                    className={`block h-0.5 bg-primary transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <LinkButton
-            href="/"
+            href={contact.WhatsappCta}
             label="Book Stay"
             target="_blank"
             rel="noopener noreferrer"
             className={`
             w-fit rounded-lg
             max-md:hidden
-            uppercase
+            uppercase font-primary
+            xl:text-base! text-xs!  text-nowrap
             ${
               scrolled
-                ? "bg-transparent text-white"
-                : " text-primary border border-primary"
+                ? "bg-transparent text-primary border  font-medium border-primary/50"
+                : " text-white border border-white/50"
             }
             `}
           />
+
+          <div className="flex lg:hidden items-center gap-1 text-white">
+            <MenuButton
+              color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"}
+            />
+          </div>
         </nav>
 
         <NavMenu />
