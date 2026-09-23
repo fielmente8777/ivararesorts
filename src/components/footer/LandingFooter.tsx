@@ -1,21 +1,12 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Form1 from "../forms/Form1";
 import { contact } from "@/utils/constent";
-import { CallIcon, MailIcon } from "@/utils/formIcons";
-import { IoLocationOutline } from "react-icons/io5";
+import { CallIcon, LocationIcon, MailIcon } from "@/utils/formIcons";
 import { SectionWithContainer } from "../sectionComponants";
 
 const LandingFooter = () => {
-  const pathName = usePathname();
-  if (pathName === "/thank-you/") {
-    return null;
-  }
-
   return (
     <footer className="w-full bg-[#4A5A3E] text-white flex flex-col">
       {/* 1. Full-Width Form Bar (Color #4A5A3E) */}
@@ -67,7 +58,9 @@ const LandingFooter = () => {
               LOCATION
             </h3>
             <div className="flex items-start gap-3 text-sm text-white leading-relaxed text-left">
-              <IoLocationOutline size={20} className="text-white flex-shrink-0 mt-0.5" />
+              <span className="text-white flex-shrink-0 mt-1">
+                <LocationIcon />
+              </span>
               <span>
                 Next to Dulhadeva Temple, Khudar Bridge, Khajuraho, Madhya Pradesh, 471606. 7 min from Khajuraho Airport
               </span>

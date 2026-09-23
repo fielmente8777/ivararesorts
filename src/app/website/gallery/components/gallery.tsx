@@ -29,16 +29,19 @@ export default function Gallery({ galleryImages }: Props) {
   //     : galleryImages.filter((img) => img.alt === selected);
 
   return (
-    <SectionWithContainer
-      sectionClassName=" bg-background"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+    <SectionWithContainer sectionClassName="bg-[#F9FCEE] py-12 md:py-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {galleryImages.map((img, index) => (
           <div
             key={index}
-            className="relative w-full aspect-4/3 overflow-hidden"
+            className="relative w-full aspect-[4/3] rounded-[8px] overflow-hidden shadow-md border border-[#E3D9CD] group bg-white"
           >
-            <Image src={img.src} alt={img.alt} fill className="object-cover" />
+            <Image
+              src={img.src}
+              alt={img.alt || `IVARA Gallery ${index + 1}`}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
         ))}
       </div>

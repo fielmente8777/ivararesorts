@@ -2,7 +2,6 @@
   import { Cormorant_Garamond, Fraunces, Manrope } from "next/font/google";
   import "./globals.css";
   import "./style.scss";
-  import LandingFooter from "@/components/footer/LandingFooter";
   import Script from "next/script";
   import Whatsapp from "@/components/ContactButton/WhatsApp";
   import { contact } from "@/utils/constent";
@@ -123,7 +122,6 @@
           </noscript>
           {/* <!-- End Google Tag Manager (noscript) --> */}
           {children}
-          <LandingFooter />
           <Whatsapp whatsAppNumber={contact.phone[0]} />
           <Call callNumber={contact.phone[0]} />
           {/* <!-- Eazbot Script (Next.js) --> */}

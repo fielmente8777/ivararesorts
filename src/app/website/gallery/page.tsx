@@ -4,16 +4,13 @@ import { galleryPageData } from "./components/pageData";
 
 export default function Page() {
   return (
-    <main>
-      {/* <ImageBanner {...galleryPageData?.bannerData} /> */}
+    <main className="bg-[#F9FCEE]">
       <ImageBanner
-        title={galleryPageData.bannerData.title}
-        tag="Gallery"
+        title="Gallery"
         images={[galleryPageData.bannerData.image]}
-        benefits="Explore our gallery and discover the beauty of our resort."
+        centeredTitle={true}
+        showForm={false}
       />
-      {/* <GalleryBanner title={galleryPageData.bannerData.title} /> */}
-
       <Gallery galleryImages={galleryPageData.gallerySection.galleryImages} />
     </main>
   );

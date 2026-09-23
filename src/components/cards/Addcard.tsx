@@ -3,32 +3,30 @@ import { AddCardDataPropsTypes } from "@/@types/types";
 import Link from "next/link";
 import { FC } from "react";
 import { SectionWithContainer } from "../sectionComponants";
-import { ArrowUpIcon } from "@/utils/icons";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Addcard: FC<AddCardDataPropsTypes> = ({ title, description, link }) => {
   return (
-    <SectionWithContainer>
-      <div className="max-w-6xl card-view-scale mx-auto bg-clr2 rounded-[24px] box-shadow">
-        <div className="grid grid-cols-1 items-center md:grid-cols-4 gap-6 max-w-5xl mx-auto md:py-16 py-8 max-md:px-4">
-          <div className="md:col-span-3">
-            <h2 className="md:text-3xl text-2xl font-bold font-plus text-clr max-md:text-center">
+    <SectionWithContainer sectionClassName="bg-[#F9FCEE] pb-16 md:pb-24">
+      <div className="max-w-6xl mx-auto bg-[#FAF7F1] border border-[#E3D9CD] rounded-2xl shadow-sm overflow-hidden">
+        <div className="grid grid-cols-1 items-center md:grid-cols-4 gap-6 p-8 md:p-12">
+          <div className="md:col-span-3 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-primary text-tertiary leading-tight">
               {title}
             </h2>
-            <p className="text-[#686767] md:text-lg max-md:text-center mt-4">
+            <p className="font-manrope text-sm md:text-base text-tertiary/80 mt-3 leading-relaxed">
               {description}
             </p>
           </div>
-          <div className="">
+          <div className="flex justify-center md:justify-end">
             <Link
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-clr1 ml-auto rounded-full md:w-fit flex justify-center items-center text-white py-4 px-6 shadow-inner md:text-lg hover:bg-clr transition"
+              className="bg-primary hover:bg-[#b88c3f] rounded-lg font-manrope font-semibold text-xs sm:text-sm uppercase tracking-widest text-white py-3.5 px-6 shadow-sm flex items-center gap-2 transition-all cursor-pointer"
             >
-              {link.label}{" "}
-              <span className="ml-2">
-                <ArrowUpIcon />
-              </span>{" "}
+              <span>{link.label}</span>
+              <GoArrowUpRight size={16} />
             </Link>
           </div>
         </div>

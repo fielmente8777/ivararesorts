@@ -14,6 +14,7 @@ import Gallery from "./components/Gallery";
 import CuratedExcursion from "./components/CuratedExcursion";
 import Faqs from "./components/Faqs";
 import Testimonials from "./components/Testimonials";
+import LandingFooter from "@/components/footer/LandingFooter";
 
 export default function Home() {
   return (
@@ -83,6 +84,9 @@ export default function Home() {
 
       {/* 15. Testimonials Section */}
       {/* <Testimonials {...landingPageData.testimonials} /> */}
+
+      {/* 16. Landing Footer */}
+      <LandingFooter />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import Call from "@/components/ContactButton/Call";
 import Whatsapp from "@/components/ContactButton/WhatsApp";
-// import WebsiteFooter from "@/components/footer/WebsiteFooter";
+import WebsiteFooter from "@/components/footer/WebsiteFooter";
 import { contact } from "@/utils/constent";
 import { Metadata } from "next";
 
@@ -58,7 +58,7 @@ export default function LandingLayout({
     <>
       {children}
 
-      {/* <WebsiteFooter /> */}
+      <WebsiteFooter />
       <Call callNumber={contact.phone[0]} />
       <Whatsapp whatsAppNumber={contact.phone[0]} />
     </>

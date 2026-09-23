@@ -6,8 +6,8 @@ import { SectionWithContainer } from "../sectionComponants";
 
 const NearByPlacesSlider: FC<NearByPlacesSliderPropsTypes> = ({ cards }) => {
   return (
-    <SectionWithContainer>
-      <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+    <SectionWithContainer sectionClassName="bg-[#F9FCEE] py-12 md:py-16">
+      <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:gap-8">
         {cards.map((card, i) => (
           <NearByPlacesCard key={i} {...card} />
         ))}

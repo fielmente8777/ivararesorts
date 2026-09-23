@@ -16,7 +16,7 @@ export default function SlidingTitle({
 
   return (
     <div
-      className={`relative overflow-hidden py-6 border border-secondary w-full box-shadow 
+      className={`relative overflow-hidden py-6 border border-secondary max_screen_width  box-shadow 
         ${bgColor ? bgColor : "bg-white"}
         ${textColor ? textColor : "text-secondary"}
         `}

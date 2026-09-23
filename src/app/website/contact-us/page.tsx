@@ -7,21 +7,21 @@ import SlidingTitle from "@/components/sliders/SlidingTitle";
 import { homePageData } from "@/components/home-components/pageData";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://therudrakshretreat.com"),
-  title: "Contact Us | The Rudraksh Retreat – Plan Your Stay Today",
+  metadataBase: new URL("https://ivararesorts.com"),
+  title: "Contact Us | IVARA Resorts Khajuraho – Plan Your Stay Today",
   description:
-    "Have questions or need assistance? Contact The Rudraksh Retreat to book your stay and experience the best resort in Tehri Garhwal.",
+    "Have questions or need assistance? Contact IVARA Resorts to book your luxury stay in Khajuraho.",
 
   alternates: {
-    canonical: "https://therudrakshretreat.com/contact-us/",
+    canonical: "https://ivararesorts.com/website/contact-us/",
   },
 
   openGraph: {
-    title: "Contact Us | The Rudraksh Retreat – Plan Your Stay Today",
+    title: "Contact Us | IVARA Resorts Khajuraho – Plan Your Stay Today",
     description:
-      "Have questions or need assistance? Contact The Rudraksh Retreat to book your stay and experience the best resort in Tehri Garhwal.",
-    url: "https://therudrakshretreat.com/contact-us/",
-    siteName: "The Rudraksh Retreat",
+      "Have questions or need assistance? Contact IVARA Resorts to book your luxury stay in Khajuraho.",
+    url: "https://ivararesorts.com/website/contact-us/",
+    siteName: "IVARA Resorts",
     type: "website",
   },
 
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main>
+    <main className="bg-[#F9FCEE]">
       {/* <Image {...contactPageData?.heroSection} /> */}
       <ImageBanner
-        title={contactPageData.heroSection.title}
-        tag="Luxury Resort"
+        title="Contact Us"
         images={[contactPageData.heroSection.image]}
-        benefits="Book directly with us for the best available rate."
+        centeredTitle={true}
+        showForm={false}
       />
       <SlidingTitle items={homePageData.slidingText} />
       <ContactSection contactInfo={contactPageData?.contactInfo} />

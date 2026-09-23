@@ -5,11 +5,13 @@ Thank you.`);
 
 export const contact = {
   email: "reservations@ivararesorts.com",
-  mapUrl: "",
+  mapUrl:
+    "https://maps.google.com/maps?q=Next+to+Dulhadeva+Temple,+Khudar+Bridge,+Khajuraho,+Madhya+Pradesh+471606&t=&z=15&ie=UTF8&iwloc=&output=embed",
   phone: ["+91 93183 66456"],
   address:
     "Next to Dulhadeva Temple, Khudar Bridge, Khajuraho, Madhya Pradesh, 471606. 7 min from Khajuraho Airport",
-  addressLink: "",
+  addressLink:
+    "https://www.google.com/maps/search/?api=1&query=Next+to+Dulhadeva+Temple,+Khudar+Bridge,+Khajuraho,+Madhya+Pradesh+471606",
   socialMedia: {
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
