@@ -32,7 +32,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   buttons,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-image bg-left bg-w-small bg-color">
+    <SectionWithContainer sectionClassName="bg-left bg-w-small bg-color">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] lg:gap-18 gap-8">
         <div className="space-y-6 h-fit lg:sticky lg:top-24">
           <div className="space-y-2">

@@ -67,7 +67,7 @@ export const RoomsPageData = {
           },
           {
             label: "BOOK YOUR STAY",
-            href: "#form",
+            href: contact.WhatsappCta,
           },
         ],
         amenities: [
@@ -138,7 +138,7 @@ export const RoomsPageData = {
           },
           {
             label: "BOOK YOUR STAY",
-            href: "#form",
+            href: contact.WhatsappCta,
           },
         ],
         // amenities: [
@@ -218,7 +218,7 @@ export const RoomsPageData = {
           },
           {
             label: "BOOK YOUR STAY",
-            href: "#form",
+            href: contact.WhatsappCta,
           },
         ],
         // amenities: [
@@ -297,7 +297,7 @@ export const RoomsPageData = {
           },
           {
             label: "BOOK YOUR STAY",
-            href: "#form",
+            href: contact.WhatsappCta,
           },
         ],
         // amenities: [

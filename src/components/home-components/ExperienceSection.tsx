@@ -15,7 +15,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   items,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-image bg-right-bottom bg-w-small bg-color">
+    <SectionWithContainer sectionClassName="bg-right-bottom bg-w-small bg-color">
       <SectionHeading title={title} textCenter />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-8 items-center mt-6 md:mt-12 max-w-6xl mx-auto">
         {items.map((item, index) => (

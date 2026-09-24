@@ -67,10 +67,10 @@ export const homePageData = {
         href: contact.callCta,
       },
 
-      {
-        label: "Know More About Us",
-        href: "/about-us",
-      },
+      // {
+      //   label: "Know More About Us",
+      //   href: "/about-us",
+      // },
     ],
   },
 
@@ -239,7 +239,7 @@ export const homePageData = {
 
     button: {
       label: "Book Your Stay",
-      link: "https://bookings.therudrakshretreat.com/?propertyId=8699",
+      link: contact.WhatsappCta,
     },
   },
 

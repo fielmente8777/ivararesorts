@@ -28,7 +28,7 @@ export interface RoomsSectionProps {
 }
 const RoomsSection = ({ cards }: RoomsSectionProps) => {
   return (
-    <Section className=" md:space-y-20 space-y-14 bg-image bg-right bg-w-small bg-color">
+    <Section className=" md:space-y-20 space-y-14 bg-right bg-w-small bg-color">
       {cards.map((card, index) => (
         <CardsComponent key={index} {...card} />
       ))}
