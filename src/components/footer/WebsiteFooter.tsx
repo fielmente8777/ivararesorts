@@ -17,17 +17,17 @@ const WebsiteFooter: React.FC<WebsiteFooterProps> = ({ className = "" }) => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: "Home", href: "/website/" },
-    { label: "About Us", href: "/website/#about" },
-    { label: "Stay", href: "/website/refined-living-spaces/" },
-    { label: "Experiences", href: "/website/experiences/" },
-    { label: "Contact Us", href: "/website/contact-us/" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/#about" },
+    { label: "Stay", href: "/refined-living-spaces/" },
+    { label: "Experiences", href: "/experiences/" },
+    { label: "Contact Us", href: "/contact-us/" },
   ];
 
   const exploreLinks = [
-    { label: "Gallery", href: "/website/gallery/" },
-    { label: "Destination Weddings", href: "/website/destination-wedding/" },
-    { label: "Explore Khajuraho", href: "/website/nearby-places/" },
+    { label: "Gallery", href: "/gallery/" },
+    { label: "Destination Weddings", href: "/destination-wedding/" },
+    { label: "Explore Khajuraho", href: "/nearby-places/" },
   ];
 
   const policyLinks = [

@@ -10,6 +10,7 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import SwiperCarousel from "../sliders/SwiperCarousel";
 import { Autoplay, Navigation } from "swiper/modules";
 import { SectionWithContainer, Container } from "../sectionComponants";
+import NewNav from "../navbar/NewNav";
 
 interface ImageBannerProps {
   tag?: string;
@@ -34,24 +35,9 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
       {/* 1. Header Bar (Figma Specs: Height 144px, Light Cream Background #FAF6F2) */}
       <header className="w-full bg-[#FAF6F2] border-b border-[#E8E0D5] z-30 min-h-[80px]">
         <Container className="py-4 px-6 md:px-14 flex items-center justify-between !max-w-[1440px]">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-32 md:w-36 h-12">
-              <Image
-                src="/logo.png"
-                alt="IVARA Resorts"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </Link>
-
-          <Link
-            href={contact.callCta}
-            className="bg-[#4A5A3E] hover:bg-[#3d4b33] text-white px-6 py-3 rounded-md font-semibold text-xs tracking-widest uppercase flex items-center gap-2 transition-all shadow-sm"
-          >
-            <CalendarIcon />
-            <span>BOOK NOW</span>
-          </Link>
+          <div className="inset-x-0 absolute z-30 ">
+            <NewNav />
+          </div>
         </Container>
       </header>
 
@@ -85,7 +71,9 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
                 priority
                 className="object-cover"
               />
-              {centeredTitle && <div className="absolute inset-0 bg-black/35" />}
+              {centeredTitle && (
+                <div className="absolute inset-0 bg-black/35" />
+              )}
             </div>
           )}
         />
