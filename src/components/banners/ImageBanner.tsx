@@ -11,6 +11,7 @@ import SwiperCarousel from "../sliders/SwiperCarousel";
 import { Autoplay, Navigation } from "swiper/modules";
 import { SectionWithContainer, Container } from "../sectionComponants";
 import NewNav from "../navbar/NewNav";
+import WebsiteNav from "../navbar/WebsiteNav";
 
 interface ImageBannerProps {
   tag?: string;
@@ -32,16 +33,14 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
 }) => {
   return (
     <div className="w-full flex flex-col">
-      {/* 1. Header Bar (Figma Specs: Height 144px, Light Cream Background #FAF6F2) */}
       <header className="w-full bg-[#FAF6F2] border-b border-[#E8E0D5] z-30 min-h-[80px]">
         <Container className="py-4 px-6 md:px-14 flex items-center justify-between !max-w-[1440px]">
           <div className="inset-x-0 absolute z-30 ">
-            <NewNav />
+            <WebsiteNav />
           </div>
         </Container>
       </header>
 
-      {/* 2. Hero Section */}
       <SectionWithContainer
         defaultPadding={false}
         sectionClassName="relative w-full overflow-hidden"
@@ -134,11 +133,11 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
           sectionId="form"
         >
           <div className="flex flex-col gap-3">
-            <Form1
+            {/* <Form1
               buttonText="Book Now"
               buttonBgClass="bg-[#B88B4A] hover:bg-[#a67c3f] text-white"
               showCalendarIcon={true}
-            />
+            /> */}
             <p className="text-xs text-[#D8C2A5] text-center tracking-wide font-normal mt-1">
               {benefits}
             </p>

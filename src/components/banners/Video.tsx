@@ -41,7 +41,7 @@ const Video: React.FC<VideoProps> = ({
             className="bg-background/80 py-6 px-1.5 rounded-[20px] mt-8 flex flex-col gap-5 max-w-6xl w-full mx-auto"
             id="form"
           >
-            <Form1 />
+            {/* <Form1 /> */}
             <p className="text-sm text-light max-w-3xl text-center mx-auto">
               {benefit}
             </p>
