@@ -38,7 +38,7 @@ const Video: React.FC<VideoProps> = ({
       <div className="absolute inset-0  z-20 md:flex items-end pb-10 justify-center  hidden">
         <Container>
           <div
-            className="bg-background/80 py-6 px-1.5 rounded-[20px] mt-8 flex flex-col gap-5 max-w-6xl w-full mx-auto"
+            className=""
             id="form"
           >
             {/* <Form1 /> */}
