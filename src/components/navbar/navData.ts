@@ -26,7 +26,7 @@ export const WebsiteNavData = {
       href: "/",
     },
     {
-      label: "Stay",
+      label: "Accommodation",
       href: "/refined-living-spaces/",
     },
     {
@@ -59,7 +59,7 @@ export const newNavData = {
       href: "/",
     },
     {
-      label: "Stay",
+      label: "Accommodation",
       href: "/refined-living-spaces/",
     },
     {

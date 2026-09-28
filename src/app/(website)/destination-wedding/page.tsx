@@ -1,22 +1,24 @@
 
-import FullScreenCarousel from "@/components/sliders/FullScreenCarousel";
-
+import ImageBanner from "@/components/banners/ImageBanner";
 import { AboutWedding, Faq, WeddingServices } from "./components";
 import { weddingPageData } from "./weddingPageData";
 import { Addcard } from "@/components/cards";
 import OfferSlider from "@/components/sliders/OfferSlider";
 
 export const metadata = {
-  title: "Destination Wedding in Manali  - Anand Vardhan Resorts",
+  title: "Destination Wedding in Khajuraho - IVARA Resorts",
   description:
-    "Celebrate love with a magical destination wedding at Anand Vardhan Resorts. A perfect blend of tradition, nature, and unforgettable moments.",
+    "Celebrate love with a magical destination wedding at IVARA Resorts. A perfect blend of tradition, nature, and unforgettable moments.",
 };
 
 const page = () => {
   return (
     <div>
-      <FullScreenCarousel
-        {...weddingPageData.bannerData}
+      <ImageBanner
+        title="Weddings & Events"
+        images={weddingPageData.bannerData.images}
+        centeredTitle={true}
+        showForm={false}
       />
       <AboutWedding {...weddingPageData.aboutWeddingData} />
       <WeddingServices {...weddingPageData.weddingServices} />

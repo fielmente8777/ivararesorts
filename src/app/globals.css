@@ -37,3 +37,13 @@
 body {
   font-family: var(--font-manrope), sans-serif;
 }
+
+h1 i,
+h2 i,
+h3 i,
+h4 i,
+h5 i,
+h6 i {
+  color: var(--color-primary);
+  font-style: italic;
+}

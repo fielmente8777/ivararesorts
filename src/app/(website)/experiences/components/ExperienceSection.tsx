@@ -8,7 +8,7 @@ interface ExperienceItem {
   description: string[];
   image: string;
   quote?: string;
-  cta: {
+  cta?: {
     label: string;
     href: string;
   };
@@ -47,7 +47,9 @@ const ExperiencesSection = ({ items }: ExperiencesSectionProps) => {
                       className="w-full h-auto rounded-2xl object-cover"
                     />
                   </div>
-                  <p className="text-lg text-primary">{item.subtitle}</p>
+                  {item.subtitle ? (
+                    <p className="text-lg text-primary">{item.subtitle}</p>
+                  ) : null}
 
                   {item.quote && (
                     <blockquote className="italic text-gray-600 mb-4">
@@ -62,12 +64,14 @@ const ExperiencesSection = ({ items }: ExperiencesSectionProps) => {
                           {item}
                         </p>
                       ))}
-                    <LinkButton
-                      label={item.cta.label}
-                      href={item.cta.href}
-                      className={`bg-primary text-white capitalize font-primary ${reverse ? "lg:ml-auto" : ""}`}
-                      arrowIcon={false}
-                    />
+                    {item.cta && (
+                      <LinkButton
+                        label={item.cta.label}
+                        href={item.cta.href}
+                        className={`bg-primary text-white capitalize font-primary ${reverse ? "lg:ml-auto" : ""}`}
+                        arrowIcon={false}
+                      />
+                    )}
                   </div>
                 </div>
 

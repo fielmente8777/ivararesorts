@@ -375,3 +375,65 @@ export const RightLinesIcon = () => (
     <rect y={9} width={60} height={2} fill="currentColor" />
   </svg>
 );
+
+// ==================== ROAD ICON ====================
+export const RoadIcon = ({ className = "w-16 h-16 text-white" }: { className?: string }) => (
+  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <circle cx="40" cy="40" r="38" stroke="currentColor" strokeWidth="2" />
+    {/* Pin */}
+    <path d="M57 26.5C57 30 52.5 35.5 52.5 35.5S48 30 48 26.5C48 24 50 22 52.5 22C55 22 57 24 57 26.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="52.5" cy="26.5" r="2" fill="currentColor" />
+    {/* Path */}
+    <path d="M38 52C42 52 46 48 46 43C46 38 52.5 38 52.5 35.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="3 3" />
+    {/* Car */}
+    <path d="M26 42L28 35C28.5 33.5 29.5 33 31 33H37C38.5 33 39.5 33.5 40 35L42 42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M28 41L29.5 36H38.5L40 41H28Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    <rect x="23" y="41" width="22" height="11" rx="3" stroke="currentColor" strokeWidth="2" />
+    <circle cx="27.5" cy="45.5" r="2" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="40.5" cy="45.5" r="2" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="32" y1="46" x2="36" y2="46" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="25" y="52" width="4" height="3" rx="1" stroke="currentColor" strokeWidth="1.5" />
+    <rect x="39" y="52" width="4" height="3" rx="1" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);
+
+// ==================== TRAIN ICON ====================
+export const TrainIcon = ({ className = "w-16 h-16 text-white" }: { className?: string }) => (
+  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <circle cx="40" cy="40" r="38" stroke="currentColor" strokeWidth="2" />
+    {/* Pantograph */}
+    <path d="M34 22H46M40 22V25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    {/* Train Body */}
+    <rect x="30" y="25" width="20" height="26" rx="4" stroke="currentColor" strokeWidth="2" />
+    {/* Windshield */}
+    <rect x="33" y="29" width="14" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="40" y1="29" x2="40" y2="37" stroke="currentColor" strokeWidth="1.5" />
+    {/* Headlights */}
+    <circle cx="35" cy="43" r="2" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="45" cy="43" r="2" stroke="currentColor" strokeWidth="1.5" />
+    {/* Bumper */}
+    <line x1="30" y1="47" x2="50" y2="47" stroke="currentColor" strokeWidth="1.5" />
+    {/* Tracks */}
+    <line x1="32" y1="51" x2="26" y2="60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="48" y1="51" x2="54" y2="60" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    {/* Sleepers */}
+    <line x1="30" y1="55" x2="50" y2="55" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="27" y1="58.5" x2="53" y2="58.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+// ==================== AIR ICON ====================
+export const AirIcon = ({ className = "w-16 h-16 text-white" }: { className?: string }) => (
+  <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <circle cx="40" cy="40" r="38" stroke="currentColor" strokeWidth="2" />
+    {/* Airplane */}
+    <path d="M32 36L48 29C50 28 52 29 52.5 30.5C53 31.5 52.5 32.5 51 33L43 38L42 44L39 43.5L38.5 40L32 43L31 39.5L37 37L32 36Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    {/* Globe Dome */}
+    <path d="M24 59C24 50.16 31.16 43 40 43C48.84 43 56 50.16 56 59" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    {/* Latitude */}
+    <path d="M26.5 53C30 51 35 49.5 40 49.5C45 49.5 50 51 53.5 53" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    {/* Longitude */}
+    <ellipse cx="40" cy="59" rx="8" ry="16" stroke="currentColor" strokeWidth="1.5" />
+    <line x1="40" y1="43" x2="40" y2="59" stroke="currentColor" strokeWidth="1.5" />
+  </svg>
+);

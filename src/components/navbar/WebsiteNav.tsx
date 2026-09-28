@@ -65,7 +65,7 @@ const WebsiteNav = () => {
         ${
           // isTransparent
           // ?
-          scrolled ? "bg-secondary/70  backdrop-blur-sm" : "bg-transparent"
+          scrolled ? "bg-secondary/90  backdrop-blur-sm" : "bg-transparent"
           // : "bg-background"
         }
       `}
@@ -90,10 +90,10 @@ const WebsiteNav = () => {
                   href={link.href}
                   className={`
                   xl:text-lg! text-xs! text-nowrap font-primary uppercase group font-medium
-                  ${scrolled ? "text-primary" : "text-white"}
-                   transition-colors duration-300
-                   hover:text-primary/80
-                   focus:text-primary/80
+                  text-white
+                  transition-colors duration-300
+                  hover:text-primary
+                  focus:text-primary
                  `}
                 >
                   {link.label}
@@ -114,19 +114,13 @@ const WebsiteNav = () => {
             w-fit rounded-lg
             max-md:hidden
             uppercase font-primary
-            xl:text-base! text-xs!  text-nowrap
-            ${
-              scrolled
-                ? "bg-transparent text-primary border  font-medium border-primary/50"
-                : " text-white border border-white/50"
-            }
+            xl:text-base! text-xs! text-nowrap
+            text-white border border-white/70 hover:bg-white hover:text-secondary transition-all
             `}
           />
 
           <div className="flex lg:hidden items-center gap-1 text-white">
-            <MenuButton
-              color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"}
-            />
+            <MenuButton color="white" />
           </div>
         </nav>
 

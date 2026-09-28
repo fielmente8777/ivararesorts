@@ -1,65 +1,67 @@
 export const experiencePageData = {
   heroSection: {
     title: "A Journey <i>Awaits</i>",
-    video: "/videos/view.mp4",
-    videoPoster: "/videos/view.png",
-    benefit :"Book directly with us for the best available rate. ",
+    images: ["/gallery4.jpg"],
   },
   introSection: {
-    title: `सर्वं ज्ञानं मयि स्थितम्। सर्वं कर्म मयि स्थितम्। सर्वं शक्तिः मयि स्थितम्। सर्वं आनन्दं मयि स्थितम्।`,
-    subTitle: `All knowledge resides within me. All actions reside within me. All power resides within me. All bliss resides within me.`,
+    title: "",
+    subTitle: "A Journey of Mindfulness & Discovery",
     description:
-      "At The Rudraksh Retreat, every experience is a journey of discovery, designed to guide you toward inner harmony and renewal. From serene treks through sacred Himalayan landscapes to the art of Ayurvedic cooking, our curated offerings invite you to reconnect with nature, culture, and self. Rooted in ancient traditions and crafted to awaken your senses, each moment nourishes your spirit, blending tranquility, adventure, and personal growth.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
   },
   bannerSection: {
-    image: "/new-img/_DSC0530.webp",
-    // image: "/DJI_20240914065117_0341_D-scaled.jpg",
+    image: "/gallery10.jpg",
   },
   experiencesSection: {
     items: [
       {
-        title: "Mindfull Trekking <i class='text-p22'>Retreats</i>",
-        subtitle: `गच्छन्ति ते मूढा गंगामूलं तपःसाधना।
-         सुखं शान्तिं च मोक्षं च प्राप्यते तद्गतिः शुभा॥
-        `,
+        title: "Golf",
+        subtitle: "",
         description: [
-          '"Those who journey to the sacred source of the Ganga in pursuit of spiritual practice attain peace, joy, and liberation through its auspicious path." ',
-          `Follow in the footsteps of ancient sages who traversed the sacred Gaumukh Tapovan trail to the source o the Ganga, seeking enlightenment and connection with the divine. These mindful treks immerse you in th spiritual essence of the Himalayas, blending adventure with reflection. Each step through these hallowe landscapes nurtures harmony of body, mind, and spirit, offering a journey of transformation an self-discovery."`,
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lacinia nunc, ut efficitur risus tristique eu. Nullam cursus tellus id sapien gravida, at facilisis tellus ultrices.",
         ],
-        image: "/blogs/service2-prlx.jpg",
-        cta:{
-          label: "Learn more",
-          href: '/itinerary-2',
-        }
+        image: "/images/img5.jpg",
       },
 
       {
-        title: "Ayurvedic Cooking <i class='text-p22'>Classes</i>",
-        subtitle: "अन्नं विष्णुं प्रजापतिं।",
+        title: "Curated <i class='text-primary'>Dining</i>",
+        subtitle: "",
         description: [
-          `"Food is the medicine of life and the foundation of well-being."`,
-          "Embark on a culinary journey with Roopali that blends the wisdom of Ayurveda with the rich flavors of traditional Indian cuisine. Experience the transformative power of food as medicine, and embrace a deeper connection to your well-being through the art of Ayurvedic cooking. With Roopali’s expert guidance, you’ll learn to create dishes that not only delight the palate but also nurture the body and mind.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum, justo ut pellentesque venenatis, purus velit lacinia sem, sed tempor est odio sit amet lectus.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet lacus id ligula convallis facilisis. Sed ac nisi ut neque tempor ultrices non vel massa.",
         ],
-        image: "/blogs/WhatsApp-Image-2025-05-13-at-2.03.56-PM-scaled.jpeg",
-        cta:{
-          label: "Learn more",
-          href: '/experiences',
-        }
+        image: "/images/img8.jpg",
       },
 
       {
-        title: "Sustainability And Local <i class='text-p22'>Support</i>",
-        subtitle: `दीनं दुःखितं लोकं य: सहायं प्राप्नुयात्।
-सदा सुखमणि पश्येत्, तस्य कार्यं सदा शुभम्।`,
+        title: "Pool",
+        subtitle: "",
         description: [
-          `"He who provides support to the needy and the suffering, always witnesses the joy and prosperity of their efforts, as their work remains ever auspicious."`,
-          "At The Rudraksh Retreat, we empower the local community by offering employment opportunities to villagers who would otherwise seek work outside their villages. Through fair wages, we help sustain the local way of life. Our guests also contribute by donating books and educational materials to the local government school, supporting the growth and educational development of the region.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel turpis eu libero vulputate dignissim. Morbi efficitur risus vel justo feugiat, ac molestie nunc facilisis.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
         ],
-        image: "/blogs/1-e1747165008992.png",
-        cta:{
-          label: "Learn more",
-          href: '/experiences',
-        }
+        image: "/images/img6.jpg",
+      },
+
+      {
+        title: "Wellness & <i class='text-primary'>Yoga</i>",
+        subtitle: "",
+        description: [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        ],
+        image: "/images/img7.jpg",
+      },
+
+      {
+        title: "Gym & <i class='text-primary'>Fitness</i>",
+        subtitle: "",
+        description: [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
+        ],
+        image: "/images/img9.jpg",
       },
     ],
   },

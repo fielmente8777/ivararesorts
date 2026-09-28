@@ -25,12 +25,12 @@ export default function Home() {
 
 
       {/* 2. Hero Banner */}
-      <ImageBanner {...landingPageData.banner} />
+      <ImageBanner {...landingPageData.banner} isLandingPage={true} />
 
       {/* Mobile Form View */}
       <SectionWithContainer
         defaultPadding={false}
-        sectionClassName="bg-[#4A5A3E] lg:hidden py-6"
+        sectionClassName="bg-[#4A5A3E] py-6"
         sectionId="form"
       >
         <div className="flex flex-col gap-4 max-w-6xl w-full mx-auto">

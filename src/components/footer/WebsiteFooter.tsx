@@ -90,9 +90,10 @@ const WebsiteFooter = () => {
                       href={item.href}
                       className="flex gap-2"
                     >
-                      <span className={`  ${index === 3 ? "" : "capitalize"} ${index === 3 && suIndex !== 2 ? "font-body" : ""} `}>
-                        {item.label}
-                      </span>
+                      <span
+                        className={`  ${index === 3 ? "" : "capitalize"} ${index === 3 && suIndex !== 2 ? "font-body" : ""} `}
+                        dangerouslySetInnerHTML={{ __html: item.label }}
+                      />
                     </Link>
                     {item.label2 && <span className="-ml-1">,</span>}
                     {item.label2 && item.href2 && (
@@ -123,7 +124,7 @@ const WebsiteFooter = () => {
           <div className="flex max-md:flex-col items-center justify-between gap-2 text-secondary ">
             {" "}
             <p className="max-md:text-center">
-              © {new Date().getFullYear()} The Rudraksh Retreat. All rights
+              © {new Date().getFullYear()} Ivara Resorts. All rights
               reserved.
             </p>
             <p className="max-md:text-center">

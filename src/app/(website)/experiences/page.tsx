@@ -3,12 +3,10 @@ import IntroSection from "./components/IntroSection";
 import { experiencePageData } from "./pageData";
 import BannerSection from "./components/BannerSection";
 import ExperiencesSection from "./components/ExperienceSection";
-import VideoBanner from "@/components/banners/VideoBanner";
+import ImageBanner from "@/components/banners/ImageBanner";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import Form1 from "@/components/forms/Form1";
 import { Metadata } from "next";
-import Video from "@/components/banners/Video";
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://therudrakshretreat.com"),
@@ -43,16 +41,19 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 const page = () => {
   return (
     <main>
-      <Video {...experiencePageData?.heroSection} />
+      <ImageBanner
+        title="Experiences"
+        images={experiencePageData.heroSection.images}
+        centeredTitle={true}
+        showForm={false}
+      />
       <IntroSection {...experiencePageData?.introSection} />
       <BannerSection {...experiencePageData?.bannerSection} />
       <ExperiencesSection {...experiencePageData?.experiencesSection} />
-       <SectionWithContainer
+      <SectionWithContainer
         defaultPadding={false}
         sectionClassName="bg-background lg:py-12 py-6"
         containerClassName="md:py-3"

@@ -46,7 +46,7 @@ const Accordion: React.FC<AccordionProps> = ({
             aria-label="accordion icon"
             role="svg"
             onClick={() => setIsAccordionOpen(!isAccordionOpen)}
-            className={`cursor-pointer ${iconColor ? iconColor : "text-[#FF8A47]"} text-lg ${
+            className={`cursor-pointer ${iconColor ? iconColor : "text-primary"} text-lg ${
               isAccordionOpen ? "rotate-360" : "rotate-180"
             }  p-1 duration-300 transition-all ease-in-out`}
           >

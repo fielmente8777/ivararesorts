@@ -36,7 +36,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] lg:gap-18 gap-8">
         <div className="space-y-6 h-fit lg:sticky lg:top-24">
           <div className="space-y-2">
-            <p className="text-p22 uppercase font-semibold">{subTitle}</p>
+            <p className="text-primary uppercase font-semibold">{subTitle}</p>
             <SectionHeading title={title} />
           </div>
           <ul className="lg:flex hidden max-md:flex-col gap-3.5  w-full">

@@ -38,7 +38,9 @@ const GettingHereSection: React.FC<GettingHereSectionProps> = ({
                 <h3 className="text-white md:text-[28px] text-2xl text-center font-primary">
                   {option.title}
                 </h3>
-                <p className="text-white text-center">{option.description}</p>
+                <p className="text-white text-center whitespace-pre-line text-sm md:text-base leading-relaxed">
+                  {option.description}
+                </p>
               </div>
             </div>
           ))}

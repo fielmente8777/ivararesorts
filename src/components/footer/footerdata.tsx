@@ -109,7 +109,7 @@ export const websiteFooterData: WebsiteFooterData = {
       links: [
         { label: "Home", href: "/" },
         // { label: "About us", href: "/about-us" },
-        { label: "Stay", href: "/refined-living-spaces/" },
+        { label: "Accommodation", href: "/refined-living-spaces/" },
         { label: "Experiences", href: "/experiences" },
         { label: "Contact us", href: "/contact-us" },
       ],
@@ -138,7 +138,8 @@ export const websiteFooterData: WebsiteFooterData = {
       title: "Contact",
       links: [
         {
-          label: "Address: " + contact.address,
+          label:
+            "Address: Next to Dulhadeva Temple, Khudar Bridge, Khajuraho, Madhya Pradesh, 471606.<br />7 min from Khajuraho Airport",
           href: contact.addressLink,
           icon: <FillLocationIcon />,
         },

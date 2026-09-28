@@ -43,10 +43,10 @@ export default function RefinedLivingSpaces() {
     <main>
       {/* <ImageBanner {...RoomsPageData?.heroSection} /> */}
       <ImageBanner
-        title={RoomsPageData.heroSection.title}
-        tag="Stay"
+        title="Accommodation"
         images={[RoomsPageData.heroSection.image]}
-        benefits="Discover our refined Himalayan stays."
+        centeredTitle={true}
+        showForm={false}
       />
       <SectionWithContainer sectionClassName="bg-image bg-left bg-w-small">
         <SectionHeading

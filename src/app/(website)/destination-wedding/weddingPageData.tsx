@@ -1,16 +1,15 @@
-import { imageUrl } from "@/data/links";
 import { contact } from "@/utils/constent";
 
 export const weddingPageData = {
   bannerData: {
     title: "Destination Wedding",
-    images: ["/wedding-bnr.png"],
+    images: ["/landing-page/Weddings.png"],
   },
   aboutWeddingData: {
-    src: "/weddingimg.png",
+    src: "/wedding1.png",
     title: "WE CREATE . YOU CELEBRATE",
     subTitle: "Your Forever Starts Here",
-    description: `Imagine saying "I do" against the breathtaking backdrop of snow-capped Himalayan peaks and verdant valleys – welcome to Anand Vardhan Resort, Manali's premier luxury wedding destination. Nestled between Kullu and Manali in the heart of Himachal Pradesh, our exclusive mountain wedding resort transforms your dream celebration into an unforgettable reality. From intimate hill station weddings surrounded by lush green lawns to grand destination wedding celebrations that can host thousands of guests, every moment becomes a picture-perfect memory etched against nature's most stunning canvas. Our dedicated wedding specialists craft bespoke experiences that blend traditional Indian wedding ceremonies with modern luxury amenities, ensuring your special day is nothing short of magical. Whether you're planning a romantic mountain wedding, a lavish destination wedding in Himachal Pradesh, or an enchanting outdoor ceremony under starlit Himalayan skies, Anand Vardhan Resort offers the perfect venue where dreams become forever memories.`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.`,
     links: [
       {
         href: "tel:" + contact.phone,
@@ -26,42 +25,37 @@ export const weddingPageData = {
     title: "Featured Wedding Services",
     cards: [
       {
-        src: "/icons/decoration.png",
+        src: "/wedding/decoration.png",
         alt: "Decorations",
         name: "Decorations",
       },
       {
-        src: "/icons/hospitality.png",
+        src: "/wedding/hygine.png",
         alt: "Hospitality",
         name: "Hospitality",
       },
       {
-        src: "/icons/entertainment.png",
+        src: "/wedding/entertainment.png",
         alt: "Entertainment",
         name: "Entertainment",
       },
       {
-        src: "/icons/photography.png",
+        src: "/wedding/photography.png",
         alt: "Photography",
         name: "Photography",
       },
-      // {
-      //   src: "/icons/hygiene.png",
-      //   alt: "Hygiene",
-      //   name: "Hygiene",
-      // },
       {
-        src: "/icons/vegmenu.png",
+        src: "/wedding/pure-veg-menu.png",
         alt: "Pure Veg Menu",
         name: "Pure Veg Menu",
       },
       {
-        src: "/icons/branding.png",
+        src: "/wedding/branding.png",
         alt: "Branding",
         name: "Branding",
       },
       {
-        src: "/icons/safety.png",
+        src: "/wedding/safety.png",
         alt: "Safety",
         name: "Safety",
       },
@@ -71,52 +65,67 @@ export const weddingPageData = {
     title: "What We Offer",
     cards: [
       {
-        src: imageUrl + "destination/offer1.webp",
+        src: "/wedding1.png",
         alt: "Pre-Wedding Events",
       },
       {
-        src: imageUrl + "destination/offer2.webp",
-        alt: "Haldi Ceremony ",
+        src: "/wedding2.png",
+        alt: "Haldi Ceremony",
       },
       {
-        src: imageUrl + "destination/offer3.webp",
-        alt: "Mehendi Ceremony ",
+        src: "/wedding3.jpg",
+        alt: "Mehendi Ceremony",
       },
       {
-        src: imageUrl + "destination/offer4.webp",
+        src: "/wedding4.jpg",
         alt: "Engagement",
       },
       {
-        src: imageUrl + "destination/offer5.webp",
+        src: "/wedding5.jpg",
         alt: "Reception",
       },
     ],
   },
   faq: {
     title: "Frequently Asked Questions",
-    src: "/weddingimg2.png",
+    src: "/wedding6.jpg",
     faqData: [
       {
         id: 1,
-        ques: "Are there any advantages/perks of having a destination wedding?",
-        ans: "Today, many couples choose a more intimate gathering at a place they love over traditional (and expensive) weddings. Having a destination wedding allows couples to extend their celebration from four hours to four days, while creating memories that will last a lifetime with their friends and family. Destination weddings can also be more affordable for couples since they tend to be more intimate than traditional weddings.",
+        ques: "What are the check-in and check-out timings?",
+        ans: "Check-in is at 2:00 PM and check-out is at 11:00 AM.",
       },
       {
         id: 2,
-        ques: "Isn't planning a destination wedding less stressful than a traditional, at-home wedding?",
-        ans: "Planning a destination wedding can be less stressful than a traditional at-home wedding because it typically involves a smaller guest list and resorts often offer all-inclusive packages with on-site coordinators. These planners handle many of the logistics, from catering to décor, reducing decision fatigue. The setting itself serves as natural décor, cutting down on extras. While travel coordination is required, the overall simplicity and built-in vacation vibe often make the process more enjoyable and relaxed.",
+        ques: "How can I book destination wedding?",
+        ans: "You can enquire via our form or call our team directly for bespoke wedding packages.",
       },
       {
         id: 3,
-        ques: "Can I plan my destination wedding within 3 months?",
-        ans: "Yes, you can plan your destination wedding within 3 months with Anand Vardhan Resort's expert support. Their experienced in-house planners streamline every detail, from décor and catering to guest accommodations. The resort offers customizable wedding packages, saving you time and stress. With a scenic venue, on-site services, and a dedicated team handling logistics, you can focus on enjoying the moment. Anand Vardhan Resort makes last-minute destination weddings smooth, stylish, and memorable.",
+        ques: "Is complimentary Wi-Fi available?",
+        ans: "Yes, high-speed complimentary Wi-Fi is available across the resort property.",
+      },
+      {
+        id: 4,
+        ques: "Does the resort have a restaurant?",
+        ans: "Yes, we feature multi-cuisine fine dining with organic locally sourced ingredients.",
+      },
+      {
+        id: 5,
+        ques: "Is parking available at the resort?",
+        ans: "Yes, complimentary secure valet and self-parking is available for all guests.",
+      },
+      {
+        id: 6,
+        ques: "How can I make a reservation?",
+        ans: "You can book directly using our website form or contact us via Call/WhatsApp.",
       },
     ],
   },
   addCardData: {
-    title: "Discover the best of Himachal Pradesh tourism from Anand Vardhan Resort",
+    title: "Discover the best of Himachal Pradesh tourism from Ivara Resort",
     description:
-      "Your perfect gateway to Naggar's top attractions, heritage sites, and natural wonders in the heart of Kullu Valley.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: {
       href: contact.WhatsappCta,
       label: "Book Now",
