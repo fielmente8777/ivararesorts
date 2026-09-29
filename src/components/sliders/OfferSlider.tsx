@@ -10,7 +10,9 @@ export const OfferSlider: FC<OfferSliderPropsTypes> = ({ title, cards }) => {
   return (
     <SectionWithContainer sectionClassName="offer">
       <div className="flex flex-col md:gap-14 gap-8">
-        <h2 className="text-3xl font-plus font-semibold text-center text-clr">{title}</h2>
+        <h2 className="font-primary text-tertiary md:text-5xl/tight text-[2rem]/tight font-bold text-center">
+          {title}
+        </h2>
         <SwiperCarousel
           data={cards}
           modules={[EffectCoverflow, Navigation, Autoplay]}
@@ -61,10 +63,10 @@ export const OfferSlider: FC<OfferSliderPropsTypes> = ({ title, cards }) => {
                   sizes="100%"
                   quality={100}
                   //   priority
-                  className="w-full h-full object-cover rounded-[4px]"
+                  className="w-full h-full object-cover rounded-xl shadow-sm"
                 />
               </figure>
-              <figcaption className="text-2xl font-plus text-center font-semibold text-clr mt-4">
+              <figcaption className="text-xl md:text-2xl font-primary text-center font-semibold text-tertiary mt-4">
                 {card.alt}
               </figcaption>
             </div>

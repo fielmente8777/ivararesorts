@@ -38,7 +38,7 @@ const Accordion: React.FC<AccordionProps> = ({
           className={`flex items-center justify-between gap-4 w-full md:py-6 py-4`}
         >
           <h3
-            className={`font-semibold font-plus text-[1.375rem] text-clr ${questionClassName}`}
+            className={`font-semibold font-primary text-xl md:text-2xl text-tertiary ${questionClassName}`}
           >
             {ques}
           </h3>
@@ -63,7 +63,7 @@ const Accordion: React.FC<AccordionProps> = ({
           {ans instanceof Array ? (
             <ul className="flex flex-col gap-4 list-disc pl-6">
               {ans.map((ans, index) => (
-                <li key={index} className={`text-white md:text-lg font-normal`}>
+                <li key={index} className={`text-tertiary/80 font-manrope text-base md:text-lg font-normal leading-relaxed`}>
                   {ans}
                 </li>
               ))}
@@ -71,7 +71,7 @@ const Accordion: React.FC<AccordionProps> = ({
           ) : (
             <p
               key={index}
-              className={`text-Light text-xl font-normal`}
+              className={`text-tertiary/80 font-manrope text-base md:text-lg font-normal leading-relaxed`}
               dangerouslySetInnerHTML={{ __html: ans }}
             ></p>
           )}
