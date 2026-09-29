@@ -62,9 +62,9 @@ export const nearByPlaces = {
     },
   ],
   addCardData: {
-    title: "Explore the Wonders of Khajuraho",
+    title: "Discover the Best of Khajuraho",
     description:
-      "Discover incredible heritage monuments and wilderness just steps away. Book your luxury stay at IVARA Resorts today.",
+      "Explore ancient temples, natural wonders, and the rich cultural heritage of Madhya Pradesh, all within easy reach of IVARA Resort.",
     link: {
       href: contact.WhatsappCta,
       label: "Book Now",

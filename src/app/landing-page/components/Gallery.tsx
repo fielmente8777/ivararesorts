@@ -36,7 +36,7 @@ const ctaButtons = [
   },
   {
     label: "BOOK NOW",
-    href: contact.callCta,
+    href: "#form",
   },
 ];
 

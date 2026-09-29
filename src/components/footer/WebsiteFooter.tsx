@@ -73,11 +73,10 @@ const WebsiteFooter = () => {
                   >
                     {item.icon && (
                       <span
-                        className={`mt-px ${
-                          index === 1
+                        className={`mt-px ${index === 1
                             ? "text-secondary flex items-center justify-center rounded-sm bg-white w-10 aspect-square"
                             : "inline-block"
-                        }`}
+                          }`}
                       >
                         {item.icon}
                         <span className="sr-only">{item.label}</span>
@@ -104,9 +103,8 @@ const WebsiteFooter = () => {
                         className="flex gap-2 max-md:ml-8"
                       >
                         <span
-                          className={`${
-                            index === 1 ? " my-auto" : "md:text-lg text-white"
-                          }`}
+                          className={`${index === 1 ? " my-auto" : "md:text-lg text-white"
+                            }`}
                         >
                           {item.label2}
                         </span>
@@ -119,10 +117,9 @@ const WebsiteFooter = () => {
           ))}
         </div>
       </Container>
-      <div className="w-full  bg-primary">
+      <div className="w-full bg-primary">
         <Container className="py-4">
-          <div className="flex max-md:flex-col items-center justify-between gap-2 text-secondary ">
-            {" "}
+          <div className="flex max-md:flex-col items-center justify-between gap-2 text-white">
             <p className="max-md:text-center">
               © {new Date().getFullYear()} Ivara Resorts. All rights
               reserved.

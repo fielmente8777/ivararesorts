@@ -5,9 +5,9 @@ export const experiencePageData = {
   },
   introSection: {
     title: "",
-    subTitle: "A Journey of Mindfulness & Discovery",
+    subTitle: "Discover the Luxury of Living Unhurried",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
+      "From peaceful mornings overlooking nature to evenings spent in exceptional company, every experience invites you to step away from the everyday and embrace a more considered way of living.",
   },
   bannerSection: {
     image: "/gallery10.jpg",
@@ -18,18 +18,18 @@ export const experiencePageData = {
         title: "Golf",
         subtitle: "",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lacinia nunc, ut efficitur risus tristique eu. Nullam cursus tellus id sapien gravida, at facilisis tellus ultrices.",
+          "Enjoy a leisurely round of golf in an environment designed to make every game as relaxing as it is engaging. Whether you are an experienced player or simply looking to enjoy some time outdoors, the golf experience at IVARA offers the perfect opportunity to slow down and enjoy the game at your own pace.",
+          "Surrounded by open landscapes and peaceful natural settings, spend a few unhurried hours on the course before returning to the comfort of the resort. It is a refreshing way to add a little recreation to your stay.",
         ],
         image: "/images/img5.jpg",
       },
 
       {
-        title: "Curated <i class='text-primary'>Dining</i>",
+        title: "Curated Dining",
         subtitle: "",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum, justo ut pellentesque venenatis, purus velit lacinia sem, sed tempor est odio sit amet lectus.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet lacus id ligula convallis facilisis. Sed ac nisi ut neque tempor ultrices non vel massa.",
+          "At IVARA, dining is an experience that goes beyond the plate. Discover thoughtfully prepared cuisine served in inviting surroundings, with menus and experiences designed to complement the relaxed character of the resort.",
+          "Begin the day with a leisurely breakfast, gather with family and friends over an unhurried meal, or settle in for an intimate evening surrounded by the tranquillity of IVARA. Every dining experience brings together flavour, setting, and attentive hospitality.",
         ],
         image: "/images/img8.jpg",
       },
@@ -38,28 +38,28 @@ export const experiencePageData = {
         title: "Pool",
         subtitle: "",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel turpis eu libero vulputate dignissim. Morbi efficitur risus vel justo feugiat, ac molestie nunc facilisis.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
+          "There is something naturally relaxing about time spent by the water. At IVARA, the pool offers a peaceful setting to take a refreshing swim, lounge under the sun, or simply enjoy a slower afternoon.",
+          "Whether you begin your morning with a quiet swim or spend the afternoon unwinding poolside, the experience is designed around relaxation. Step away from the pace of everyday life and let the day unfold at your own rhythm.",
         ],
         image: "/images/img6.jpg",
       },
 
       {
-        title: "Wellness & <i class='text-primary'>Yoga</i>",
+        title: "Wellness & Yoga",
         subtitle: "",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "Wellness at IVARA is about creating time for yourself. Step away from the demands of everyday life and embrace moments of movement, mindfulness, and stillness in a peaceful natural setting.",
+          "Begin your day with a rejuvenating yoga session, focus on mindful movement, or simply take a few quiet moments to breathe and reset. Whether your idea of wellness is an active practice or a slower state of mind, the experience is designed to leave you feeling refreshed and restored.",
         ],
         image: "/images/img7.jpg",
       },
 
       {
-        title: "Gym & <i class='text-primary'>Fitness</i>",
+        title: "Gym & Fitness",
         subtitle: "",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
+          "Stay committed to your fitness routine while enjoying your time away. IVARA's fitness experience provides a dedicated space where you can maintain your daily workout, stay active, and start your day with renewed energy.",
+          "Whether you prefer a focused workout, a light training session, or simply want to keep moving during your stay, the fitness facilities offer the flexibility to follow your own routine.",
         ],
         image: "/images/img9.jpg",
       },

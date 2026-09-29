@@ -5,7 +5,7 @@ import NearByPlacesSlider from "@/components/sliders/NearByPlacesSlider";
 
 export default function NearByPlaces() {
   return (
-    <main className="bg-[#F9FCEE]">
+    <main>
       <ImageBanner
         title={nearByPlaces.bannerData.title}
         images={[nearByPlaces.bannerData.image]}

@@ -98,7 +98,7 @@ export const footerData: FooterData = {
 
 export const websiteFooterData: WebsiteFooterData = {
   logo: "/logo.png",
-  description: "Reserve Himalayan escape!",
+  description: "Begin Your IVARA Journey!",
   cta: {
     label: "Book stay",
     href: contact.WhatsappCta,

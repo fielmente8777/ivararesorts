@@ -9,13 +9,13 @@ interface AboutSectionProps {
   images: string[];
   subTitle: string;
   title: string;
-  note: string;
+  note?: string;
   cards: {
     title: string;
     description: string;
   }[];
   description: string[];
-  listsText: string[];
+  listsText?: string[];
   buttons: {
     label: string;
     href: string;
@@ -54,42 +54,75 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               </li>
             ))}
           </ul>
-          <div className="lg:block hidden">
-            <ul className="flex flex-wrap gap-4 items-center wrap-break-word font-primary mt-8">
-              {listsText.slice(0, 2).map((text, index) => (
-                <React.Fragment key={index}>
-                  <li
-                    className="text-xl text-tertiary"
-                    style={{
-                      wordBreak: "break-word",
-                    }}
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  />
-                  {index !== listsText.slice(0, 2).length - 1 && (
-                    <span className="text-2xl text-primary font-bold">•</span>
-                  )}
-                </React.Fragment>
-              ))}
-            </ul>
-            <ul className="flex flex-wrap gap-4 items-center wrap-break-word font-primary mt-3">
-              {listsText.slice(2).map((text, index) => (
-                <React.Fragment key={index}>
-                  <li
-                    className="text-xl text-tertiary"
-                    style={{
-                      wordBreak: "break-word",
-                    }}
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  />
-                  {index !== listsText.slice(2).length - 1 && (
-                    <span className="text-2xl text-primary font-bold">•</span>
-                  )}
-                </React.Fragment>
-              ))}
-            </ul>
+          {listsText && listsText.length > 0 && (
+            <div className="lg:block hidden">
+              <ul className="flex flex-wrap gap-4 items-center wrap-break-word font-primary mt-8">
+                {listsText.slice(0, 2).map((text, index) => (
+                  <React.Fragment key={index}>
+                    <li
+                      className="text-xl text-tertiary"
+                      style={{
+                        wordBreak: "break-word",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
+                    {index !== listsText.slice(0, 2).length - 1 && (
+                      <span className="text-2xl text-primary font-bold">•</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </ul>
+              <ul className="flex flex-wrap gap-4 items-center wrap-break-word font-primary mt-3">
+                {listsText.slice(2).map((text, index) => (
+                  <React.Fragment key={index}>
+                    <li
+                      className="text-xl text-tertiary"
+                      style={{
+                        wordBreak: "break-word",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
+                    {index !== listsText.slice(2).length - 1 && (
+                      <span className="text-2xl text-primary font-bold">•</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </ul>
+            </div>
+          )}
+          {listsText && listsText.length > 0 && (
+            <div className="lg:hidden block">
+              <SlidingTitle2 items={listsText} />
+            </div>
+          )}
+        </div>
+        <div>
+          {note && (
+            <>
+              <p className="text-lg md:text-2xl text-tertiary font-primary italic">
+                {note}
+              </p>
+              <div className="bg-tertiary h-[0.5px] w-full my-4 md:mt-7 md:mb-5"></div>
+            </>
+          )}
+          <div className="space-y-4">
+            {description.map((desc, index) => (
+              <p key={index} className="md:text-lg text-tertiary">
+                {desc}
+              </p>
+            ))}
           </div>
-          <div className="lg:hidden block space-y-6">
-            <SlidingTitle2 items={listsText} />
+
+          {/* Desktop Version */}
+          <div className="hidden lg:grid grid-cols-2 gap-8 mt-8">
+            {cards.map((card, index) => (
+              <div key={index}>
+                <h3 className="italic text-2xl font-primary text-secondary">
+                  {card.title}
+                </h3>
+                <p className="text-tertiary mt-2">{card.description}</p>
+              </div>
+            ))}
             {images.map((image, index) => (
               <div
                 key={index}
@@ -105,44 +138,31 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               </div>
             ))}
           </div>
-        </div>
-        <div>
-          <p className="text-lg md:text-2xl text-tertiary font-primary italic">
-            {note}
-          </p>
-          <div className="bg-tertiary h-[0.5px] w-full my-4 md:mt-7 md:mb-5"></div>
-          <div className="space-y-4">
-            {description.map((desc, index) => (
-              <p key={index} className="md:text-lg text-tertiary">
-                {desc}
-              </p>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mt-8">
+
+          {/* Mobile Version */}
+          <div className="lg:hidden flex flex-col gap-6 mt-8">
             {cards.map((card, index) => (
-              <div key={index}>
+              <div key={index} className="space-y-3">
                 <h3 className="italic text-2xl font-primary text-secondary">
                   {card.title}
                 </h3>
-                <p className="text-tertiary mt-2">{card.description}</p>
-              </div>
-            ))}
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`w-full aspect-4/4.5 lg:block hidden relative ${index === 0 ? "" : "lg:mt-8"}`}
-              >
-                <Image
-                  src={image}
-                  alt="Image"
-                  fill
-                  className="object-cover rounded-2xl"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+                {images[index] && (
+                  <div className="w-full aspect-4/4.5 relative">
+                    <Image
+                      src={images[index]}
+                      alt={card.title || "Image"}
+                      fill
+                      className="object-cover rounded-2xl"
+                      sizes="100vw"
+                    />
+                  </div>
+                )}
+                <p className="text-tertiary">{card.description}</p>
               </div>
             ))}
           </div>
-          <ul className="lg:hidden flex mt-4 max-md:flex-col gap-3.5  w-full">
+
+          <ul className="lg:hidden flex mt-6 max-md:flex-col gap-3.5  w-full">
             {buttons.map((button, index) => (
               <li key={index}>
                 <LinkButton

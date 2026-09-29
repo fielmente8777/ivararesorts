@@ -13,9 +13,22 @@ const AboutWedding: FC<AboutWeddingPropsTypes> = ({
 }) => {
   return (
     <Section className="about-wedding">
-      <div className="max-w-[1450px] mx-auto max-lg:px-4">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Mobile View Heading (Above Image) */}
+        <div className="lg:hidden flex flex-col gap-2 text-center mb-6">
+          {subTitle && (
+            <p className="text-primary uppercase font-semibold text-xs sm:text-sm tracking-widest">
+              {subTitle}
+            </p>
+          )}
+          <h2 className="text-tertiary text-2xl sm:text-[2rem]/tight font-primary font-bold">
+            {title}
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-          <div className="relative w-full aspect-[4/3] sm:aspect-[4/3.5] lg:aspect-[4/4.1] lg:col-span-3 rounded-2xl overflow-hidden shadow-sm">
+          {/* Image */}
+          <div className="relative w-full aspect-[4/3] sm:aspect-[4/3.2] lg:aspect-[4/3.2] lg:col-span-3 rounded-2xl overflow-hidden shadow-sm">
             <Image
               src={src}
               alt={title}
@@ -24,18 +37,35 @@ const AboutWedding: FC<AboutWeddingPropsTypes> = ({
               className="object-cover rounded-2xl"
             />
           </div>
+
+          {/* Text Content */}
           <div className="lg:col-span-2 flex flex-col gap-4 text-center">
-            {subTitle && (
-              <p className="text-primary uppercase font-semibold text-xs sm:text-sm tracking-widest">
-                {subTitle}
+            {/* Desktop View Heading (Hidden on Mobile) */}
+            <div className="hidden lg:flex flex-col gap-4">
+              {subTitle && (
+                <p className="text-primary uppercase font-semibold text-xs sm:text-sm tracking-widest">
+                  {subTitle}
+                </p>
+              )}
+              <h2 className="text-tertiary md:text-5xl/tight text-[2rem]/tight font-primary font-bold">
+                {title}
+              </h2>
+            </div>
+
+            {Array.isArray(description) ? (
+              description.map((desc, index) => (
+                <p
+                  key={index}
+                  className="font-manrope text-base md:text-lg text-tertiary/80 leading-relaxed"
+                >
+                  {desc}
+                </p>
+              ))
+            ) : (
+              <p className="font-manrope text-base md:text-lg text-tertiary/80 leading-relaxed">
+                {description}
               </p>
             )}
-            <h2 className="text-tertiary md:text-5xl/tight text-[2rem]/tight font-primary font-bold">
-              {title}
-            </h2>
-            <p className="font-manrope text-base md:text-lg text-tertiary/80 leading-relaxed">
-              {description}
-            </p>
             {links?.[0] && (
               <div className="pt-2 flex justify-center">
                 <Link

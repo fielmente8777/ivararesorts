@@ -23,16 +23,16 @@ export default function LandingPage() {
       <SlidingTitle items={homePageData.slidingText} />
       <SectionWithContainer
         defaultPadding={false}
-        sectionClassName="lg:pt-12"
-        containerClassName="md:rounded-2xl  md:py-3 pt-4 "
+        sectionClassName="bg-background lg:py-12 py-6"
+        containerClassName="md:rounded-2xl md:py-3 pt-4"
       >
-        <div className=" rounded-2xl p-4">
+        <div className="bg-secondary rounded-2xl p-4">
           <Form1 />
         </div>
       </SectionWithContainer>
 
       <AboutSection {...homePageData.about} />
-      <Section className="bg-background "  defaultPadding={false}>
+      <Section className="bg-background " defaultPadding={false}>
         <Section
           className="relative w-full lg:aspect-16/7 aspect-4/2 bg-cover bg-no-repeat bg-bottom lg:bg-center lg:bg-fixed flex items-center justify-center"
           style={{

@@ -5,9 +5,21 @@ import { FC } from "react";
 import { SectionWithContainer } from "../sectionComponants";
 import { GoArrowUpRight } from "react-icons/go";
 
-const Addcard: FC<AddCardDataPropsTypes> = ({ title, description, link }) => {
+interface AddCardProps extends AddCardDataPropsTypes {
+  sectionClassName?: string;
+}
+
+const Addcard: FC<AddCardProps> = ({
+  title,
+  description,
+  link,
+  sectionClassName = "bg-background pt-8 md:pt-12 pb-16 md:pb-24",
+}) => {
   return (
-    <SectionWithContainer sectionClassName="bg-[#F9FCEE] pb-16 md:pb-24">
+    <SectionWithContainer
+      defaultPadding={false}
+      sectionClassName={sectionClassName}
+    >
       <div className="max-w-6xl mx-auto bg-[#FAF7F1] border border-[#E3D9CD] rounded-2xl shadow-sm overflow-hidden">
         <div className="grid grid-cols-1 items-center md:grid-cols-4 gap-6 p-8 md:p-12">
           <div className="md:col-span-3 text-center md:text-left">

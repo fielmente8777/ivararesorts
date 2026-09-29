@@ -61,12 +61,9 @@ const WebsiteNav = () => {
         fixed top-0 left-0 z-50 w-full
         transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]
         will-change-transform
-        ${visible ? "translate-y-0" : "-translate-y-full"}
+        ${visible || isOpenNavBar ? "translate-y-0" : "-translate-y-full"}
         ${
-          // isTransparent
-          // ?
-          scrolled ? "bg-secondary/90  backdrop-blur-sm" : "bg-transparent"
-          // : "bg-background"
+          scrolled || isOpenNavBar ? "bg-secondary/95 backdrop-blur-sm shadow-md" : "bg-transparent"
         }
       `}
       >
@@ -120,7 +117,7 @@ const WebsiteNav = () => {
           />
 
           <div className="flex lg:hidden items-center gap-1 text-white">
-            <MenuButton color="white" />
+            <MenuButton color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"} />
           </div>
         </nav>
 

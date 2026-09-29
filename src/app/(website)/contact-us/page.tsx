@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="bg-[#F9FCEE]">
+    <main>
       {/* <Image {...contactPageData?.heroSection} /> */}
       <ImageBanner
         title="Contact Us"

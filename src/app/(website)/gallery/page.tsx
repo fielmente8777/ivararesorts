@@ -4,7 +4,7 @@ import { galleryPageData } from "./components/pageData";
 
 export default function Page() {
   return (
-    <main className="bg-[#F9FCEE]">
+    <main>
       <ImageBanner
         title="Gallery"
         images={[galleryPageData.bannerData.image]}

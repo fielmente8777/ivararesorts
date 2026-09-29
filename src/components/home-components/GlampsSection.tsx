@@ -76,9 +76,8 @@ const GlampsSection: React.FC<Props> = ({
                 type="button"
                 onClick={() => handleRoomChange(acc.title)}
                 key={acc.id}
-                className={`w-full py-3 text-2xl font-semibold flex items-center gap-4 transition-all duration-300 ${
-                  acc.title === selectRoom ? "text-primary" : "text-[#28361980]"
-                }`}
+                className={`w-full py-3 text-2xl font-semibold flex items-center gap-4 transition-all duration-300 ${acc.title === selectRoom ? "text-primary" : "text-[#28361980]"
+                  }`}
               >
                 <span className="text-sm text-secondary">{acc.id}</span>
                 {acc.title}
@@ -105,17 +104,16 @@ const GlampsSection: React.FC<Props> = ({
               alt="Image"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover rounded-2xl transition-all duration-500 ease-in-out ${
-                animateImage ? "scale-110 opacity-0" : "scale-100 opacity-100"
-              }`}
+              className={`object-cover rounded-2xl transition-all duration-500 ease-in-out ${animateImage ? "scale-110 opacity-0" : "scale-100 opacity-100"
+                }`}
             />
           </Link>
 
           {/* Mobile */}
-          <div className="lg:hidden space-y-10">
+          <div className="lg:hidden space-y-8">
             {accommodations.map((acc) => (
               <div
-                className="flex flex-col gap-4 sticky top-0 bg-background"
+                className="flex flex-col gap-4 sticky top-20 bg-background p-5 sm:p-6 rounded-2xl shadow-sm border border-[#E3D9CD]/60"
                 key={acc.id}
               >
                 <p className="text-xl font-semibold text-primary flex items-center gap-4">
@@ -123,22 +121,21 @@ const GlampsSection: React.FC<Props> = ({
                   {acc.title}
                 </p>
 
-                <div className="w-full relative aspect-4/2.75 overflow-hidden">
+                <div className="w-full relative aspect-4/2.75 overflow-hidden rounded-xl">
                   <Image
                     src={acc.image}
                     alt="Image"
                     fill
                     sizes="100vw"
-                    className="object-cover rounded-2xl"
+                    className="object-cover"
                   />
                 </div>
 
                 {acc.description.map((desc, index) => (
-                  <p key={index}>{desc}</p>
+                  <p key={index} className="text-[#383838] leading-relaxed">
+                    {desc}
+                  </p>
                 ))}
-                <Link href={acc.href} className="w-fit border-b border-primary">
-                  View Details
-                </Link>
               </div>
             ))}
           </div>

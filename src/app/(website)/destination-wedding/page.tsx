@@ -24,7 +24,10 @@ const page = () => {
       <WeddingServices {...weddingPageData.weddingServices} />
       <OfferSlider {...weddingPageData.offer} />
       <Faq {...weddingPageData.faq} />
-      <Addcard {...weddingPageData.addCardData} />
+      <Addcard
+        {...weddingPageData.addCardData}
+        sectionClassName="pt-8 md:pt-12 pb-16 md:pb-24"
+      />
     </div>
   );
 };

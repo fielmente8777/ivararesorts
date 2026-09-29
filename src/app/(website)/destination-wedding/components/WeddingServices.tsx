@@ -9,7 +9,7 @@ import { Autoplay } from "swiper/modules";
 
 const WeddingServices: FC<WeddingServicesPropsTypes> = ({ title, cards }) => {
   return (
-    <Section className="wedding-services">
+    <Section className="wedding-services bg-background">
       <div className="flex flex-col md:gap-14 gap-6 max-w-[1400px] mx-auto">
         <h2 className="font-primary text-tertiary md:text-5xl/tight text-[2rem]/tight font-bold text-center">
           {title}

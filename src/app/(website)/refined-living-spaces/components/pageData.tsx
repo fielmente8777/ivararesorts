@@ -7,20 +7,20 @@ export const RoomsPageData = {
     image: "/private-cottage1.jpg",
   },
   aboutUsSection: {
-    title: `<span class='text-primary'>सर्वं खल्विदं ब्रह्म </span><br/> <i class='text-primary mr-2'>“Consciousness</i> is all there is. All is One, One is All!”`,
+    title: ` A <i class='text-primary mr-2'>Private Retreat,</i> Framed by Nature”`,
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris aliquet lacinia nunc, ut efficitur risus tristique eu. Nullam cursus tellus id sapien gravida, at facilisis tellus ultrices.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel turpis eu libero vulputate dignissim. Morbi efficitur risus vel justo feugiat, ac molestie nunc facilisis. Phasellus sit amet lacus id ligula convallis facilisis.",
+      "Discover a collection of 22 private riverfront cottages, thoughtfully designed to bring together contemporary comfort, understated elegance, and a sense of complete privacy.",
+      "With inviting interiors and the calming presence of nature just beyond your doorstep, each cottage offers a personal sanctuary to retreat to after a day of discovery.",
     ],
   },
   roomsSection: {
     cards: [
       {
-        title: "Private Cottages",
-        subtitle: "Uncompromised Comfort",
+        title: "Uncompromised Comfort",
+        subtitle: "Private Cottages",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod nunc ac turpis convallis, ut fermentum odio convallis.",
+          "Settle into beautifully appointed rooms where contemporary comfort meets understated elegance. Every space is designed to give you room to unwind, recharge, and enjoy the serenity of IVARA.",
+          "Each room is designed as a peaceful retreat, with spacious surroundings, modern amenities, and everything you need for a relaxed and memorable stay in Khajuraho.",
         ],
         images: [
           "/private-cottage1.jpg",

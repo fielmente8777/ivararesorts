@@ -39,7 +39,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
   },
@@ -100,7 +100,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
   },
@@ -144,7 +144,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
     list: [
@@ -167,7 +167,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
     cards: [
@@ -234,7 +234,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
   },
@@ -302,7 +302,7 @@ export const landingPageData = {
       },
       {
         label: "BOOK NOW",
-        href: contact.callCta,
+        href: "#form",
       },
     ],
     benefits: "Save 15% when you book direct · Free cancellation on most dates*",

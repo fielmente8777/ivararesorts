@@ -74,7 +74,7 @@ export interface AboutWeddingPropsTypes {
   src: string;
   title: string;
   subTitle: string;
-  description: string;
+  description: string | string[];
   links: {
     href: string;
     label: string;

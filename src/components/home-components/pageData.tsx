@@ -49,29 +49,23 @@ export const homePageData = {
   about: {
     images: ["/website/new-image2.webp", "/website/new-image4.webp"],
     subTitle: "Our STORY",
-    title: "Named after the <i class='text-primary'>divine tears</i> of Shiva.",
-    note: "Discover the Art of Slow Living in the Himalayas",
+    title: "A Place Where <i class='text-primary'>Time Slows</i> & <i class='text-primary'>Every Detail Belongs</i>",
     cards: [
       {
-        title: "Rooted in the Himalayas",
+        title: "Rooted in the Nature",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "A serene 14-acre setting shaped by open landscapes, riverfront views, and the quiet beauty of the natural world.",
       },
       {
-        title: "Made for Inner Quiet",
+        title: "Inspired by the Heritage",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "An experience enriched by the extraordinary architecture, artistry, and cultural legacy of Khajuraho",
       },
     ],
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lacinia nunc, ut efficitur risus tristique eu. Nullam cursus tellus id sapien gravida, at facilisis tellus ultrices.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel turpis eu libero vulputate dignissim. Morbi efficitur risus vel justo feugiat, ac molestie nunc facilisis.",
-    ],
-    listsText: [
-      "Family Hosted",
-      "Organic Vegetarian & Vegan Meals",
-      "<span class='font-body'>11</span> Rooms",
-      "Holistic Wellness",
+      "Set along the serene landscapes of Khajuraho, IVARA Resorts is an expression of thoughtful hospitality, where the natural beauty of Central India meets the richness of its cultural heritage.",
+      "Spread across 14 acres of tranquil surroundings, the resort is designed to offer more than a place to stay. It is a space to pause, reconnect, and discover the luxury of unhurried living.",
+      "From private riverfront cottages to curated experiences and personalised service, every element reflects a simple philosophy: true luxury is not about excess, but about how a place makes you feel.",
     ],
     buttons: [
       {
@@ -90,12 +84,12 @@ export const homePageData = {
     logo: "/logo.png",
     image: "/landing-page/banner.png",
     description: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet lacus id ligula convallis facilisis. Sed ac nisi ut neque tempor ultrices non vel massa.
+      Discover a world of understated luxury at IVARA Resorts, where tranquil riverfront landscapes, thoughtfully designed cottages, and the timeless heritage of Khajuraho come together. An invitation to slow down, reconnect, and experience the extraordinary in complete privacy.
     `,
   },
 
   beginYourJourney: {
-    title: "Escape into <i class='text-primary'>Stillness</i>",
+    title: "Moments Made for <i class='text-primary'>Living Well</i>",
     button: {
       label: "Begin Your Journey",
       link: "/",
@@ -103,40 +97,40 @@ export const homePageData = {
     cards: [
       {
         id: "01",
-        title: "Refined Living Spaces",
+        title: "Refined Stays",
         image: "/gallery1.jpg",
         href: "/refined-living-spaces/",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus euismod nunc ac turpis convallis, ut fermentum odio convallis.",
+          "Thoughtfully designed rooms and suites offer a peaceful retreat with contemporary comforts, elegant interiors, and everything you need for a relaxed and memorable stay.",
         ],
       },
 
       {
         id: "02",
-        title: "Holistic Wellness",
+        title: "Leisure & Recreation",
         image: "/gallery3.jpg",
         href: "/holistic-wellness/",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum, justo ut pellentesque venenatis, purus velit lacinia sem, sed tempor est odio sit amet lectus.",
+          "Make the most of unhurried days with refreshing poolside moments, golf, and recreational experiences designed to bring relaxation, enjoyment, and a little adventure to your stay.",
         ],
       },
       {
         id: "03",
-        title: "Mindful Trekking Retreats",
-        image: "/gallery4.jpg",
+        title: "Wellness",
+        image: "/gallery6.jpg",
         href: "/experiences/",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique, nunc vitae placerat elementum, erat lectus lobortis arcu, nec porta eros magna eu orci.",
+          "Reconnect with yourself through mindful yoga, wellness experiences, and fitness facilities designed to help you restore your energy and feel your best throughout your stay.",
         ],
       },
 
       {
         id: "04",
-        title: "Farm To Table",
-        image: "/gallery6.jpg",
+        title: "Dining",
+        image: "/gallery4.jpg",
         href: "/farm-to-table/",
         description: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sapien non nibh vehicula luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+          "Savour thoughtfully curated dining experiences where delicious flavours, inviting settings, and warm hospitality come together to make every meal a memorable occasion.",
         ],
       },
     ],
@@ -148,19 +142,19 @@ export const homePageData = {
     options: [
       {
         title: "Road",
-        img: "/home/car-icon.png",
+        img: "/home/car-icon.png?v=2",
         description: "3 hours drive from Rishikesh\n2.5 hours drive from Mussoorie.",
       },
 
       {
         title: "Train",
-        img: "/home/train-icon.png",
+        img: "/home/train-icon.png?v=2",
         description: "4 hours drive from Haridwar & Dehradun Railway Station.",
       },
 
       {
         title: "Air",
-        img: "/home/plane-icon.png",
+        img: "/home/plane-icon.png?v=2",
         description: "3 hours drive from Dehradun Airport.",
       },
     ],
@@ -286,8 +280,8 @@ export const homePageData = {
   enquirySection: {
     title: "Limited Availability",
     subtitle:
-      "In the <i>Himalayas</i>, doing less often means experiencing <i>more!</i>",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Where Every <i>Moment</i> Finds Its Own <i>Rhythm!</i>",
+    description: "Where Heritage Meets the Art of Slow Living offers a balance of luxury, destination identity, and emotional appeal without sounding overly promotional.",
     image: "/gallery19.jpg",
     buttons: [
       {

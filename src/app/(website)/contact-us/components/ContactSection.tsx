@@ -75,7 +75,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
   };
 
   return (
-    <SectionWithContainer sectionClassName="bg-[#F9FCEE]">
+    <SectionWithContainer>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-14 items-start">
         {/* Left Side */}
         <div>
@@ -157,10 +157,10 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
 
             {/* Phone Field with Country Code */}
             <div>
-              <div className="flex gap-2">
-                <div className="relative w-[100px] flex-shrink-0">
+              <div className="flex gap-2 w-full">
+                <div className="relative w-[85px] sm:w-[95px] md:w-[100px] flex-shrink-0">
                   <select
-                    className="w-full rounded-lg font-manrope font-medium text-sm md:text-base text-tertiary border border-[#E3D9CD] bg-white px-3 py-3.5 outline-none appearance-none cursor-pointer pr-8 focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all"
+                    className="w-full rounded-lg font-manrope font-medium text-sm md:text-base text-tertiary border border-[#E3D9CD] bg-white pl-3 pr-7 py-3.5 outline-none appearance-none cursor-pointer focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all"
                     name="countryCode"
                     value={formData.countryCode}
                     onChange={(e) =>
@@ -174,7 +174,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
                       </option>
                     ))}
                   </select>
-                  <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-tertiary">
+                  <span className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-tertiary">
                     <FromDropDown />
                   </span>
                 </div>
@@ -184,7 +184,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
                   value={formData.phone}
                   placeholder="Phone Number*"
                   onChange={handleChange}
-                  className="flex-1 rounded-lg border border-[#E3D9CD] bg-white px-4 py-3.5 outline-none font-manrope text-sm md:text-base text-tertiary placeholder:text-[#8C8C8C] focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all"
+                  className="flex-1 min-w-0 w-full rounded-lg border border-[#E3D9CD] bg-white px-4 py-3.5 outline-none font-manrope text-sm md:text-base text-tertiary placeholder:text-[#8C8C8C] focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all"
                 />
               </div>
               {errors.phone && (

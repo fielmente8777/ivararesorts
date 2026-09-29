@@ -118,7 +118,7 @@ const Form1 = ({
         <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
-              className={`flex bg-[#FFFCF7] items-center gap-2.5 border border-[#E8DFC0]/40 rounded-lg ${
+              className={`flex bg-[#FFFCF7] items-center gap-2.5 shadow-sm border border-[#E3D9CD] rounded-lg ${
                 gridView ? "p-4" : "py-3 px-3.5 lg:px-2"
               }`}
               key={index}

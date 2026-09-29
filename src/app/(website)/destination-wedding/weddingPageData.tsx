@@ -7,9 +7,12 @@ export const weddingPageData = {
   },
   aboutWeddingData: {
     src: "/wedding1.png",
-    title: "WE CREATE . YOU CELEBRATE",
+    title: "Create Moments Worth Remembering",
     subTitle: "Your Forever Starts Here",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.`,
+    description: [
+      "Some occasions deserve more than a venue. They deserve a setting that becomes part of the story.",
+      "Surrounded by the natural beauty of Khajuraho, IVARA offers a distinctive destination for weddings, milestone celebrations, and unforgettable gatherings. From intimate ceremonies to grand festivities, every celebration is shaped around your vision and brought to life with thoughtful planning and personalised hospitality.",
+    ],
     links: [
       {
         href: "tel:" + contact.phone,
@@ -123,9 +126,9 @@ export const weddingPageData = {
     ],
   },
   addCardData: {
-    title: "Discover the best of Himachal Pradesh tourism from Ivara Resort",
+    title: "Discover the Best of Khajuraho & Madhya Pradesh from IVARA Resort",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Explore ancient temples, rich heritage, scenic landscapes, and the wild beauty of Madhya Pradesh — all from the comfort of IVARA Resorts.",
     link: {
       href: contact.WhatsappCta,
       label: "Book Now",

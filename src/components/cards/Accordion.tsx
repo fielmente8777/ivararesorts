@@ -30,7 +30,7 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <>
       <div
-        className={`flex flex-col w-full ${className} group cursor-pointer px-4`}
+        className={`flex flex-col w-full ${className} group cursor-pointer px-1 md:px-4`}
         onMouseEnter={() => setIsAccordionOpen(true)}
         onMouseLeave={() => setIsAccordionOpen(false)}
       >
@@ -55,7 +55,7 @@ const Accordion: React.FC<AccordionProps> = ({
         </div>
 
         <div
-          className={`flex pr-6 flex-col gap-4 w-full ${answerClassName} transition-all max-h-0 overflow-hidden group-hover:max-h-[20rem] ${
+          className={`flex pr-2 md:pr-6 flex-col gap-4 w-full ${answerClassName} transition-all max-h-0 overflow-hidden group-hover:max-h-[20rem] ${
             isAccordionOpen ? "max-h-[20rem] mb-2 py-3" : ""
           }`}
           onClick={() => setIsAccordionOpen(!isAccordionOpen)}

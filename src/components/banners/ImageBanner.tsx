@@ -9,6 +9,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { SectionWithContainer, Container } from "../sectionComponants";
 import WebsiteNav from "../navbar/WebsiteNav";
 import { CalendarIcon } from "@/utils/formIcons";
+import { useWebContext } from "@/context-api/WebContext";
 
 interface ImageBannerProps {
   tag?: string;
@@ -32,6 +33,8 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
   showText = true,
   isLandingPage = false,
 }) => {
+  const { setIsOpenFormPopUp } = useWebContext();
+
   return (
     <div className="w-full flex flex-col relative">
       {isLandingPage ? (
@@ -47,13 +50,14 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
               />
             </div>
           </Link>
-          <Link
-            href="#form"
-            className="flex items-center uppercase gap-2 rounded-lg bg-secondary text-white px-4 md:px-6 py-2 md:py-2.5 tracking-wider text-xs md:text-sm font-medium hover:bg-secondary/90 transition-all shadow-md"
+          <button
+            onClick={() => setIsOpenFormPopUp(true)}
+            type="button"
+            className="flex items-center uppercase gap-2 rounded-lg bg-secondary text-white px-4 md:px-6 py-2 md:py-2.5 tracking-wider text-xs md:text-sm font-medium hover:bg-secondary/90 transition-all shadow-md cursor-pointer active:scale-95"
           >
             <CalendarIcon />
             <span>BOOK NOW</span>
-          </Link>
+          </button>
         </header>
       ) : (
         <div className="inset-x-0 absolute z-30 top-0">
@@ -124,7 +128,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             <div className="absolute bottom-5 sm:bottom-8 md:bottom-12 inset-x-0 z-20 px-4 sm:px-6 md:px-14">
               <div className="max-w-[1320px] mx-auto flex items-end justify-between gap-2 sm:gap-4 md:gap-6">
                 {/* Left Title Box */}
-                <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-[calc(100%-70px)] sm:max-w-3xl">
+                <div className="flex flex-col items-start text-left gap-2 sm:gap-3 max-w-full sm:max-w-3xl">
                   {tag && (
                     <div className="w-fit max-w-full rounded-2xl bg-white/20 backdrop-blur-lg border border-white/20 px-2.5 py-1 sm:px-3 sm:py-1.5 text-[8.5px] min-[340px]:text-[9.5px] min-[380px]:text-[10.5px] sm:text-[11px] md:text-xs text-white/90 uppercase tracking-normal min-[360px]:tracking-wider md:tracking-[0.2em] font-medium leading-none whitespace-nowrap overflow-hidden">
                       {tag}
@@ -140,9 +144,9 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
                   </h1>
                 </div>
 
-                {/* Right Navigation Arrows */}
+                {/* Right Navigation Arrows (Hidden on Mobile, Visible on Desktop) */}
                 {images.length > 1 && (
-                  <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0 z-30 pb-0.5">
+                  <div className="hidden md:flex items-center gap-1 sm:gap-2 flex-shrink-0 z-30 pb-0.5">
                     <button
                       className="image-banner-prev w-[22px] h-[22px] sm:w-[40px] sm:h-[40px] rounded-full bg-white text-[#1F2523] shadow-md flex items-center justify-center hover:bg-white/90 hover:scale-105 transition-all cursor-pointer flex-shrink-0"
                       aria-label="Previous Slide"

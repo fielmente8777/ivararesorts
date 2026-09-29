@@ -16,7 +16,7 @@ const GettingHereSection: React.FC<GettingHereSectionProps> = ({
   options,
 }) => {
   return (
-    <SectionWithContainer sectionClassName="bg-image bg-left-bottom bg-w-small">
+    <SectionWithContainer sectionClassName="bg-background bg-image bg-left-bottom bg-w-small">
       <div className="md:space-y-14 space-y-10">
         <SectionHeading title={title} textCenter titleClassName="capitalize" />
         <div className="flex flex-wrap justify-center lg:justify-between gap-8 max-w-5xl mx-auto">
@@ -31,6 +31,7 @@ const GettingHereSection: React.FC<GettingHereSectionProps> = ({
                   alt={option.title}
                   fill
                   sizes="80px"
+                  unoptimized={true}
                   className="object-contain"
                 />
               </div>
