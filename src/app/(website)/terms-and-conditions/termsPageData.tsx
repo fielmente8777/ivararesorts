@@ -1,7 +1,7 @@
 export const termsPageData = {
   bannerData: {
     title: "Terms & Conditions",
-    image: "/gallery19.jpg",
+    image: "/new-website/exterior3.webp",
   },
   lastUpdated: "29 September 2026",
   intro: [

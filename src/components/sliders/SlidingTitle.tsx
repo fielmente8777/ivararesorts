@@ -1,4 +1,4 @@
-import { JSX } from "react/jsx-runtime";
+import React from "react";
 import "./sliding.title.scss";
 
 export default function SlidingTitle({
@@ -8,7 +8,7 @@ export default function SlidingTitle({
   textColor,
   iconColor,
 }: {
-  items: { icon: JSX.Element; title: string }[];
+  items: { icon: React.ReactNode; title: string }[];
   ariaHidden?: boolean;
   bgColor?: string; textColor?: string; iconColor?: string;
 }) {

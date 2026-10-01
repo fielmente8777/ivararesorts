@@ -4,8 +4,6 @@ import { experiencePageData } from "./pageData";
 import BannerSection from "./components/BannerSection";
 import ExperiencesSection from "./components/ExperienceSection";
 import ImageBanner from "@/components/banners/ImageBanner";
-import { SectionWithContainer } from "@/components/sectionComponants";
-import Form1 from "@/components/forms/Form1";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,15 +51,6 @@ const page = () => {
       <IntroSection {...experiencePageData?.introSection} />
       <BannerSection {...experiencePageData?.bannerSection} />
       <ExperiencesSection {...experiencePageData?.experiencesSection} />
-      <SectionWithContainer
-        defaultPadding={false}
-        sectionClassName="bg-background lg:py-12 py-6"
-        containerClassName="md:py-3"
-      >
-        <div className="bg-secondary rounded-2xl p-4">
-          <Form1 />
-        </div>
-      </SectionWithContainer>
     </main>
   );
 };

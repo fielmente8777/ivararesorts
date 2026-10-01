@@ -33,7 +33,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
 
   const enquiryForm = {
     subtitle: "ENQUIRE NOW",
-    title: "Let's Plan your Stay at <i class='text-primary italic font-light'>IVARA Resort</i>",
+    title: "Let's Plan your Stay at <i class='text-primary italic font-light'>IVARA Resorts</i>",
     buttonText: "GET A CALL BACK",
     fields: [
       {

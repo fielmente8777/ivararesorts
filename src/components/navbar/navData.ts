@@ -1,7 +1,7 @@
 import { contact } from "@/utils/constent";
 
 export const navData = {
-  logo: "/logo.png",
+  logo: "/new-website/new-logo.webp",
 
   buttons: [
     // { label: "CALL NOW", href: contact.callCta },
@@ -17,7 +17,7 @@ export const navData = {
 };
 
 export const WebsiteNavData = {
-  logo: "/logo.png",
+  logo: "/new-website/new-logo.webp",
   links: [
     // { label: "Home", href: "/" },
     // { label: "About", href: "/about-us/" },
@@ -85,8 +85,8 @@ export const newNavData = {
   ],
 
   logo: {
-    default: "/logo.png",
-    scrolled: "/logo.png",
+    default: "/new-website/new-logo.webp",
+    scrolled: "/new-website/new-logo.webp",
     alt: "IVARA Logo",
   },
 

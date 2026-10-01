@@ -25,7 +25,7 @@ export const landingPageData = {
   },
 
   aboutResort: {
-    tag: "ABOUT IVARA RESORT",
+    tag: "ABOUT IVARA RESORTS",
     title: "<span class='block whitespace-nowrap'>An Editorial Approach to Luxury,</span><span class='block whitespace-nowrap'><i class='text-secondary'>in the Heart of Khajuraho.</i></span>",
     paragraphs: [
       "Set amidst the timeless landscapes of Khajuraho, IVARA brings together refined hospitality, natural beauty, and the rich cultural heritage of Central India. Here, every space is designed to feel grand yet personal, elegant yet effortless.",

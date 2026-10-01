@@ -57,9 +57,9 @@ export default function HeroBanner({
       {/* 1. Header Bar (Figma Specs: Logo Left, Book Now Button Right) */}
       <header className="w-full bg-[#FAF6F2] py-4 px-6 md:px-16 flex items-center justify-between border-b border-[#E8E0D5]">
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-32 h-12">
+          <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
             <Image
-              src="/logo.png"
+              src="/new-website/new-logo.webp"
               alt="IVARA Resorts"
               fill
               className="object-contain"

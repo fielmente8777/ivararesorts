@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import LinkButton from "../buttons/LinkButton";
 import MenuButton from "./MenuButton";
 import NavMenu from "./NavMenu";
+import { Container } from "@/components/sectionComponants";
 import { contact } from "@/utils/constent";
 import Link from "next/link";
 import { WebsiteNavData } from "./navData";
@@ -58,20 +59,19 @@ const WebsiteNav = () => {
     <>
       <header
         className={`
-        fixed top-0 left-0 z-50 w-full
+        fixed top-0 left-0 right-0 mx-auto z-50 max_screen_width w-full
         transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]
         will-change-transform
         ${visible || isOpenNavBar ? "translate-y-0" : "-translate-y-full"}
-        ${
-          scrolled || isOpenNavBar ? "bg-secondary/95 backdrop-blur-sm shadow-md" : "bg-transparent"
-        }
+        ${scrolled || isOpenNavBar ? "bg-secondary/100 backdrop-blur-sm shadow-md" : "bg-transparent"
+          }
       `}
       >
         {/* Top Navbar */}
-        <nav className="max_width flex items-center justify-between gap-5 py-4">
+        <Container className="flex items-center justify-between gap-5 py-4">
           <Link href="/" className="relative block aspect-4/4 lg:w-25 w-15">
             <Image
-              src={!scrolled ? "/logo.png" : "/logo.png"}
+              src="/new-website/new-logo.webp"
               alt="Logo"
               fill
               priority
@@ -89,13 +89,11 @@ const WebsiteNav = () => {
                   xl:text-lg! text-xs! text-nowrap font-primary uppercase group font-medium
                   text-white
                   transition-colors duration-300
-                  hover:text-primary
-                  focus:text-primary
                  `}
                 >
                   {link.label}
                   <span
-                    className={`block h-0.5 bg-primary transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
+                    className={`block h-0.5 bg-white transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
                   />
                 </Link>
               </li>
@@ -119,7 +117,7 @@ const WebsiteNav = () => {
           <div className="flex lg:hidden items-center gap-1 text-white">
             <MenuButton color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"} />
           </div>
-        </nav>
+        </Container>
 
         <NavMenu />
       </header>

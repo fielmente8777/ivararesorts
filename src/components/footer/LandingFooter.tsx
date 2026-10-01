@@ -38,9 +38,9 @@ const LandingFooter = () => {
           {/* Column 1: Gold Logo Card Frame (Dev Mode Specs: 246px x 148px, Radius 8px, Padding: py-10px px-16px, Gap 16px) */}
           <div className="flex flex-col items-start flex-shrink-0">
             <div className="border border-[#C4A482]/40 rounded-[8px] py-[10px] px-[16px] bg-[#435237]/40 flex flex-col items-center justify-center gap-[16px] w-[246px] h-[148px] shadow-inner">
-              <div className="relative w-36 h-14">
+              <div className="relative w-20 h-20 aspect-square">
                 <Image
-                  src="/logo.png"
+                  src="/new-website/new-logo.webp"
                   alt="IVARA Resorts Khajuraho"
                   fill
                   className="object-contain"

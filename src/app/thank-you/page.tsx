@@ -7,12 +7,12 @@ export default function ThankYou() {
     <main>
       <SectionWithContainer>
         <div className="flex flex-col gap-6 items-center justify-center">
-          <div className="max-w-sm w-full relative aspect-4/2 bg-tertiary rounded-md">
+          <div className="w-28 h-28 relative aspect-square">
             <Image
-              src="/logo.png"
+              src="/new-website/new-logo.webp"
               alt="Image"
               fill
-              className="object-contain p-2"
+              className="object-contain"
             />
           </div>
           <p className="">THANK YOU FOR SUBMITTING</p>

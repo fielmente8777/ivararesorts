@@ -47,9 +47,10 @@ export const homePageData = {
     },
   ],
   about: {
-    images: ["/website/new-image2.webp", "/website/new-image4.webp"],
+    images: ["/new-website/nature.webp", "/new-website/heritage.webp"],
     subTitle: "Our STORY",
     title: "A Place Where <i class='text-primary'>Time Slows</i> & <i class='text-primary'>Every Detail Belongs</i>",
+    note: "Discover the Art of Quiet Luxury in Khajuraho",
     cards: [
       {
         title: "Rooted in the Nature",
@@ -67,6 +68,12 @@ export const homePageData = {
       "Spread across 14 acres of tranquil surroundings, the resort is designed to offer more than a place to stay. It is a space to pause, reconnect, and discover the luxury of unhurried living.",
       "From private riverfront cottages to curated experiences and personalised service, every element reflects a simple philosophy: true luxury is not about excess, but about how a place makes you feel.",
     ],
+    listsText: [
+      "Family Hosted",
+      "Organic Vegetarian & Vegan Meals",
+      "<span class='font-body'>11</span> Rooms",
+      "Holistic Wellness",
+    ],
     buttons: [
       {
         label: "CALL NOW",
@@ -81,7 +88,8 @@ export const homePageData = {
   },
 
   wisdom: {
-    logo: "/logo.png",
+    title: "Where <i>Luxury</i> Meets <i>Serenity!</i>",
+    logo: "/new-website/new-logo.webp",
     image: "/landing-page/banner.png",
     description: `
       Discover a world of understated luxury at IVARA Resorts, where tranquil riverfront landscapes, thoughtfully designed cottages, and the timeless heritage of Khajuraho come together. An invitation to slow down, reconnect, and experience the extraordinary in complete privacy.
@@ -98,7 +106,7 @@ export const homePageData = {
       {
         id: "01",
         title: "Refined Stays",
-        image: "/gallery1.jpg",
+        image: "/new-website/room6.webp",
         href: "/refined-living-spaces/",
         description: [
           "Thoughtfully designed rooms and suites offer a peaceful retreat with contemporary comforts, elegant interiors, and everything you need for a relaxed and memorable stay.",
@@ -108,7 +116,7 @@ export const homePageData = {
       {
         id: "02",
         title: "Leisure & Recreation",
-        image: "/gallery3.jpg",
+        image: "/new-website/experience11.webp",
         href: "/holistic-wellness/",
         description: [
           "Make the most of unhurried days with refreshing poolside moments, golf, and recreational experiences designed to bring relaxation, enjoyment, and a little adventure to your stay.",
@@ -117,7 +125,7 @@ export const homePageData = {
       {
         id: "03",
         title: "Wellness",
-        image: "/gallery6.jpg",
+        image: "/new-website/experience10.webp",
         href: "/experiences/",
         description: [
           "Reconnect with yourself through mindful yoga, wellness experiences, and fitness facilities designed to help you restore your energy and feel your best throughout your stay.",
@@ -127,7 +135,7 @@ export const homePageData = {
       {
         id: "04",
         title: "Dining",
-        image: "/gallery4.jpg",
+        image: "/new-website/experience4.webp",
         href: "/farm-to-table/",
         description: [
           "Savour thoughtfully curated dining experiences where delicious flavours, inviting settings, and warm hospitality come together to make every meal a memorable occasion.",
@@ -143,19 +151,19 @@ export const homePageData = {
       {
         title: "Road",
         img: "/home/car-icon.png?v=2",
-        description: "3 hours drive from Rishikesh\n2.5 hours drive from Mussoorie.",
+        description: "Easy access from Jhansi & Satna.",
       },
 
       {
         title: "Train",
         img: "/home/train-icon.png?v=2",
-        description: "4 hours drive from Haridwar & Dehradun Railway Station.",
+        description: "10–15 minutes drive from Khajuraho Railway Station.",
       },
 
       {
         title: "Air",
         img: "/home/plane-icon.png?v=2",
-        description: "3 hours drive from Dehradun Airport.",
+        description: "7 Minutes from Khajuraho Airport.",
       },
     ],
   },

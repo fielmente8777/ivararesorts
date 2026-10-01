@@ -3,8 +3,8 @@ import { contact } from "@/utils/constent";
 export const contactPageData = {
   heroSection: {
     title: "Contact Us",
-    image: "/gallery2.jpg",
-   
+    image: "/new-website/resturant4.webp",
+
   },
   contactInfo: {
     title: "Contact Details!",

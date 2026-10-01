@@ -22,7 +22,7 @@ const WebsiteFooter = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="w-10 aspect-square rounded-sm flex items-center justify-center bg-white text-primary transition-all"
+                    className="w-10 aspect-square rounded-sm border border-white text-primary hover:border-primary hover:text-white flex items-center justify-center transition-all"
                   >
                     {item.icon}
                   </Link>
@@ -33,7 +33,7 @@ const WebsiteFooter = () => {
           {/* logo */}
           <Link
             href="/"
-            className="md:w-50 lg:ml-18 w-full relative max-md:order-1 md:aspect-[4/2.45] aspect-3/1.25"
+            className="w-28 md:w-36 lg:w-40 aspect-square relative max-md:order-1 max-md:mx-auto lg:ml-18"
           >
             <Image
               src={websiteFooterData.logo}

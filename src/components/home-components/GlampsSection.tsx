@@ -70,25 +70,33 @@ const GlampsSection: React.FC<Props> = ({
         <div className="md:space-y-6 space-y-4">
           <SectionHeading title={title} />
 
-          <div className="lg:flex hidden flex-col mt-6 gap-2 divide-y divide-[#CACACA] border-y border-[#CACACA]">
-            {accommodations.map((acc) => (
-              <button
-                type="button"
-                onClick={() => handleRoomChange(acc.title)}
-                key={acc.id}
-                className={`w-full py-3 text-2xl font-semibold flex items-center gap-4 transition-all duration-300 ${acc.title === selectRoom ? "text-primary" : "text-[#28361980]"
-                  }`}
-              >
-                <span className="text-sm text-secondary">{acc.id}</span>
-                {acc.title}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-2">
-            {filtered[0].description.map((desc, index) => (
-              <p key={index}>{desc}</p>
-            ))}
+          <div className="lg:flex hidden flex-col mt-6 divide-y divide-[#CACACA] border-y border-[#CACACA]">
+            {accommodations.map((acc) => {
+              const isSelected = acc.title === selectRoom;
+              return (
+                <div key={acc.id} className="py-3 transition-all duration-300">
+                  <button
+                    type="button"
+                    onClick={() => handleRoomChange(acc.title)}
+                    className={`w-full text-2xl font-semibold flex items-center gap-4 transition-all duration-300 text-left ${
+                      isSelected ? "text-primary" : "text-[#28361980]"
+                    }`}
+                  >
+                    <span className="text-sm text-secondary">{acc.id}</span>
+                    {acc.title}
+                  </button>
+                  {isSelected && (
+                    <div className="flex flex-col gap-2 mt-3 transition-all duration-300">
+                      {acc.description.map((desc, index) => (
+                        <p key={index} className="text-[#383838] leading-relaxed">
+                          {desc}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -20,28 +20,26 @@ export default function LandingPage() {
   return (
     <main>
       <ImageBanner {...homePageData.banner} />
-      <SlidingTitle items={homePageData.slidingText} />
       <SectionWithContainer
         defaultPadding={false}
-        sectionClassName="bg-background lg:py-12 py-6"
-        containerClassName="md:rounded-2xl md:py-3 pt-4"
+        sectionClassName="bg-secondary py-4 md:py-5"
+        containerClassName="!max-w-7xl"
       >
-        <div className="bg-secondary rounded-2xl p-4">
-          <Form1 />
-        </div>
+        <Form1 />
       </SectionWithContainer>
+      <SlidingTitle items={homePageData.slidingText} />
 
       <AboutSection {...homePageData.about} />
       <Section className="bg-background " defaultPadding={false}>
         <Section
-          className="relative w-full lg:aspect-16/7 aspect-4/2 bg-cover bg-no-repeat bg-bottom lg:bg-center lg:bg-fixed flex items-center justify-center"
+          className="relative w-full lg:aspect-16/7 min-h-[480px] lg:min-h-0 py-14 lg:py-0 bg-cover bg-no-repeat bg-center bg-fixed flex items-center justify-center"
           style={{
             backgroundImage: `url(${homePageData.wisdom.image})`,
           }}
         >
-          <div className="absolute inset-0 bg-black/30 "></div>
-          <Container className="flex lg:max-w-5xl! flex-col items-center gap-8 z-20">
-            <div className="w-35 relative aspect-square">
+          <div className="absolute inset-0 bg-black/60"></div>
+          <Container className="flex lg:max-w-5xl! flex-col items-center gap-6 z-20">
+            <div className="w-28 md:w-32 relative aspect-square">
               <Image
                 src={homePageData.wisdom.logo}
                 alt="IVARA Logo"
@@ -50,7 +48,14 @@ export default function LandingPage() {
                 className="object-contain"
               />
             </div>
-            <p className="text-white text-center lg:text-2xl  text-lg">
+            {homePageData?.wisdom?.title && (
+              <SectionHeading
+                title={homePageData.wisdom.title}
+                textCenter
+                titleColor="white"
+              />
+            )}
+            <p className="text-white text-center text-[20px] leading-relaxed">
               {homePageData.wisdom.description}
             </p>
           </Container>
@@ -90,7 +95,7 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 arrowIcon={false}
                 whatsAppIcon2={index === 0}
-                className={`rounded-sm justify-center w-full uppercase tracking-widest max-md:text-sm! ${index === 0 ? "text-white bg-primary border-primary" : "text-primary bg-transparent border border-primary"}`}
+                className={`rounded-sm justify-center w-full uppercase tracking-widest max-md:text-sm! transition-all ${index === 0 ? "text-white bg-primary border border-primary hover:bg-white hover:text-primary" : "text-primary bg-white border border-white hover:bg-transparent hover:text-white"}`}
               />
             ))}
           </div>

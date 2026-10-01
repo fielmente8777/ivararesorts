@@ -45,7 +45,7 @@ const SectionHeading: React.FC<SectionHeadingDescProps> = ({
     <div className={`flex flex-col gap-2 line ${wrapperClassName}`}>
       {logo && (
         <div className="flex justify-center">
-          <Image src={"/logo3.png"} alt="logo" width={130} height={130} />
+          <Image src={"/new-website/new-logo.webp"} alt="logo" width={130} height={130} />
         </div>
       )}
       <div className={`${line && "lg:flex items-center gap-4 mx-auto"}`}>

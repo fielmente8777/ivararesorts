@@ -4,10 +4,10 @@ import { AdjacentIcon } from "@/utils/landingIcon";
 export const RoomsPageData = {
   heroSection: {
     title: "Refined Living <i>Spaces</i>",
-    image: "/private-cottage1.jpg",
+    image: "/new-website/room4.webp",
   },
   aboutUsSection: {
-    title: ` A <i class='text-primary mr-2'>Private Retreat,</i> Framed by Nature”`,
+    title: ` A <i class='text-primary mr-2'>Private Retreat,</i> Framed by Nature`,
     description: [
       "Discover a collection of 22 private riverfront cottages, thoughtfully designed to bring together contemporary comfort, understated elegance, and a sense of complete privacy.",
       "With inviting interiors and the calming presence of nature just beyond your doorstep, each cottage offers a personal sanctuary to retreat to after a day of discovery.",
@@ -23,13 +23,12 @@ export const RoomsPageData = {
           "Each room is designed as a peaceful retreat, with spacious surroundings, modern amenities, and everything you need for a relaxed and memorable stay in Khajuraho.",
         ],
         images: [
-          "/private-cottage1.jpg",
-          "/private-cottage2.jpg",
-          "/private-cottage3.jpg",
-          "/private-cottage4.jpg",
-          "/private-cottage5.jpg",
-          "/private-cottage6.jpg",
-          "/private-cottage9.jpg",
+          "/new-website/room1.webp",
+          "/new-website/room6.webp",
+          "/new-website/room2.webp",
+          "/new-website/room3.webp",
+          // "/new-website/room1.webp",
+          "/new-website/room5.webp",
         ],
         // slidingText: [
         //   "Up to 2 Guests, extra bedding on request.",

@@ -3,7 +3,7 @@ import { contact } from "@/utils/constent";
 export const weddingPageData = {
   bannerData: {
     title: "Destination Wedding",
-    images: ["/landing-page/Weddings.png"],
+    images: ["/new-website/wedding-new.jpeg"],
   },
   aboutWeddingData: {
     src: "/wedding1.png",
@@ -68,23 +68,23 @@ export const weddingPageData = {
     title: "What We Offer",
     cards: [
       {
-        src: "/wedding1.png",
-        alt: "Pre-Wedding Events",
-      },
-      {
-        src: "/wedding2.png",
-        alt: "Haldi Ceremony",
-      },
-      {
-        src: "/wedding3.jpg",
-        alt: "Mehendi Ceremony",
-      },
-      {
-        src: "/wedding4.jpg",
+        src: "/new-website/engagement.jpg",
         alt: "Engagement",
       },
       {
-        src: "/wedding5.jpg",
+        src: "/new-website/haldi.webp",
+        alt: "Haldi Ceremony",
+      },
+      {
+        src: "/new-website/mehndi.jpg",
+        alt: "Mehendi Ceremony",
+      },
+      {
+        src: "/new-website/pre-wedding-new.jpg",
+        alt: "Pre-Wedding Events",
+      },
+      {
+        src: "/new-website/reception-new.jpg",
         alt: "Reception",
       },
     ],
@@ -126,7 +126,7 @@ export const weddingPageData = {
     ],
   },
   addCardData: {
-    title: "Discover the Best of Khajuraho & Madhya Pradesh from IVARA Resort",
+    title: "Discover the Best of Khajuraho & Madhya Pradesh from IVARA Resorts",
     description:
       "Explore ancient temples, rich heritage, scenic landscapes, and the wild beauty of Madhya Pradesh — all from the comfort of IVARA Resorts.",
     link: {

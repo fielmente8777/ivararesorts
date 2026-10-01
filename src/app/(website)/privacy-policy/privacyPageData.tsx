@@ -1,7 +1,7 @@
 export const privacyPageData = {
   bannerData: {
     title: "Privacy Policy",
-    image: "/gallery19.jpg",
+    image: "/new-website/exterior5.webp",
   },
   lastUpdated: "29 September 2026",
   intro: [

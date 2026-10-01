@@ -3,7 +3,7 @@ import { contact } from "@/utils/constent";
 export const nearByPlaces = {
   bannerData: {
     title: "Explore Khajuraho",
-    image: "/landing-page/banner.png",
+    image: "/new-website/location2.webp",
   },
   cards: [
     {
@@ -64,7 +64,7 @@ export const nearByPlaces = {
   addCardData: {
     title: "Discover the Best of Khajuraho",
     description:
-      "Explore ancient temples, natural wonders, and the rich cultural heritage of Madhya Pradesh, all within easy reach of IVARA Resort.",
+      "Explore ancient temples, natural wonders, and the rich cultural heritage of Madhya Pradesh, all within easy reach of IVARA Resorts.",
     link: {
       href: contact.WhatsappCta,
       label: "Book Now",

@@ -15,7 +15,7 @@ export interface RoomsSectionProps {
     subtitle: string;
     description: string[];
     images: string[];
-    // slidingText: string[];
+    slidingText?: { icon: React.ReactNode; title: string }[];
     buttons: {
       label: string;
       href: string;
@@ -43,19 +43,27 @@ export const CardsComponent: React.FC<RoomsSectionProps["cards"][0]> = ({
   subtitle,
   description,
   images,
+  slidingText,
   buttons,
   amenities,
 }) => {
   return (
     <div className="w-full">
       {/* 1. Private Cottages & Slider Section with Theme Background */}
-      <div className="bg-background py-12 md:py-16 md:space-y-14 space-y-10">
+      <Section
+        defaultPadding={false}
+        className="bg-background py-12 md:py-16 md:space-y-14 space-y-10"
+      >
         <Container className="text-center space-y-6">
-          <p className="text-lg text-primary text-center">{subtitle}</p>
+          <p className="text-2xl md:text-3xl lg:text-4xl text-primary font-primary font-medium tracking-wide text-center">
+            {subtitle}
+          </p>
           <SectionHeading title={title} textCenter />
         </Container>
         <ImageSlider2 images={images} title={title} />
-        {/* <SlidingTitle items={slidingText} /> */}
+        {slidingText && slidingText.length > 0 && (
+          <SlidingTitle items={slidingText} />
+        )}
         <Container className="flex flex-col gap-2 text-center max-w-6xl!">
           {description.map((text, index) => (
             <p key={index} className=" md:text-lg ">
@@ -77,7 +85,7 @@ export const CardsComponent: React.FC<RoomsSectionProps["cards"][0]> = ({
             ))}
           </div>
         </Container>
-      </div>
+      </Section>
 
       {/* 2. Amenities Section with Clean White Background */}
       {amenities && (
