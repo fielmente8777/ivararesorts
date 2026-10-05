@@ -55,29 +55,31 @@ export default function HeroBanner({
   return (
     <div className="w-full relative flex flex-col">
       {/* 1. Header Bar (Figma Specs: Logo Left, Book Now Button Right) */}
-      <header className="w-full bg-[#FAF6F2] py-4 px-6 md:px-16 flex items-center justify-between border-b border-[#E8E0D5]">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
-            <Image
-              src="/new-website/new-logo.webp"
-              alt="IVARA Resorts"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </Link>
+      <header className="max_screen_width w-full bg-[#FAF6F2] py-4 border-b border-[#E8E0D5]">
+        <div className="max_width flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
+              <Image
+                src="/new-website/new-logo.webp"
+                alt="IVARA Resorts"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </Link>
 
-        <Link
-          href={contact.callCta}
-          className="bg-[#4A5A3E] hover:bg-[#3d4b33] text-white px-6 py-2.5 rounded-md font-semibold text-xs tracking-widest uppercase flex items-center gap-2 transition-all shadow-sm"
-        >
-          <CalendarIcon />
-          <span>BOOK NOW</span>
-        </Link>
+          <Link
+            href={contact.callCta}
+            className="bg-[#4A5A3E] hover:bg-[#3d4b33] text-white px-6 py-2.5 rounded-md font-semibold text-xs tracking-widest uppercase flex items-center gap-2 transition-all shadow-sm"
+          >
+            <CalendarIcon />
+            <span>BOOK NOW</span>
+          </Link>
+        </div>
       </header>
 
       {/* 2. Hero Canvas (Full aerial resort image) */}
-      <div className="relative w-full h-[520px] md:h-[620px] overflow-hidden">
+      <div className="relative max_screen_width w-full h-[520px] md:h-[620px] overflow-hidden">
         <Image
           src={image}
           alt={title}

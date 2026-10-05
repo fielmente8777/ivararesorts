@@ -38,26 +38,28 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
   return (
     <div className="w-full flex flex-col relative">
       {isLandingPage ? (
-        <header className="w-full bg-[#FAF6F2] py-4 px-6 md:px-16 flex items-center justify-between border-b border-[#E8E0D5] z-30">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
-              <Image
-                src="/new-website/new-logo.webp"
-                alt="IVARA Resorts Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </Link>
-          <button
-            onClick={() => setIsOpenFormPopUp(true)}
-            type="button"
-            className="flex items-center uppercase gap-2 rounded-lg bg-secondary text-white px-4 md:px-6 py-2 md:py-2.5 tracking-wider text-xs md:text-sm font-medium hover:bg-secondary/90 transition-all shadow-md cursor-pointer active:scale-95"
-          >
-            <CalendarIcon />
-            <span>BOOK NOW</span>
-          </button>
+        <header className="max_screen_width w-full bg-[#FAF6F2] py-4 border-b border-[#E8E0D5] z-30">
+          <div className="max_width flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
+                <Image
+                  src="/new-website/new-logo.webp"
+                  alt="IVARA Resorts Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+            <button
+              onClick={() => setIsOpenFormPopUp(true)}
+              type="button"
+              className="flex items-center uppercase gap-2 rounded-lg bg-secondary text-white px-4 md:px-6 py-2 md:py-2.5 tracking-wider text-xs md:text-sm font-medium hover:bg-secondary/90 transition-all shadow-md cursor-pointer active:scale-95"
+            >
+              <CalendarIcon />
+              <span>BOOK NOW</span>
+            </button>
+          </div>
         </header>
       ) : (
         <div className="inset-x-0 absolute z-30 top-0">

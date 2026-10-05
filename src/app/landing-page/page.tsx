@@ -18,7 +18,7 @@ import LandingFooter from "@/components/footer/LandingFooter";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAF6F2] overflow-x-hidden">
+    <main className="min-h-screen bg-white overflow-x-hidden">
       {/* 1. Top Offer Ticker */}
       <OfferTicker text={landingPageData.offerTicker.text} />
 

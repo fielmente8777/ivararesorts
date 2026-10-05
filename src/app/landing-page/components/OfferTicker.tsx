@@ -13,7 +13,7 @@ export default function OfferTicker({
   const items = Array(6).fill(text);
 
   return (
-    <div className="bg-[#1C2618] text-[#F3ECE5] py-2.5 overflow-hidden border-y border-[#354330] uppercase text-xs sm:text-sm tracking-[0.2em] font-medium">
+    <div className="max_screen_width w-full bg-[#1C2618] text-[#F3ECE5] py-2.5 overflow-hidden border-y border-[#354330] uppercase text-xs sm:text-sm tracking-[0.2em] font-medium">
       <div 
         className="marquee-wrapper flex whitespace-nowrap gap-12 animate-marquee"
         style={{ animationDuration: `${speed}s` }}

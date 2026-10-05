@@ -8,7 +8,7 @@ import { SectionWithContainer } from "../sectionComponants";
 
 const LandingFooter = () => {
   return (
-    <footer className="w-full bg-[#4A5A3E] text-white flex flex-col">
+    <footer className="max_screen_width w-full bg-[#4A5A3E] text-white flex flex-col">
       {/* 1. Full-Width Form Bar (Color #4A5A3E) */}
       <SectionWithContainer
         defaultPadding={false}
