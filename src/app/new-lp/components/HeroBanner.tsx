@@ -24,7 +24,6 @@ interface HeroBannerProps {
   benefits: string;
 }
 
-
 export default function HeroBanner({
   tag,
   title,
