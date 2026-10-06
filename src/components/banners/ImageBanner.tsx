@@ -10,12 +10,15 @@ import { SectionWithContainer, Container } from "../sectionComponants";
 import WebsiteNav from "../navbar/WebsiteNav";
 import { CalendarIcon } from "@/utils/formIcons";
 import { useWebContext } from "@/context-api/WebContext";
+import { LazyLoadedVideo } from "@/components/Video";
 
 interface ImageBannerProps {
   tag?: string;
   title?: string;
   description?: string;
-  images: string[];
+  video?: string;
+  videoPoster?: string;
+  images?: string[];
   benefits?: string;
   showForm?: boolean;
   centeredTitle?: boolean;
@@ -25,7 +28,9 @@ interface ImageBannerProps {
 
 const ImageBanner: React.FC<ImageBannerProps> = ({
   title,
-  images,
+  video,
+  videoPoster,
+  images = [],
   tag,
   benefits = "",
   showForm = true,
@@ -72,7 +77,12 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         sectionClassName="relative w-full overflow-hidden"
         containerClassName="!p-0 !max-w-none relative"
       >
-        {images.length <= 1 ? (
+        {video ? (
+          <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px] overflow-hidden">
+            <LazyLoadedVideo src={video} poster={videoPoster || images[0]} />
+            <div className="absolute inset-0 bg-black/10 pointer-events-none z-10" />
+          </div>
+        ) : images.length <= 1 ? (
           <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px]">
             <Image
               src={images[0] || "/landing-page/Weddings.png"}
@@ -146,8 +156,8 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
                   </h1>
                 </div>
 
-                {/* Right Navigation Arrows (Hidden on Mobile, Visible on Desktop) */}
-                {images.length > 1 && (
+                {/* Right Navigation Arrows (Hidden on Mobile or if video is active) */}
+                {!video && images.length > 1 && (
                   <div className="hidden md:flex items-center gap-1 sm:gap-2 flex-shrink-0 z-30 pb-0.5">
                     <button
                       className="image-banner-prev w-[22px] h-[22px] sm:w-[40px] sm:h-[40px] rounded-full bg-white text-[#1F2523] shadow-md flex items-center justify-center hover:bg-white/90 hover:scale-105 transition-all cursor-pointer flex-shrink-0"

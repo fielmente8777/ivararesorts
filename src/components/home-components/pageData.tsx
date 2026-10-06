@@ -11,6 +11,8 @@ export const homePageData = {
     tag: "A 14-Acre Riverfront Sanctuary · Khajuraho",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
+    video: "/new-website/ivara-banner-video.mp4",
+    videoPoster: "/images/img1.jpg",
     images: [
       "/images/img1.jpg",
       "/images/img2.jpg",
