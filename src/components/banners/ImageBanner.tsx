@@ -80,7 +80,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         {video ? (
           <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px] overflow-hidden">
             <LazyLoadedVideo src={video} poster={videoPoster || images[0]} />
-            <div className="absolute inset-0 bg-black/10 pointer-events-none z-10" />
+            <div className="absolute inset-0 bg-black/30 pointer-events-none z-10" />
           </div>
         ) : images.length <= 1 ? (
           <div className="relative w-full h-[380px] min-[400px]:h-[420px] sm:h-[550px] md:h-[700px] lg:h-[800px]">
