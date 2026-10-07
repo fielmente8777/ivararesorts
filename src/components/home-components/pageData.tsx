@@ -71,10 +71,10 @@ export const homePageData = {
       "From private riverfront cottages to curated experiences and personalised service, every element reflects a simple philosophy: true luxury is not about excess, but about how a place makes you feel.",
     ],
     listsText: [
-      "Family Hosted",
-      "Organic Vegetarian & Vegan Meals",
-      "<span class='font-body'>11</span> Rooms",
-      "Holistic Wellness",
+      "Private Golf Course",
+      "Riverfront Living",
+      "Spa, Yoga & Zen Garden",
+      "Private Luxury Cottages",
     ],
     buttons: [
       {
