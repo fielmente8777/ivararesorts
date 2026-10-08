@@ -25,7 +25,7 @@ interface FooterData {
 
 
 export const footerData: FooterData = {
-  logo: "/logo.png",
+  logo: "/new-logo.webp",
   tagLine:"Resorts · Khajuraho",
   description:
     "A luxury riverfront resort in Khajuraho, Madhya Pradesh, set on 14 acres along the Khudar River, adjacent to the UNESCO-listed Khajuraho Group of Monuments.",

@@ -39,7 +39,7 @@ const LandingFooter = () => {
             <div className="border border-[#C4A482]/40 rounded-[8px] py-[10px] px-[16px] bg-[#435237]/40 flex flex-col items-center justify-center gap-[16px] w-[246px] h-[148px] shadow-inner">
               <div className="relative w-36 h-14">
                 <Image
-                  src="/logo.png"
+                  src="/new-logo.webp"
                   alt="IVARA Resorts Khajuraho"
                   fill
                   className="object-contain"

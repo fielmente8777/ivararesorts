@@ -32,7 +32,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-32 md:w-36 h-12">
             <Image
-              src="/logo.png"
+              src="/new-logo.webp"
               alt="IVARA Resorts"
               fill
               className="object-contain"

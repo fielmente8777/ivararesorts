@@ -9,7 +9,7 @@ export default function ThankYou() {
         <div className="flex flex-col gap-6 items-center justify-center">
           <div className="max-w-sm w-full relative aspect-4/2 bg-tertiary rounded-md">
             <Image
-              src="/logo.png"
+              src="/new-logo.webp"
               alt="Image"
               fill
               className="object-contain p-2"
