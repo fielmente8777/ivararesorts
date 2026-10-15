@@ -17,11 +17,11 @@ export const navData = {
 };
 
 export const WebsiteNavData = {
+<<<<<<< HEAD
   logo: "/new-website/new-logo.webp",
+=======
+  logo: "/images/new-logo.webp",
   links: [
-    // { label: "Home", href: "/" },
-    // { label: "About", href: "/about-us/" },
-    {
       label: "Home",
       href: "/",
     },
