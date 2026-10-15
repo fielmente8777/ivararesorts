@@ -10,21 +10,24 @@ export default function SlidingTitle2({
   className?: string;
   useIcon?: boolean;
 }) {
-  const titles = [...items, ...items];
+  const titles = [...items, ...items, ...items, ...items];
 
   return (
     <div
-      className={`relative overflow-hidden text-secondary max_screen_width ${className || ""}`}
+      className={`relative overflow-hidden text-secondary max_screen_width py-2 ${className || ""}`}
     >
       <div className="marquee-wrapper">
-        <div className="marquee-track">
+        <div className="marquee-track flex items-center">
           {titles.map((t, i) => (
-            <span key={i} className="marquee-item font-primary text-xl">
+            <span
+              key={i}
+              className="inline-flex items-center gap-4 pr-4 !mr-0 font-primary text-xl text-tertiary whitespace-nowrap"
+            >
               <span dangerouslySetInnerHTML={{ __html: t }}></span>
               {useIcon ? (
                 <ICon />
               ) : (
-                <span className="separator w-2 bg-primary aspect-square rounded-full"></span>
+                <span className="w-1.5 h-1.5 bg-primary rounded-full inline-block shrink-0"></span>
               )}
             </span>
           ))}

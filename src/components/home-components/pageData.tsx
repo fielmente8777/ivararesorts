@@ -11,6 +11,8 @@ export const homePageData = {
     tag: "A 14-Acre Riverfront Sanctuary · Khajuraho",
     title: "Luxury Resort in Khajuraho, Anchored in Heritage",
     description: "",
+    video: "/new-website/ivara-banner-video.mp4",
+    videoPoster: "/images/img1.jpg",
     images: [
       "/images/img1.jpg",
       "/images/img2.jpg",
@@ -64,15 +66,14 @@ export const homePageData = {
       },
     ],
     description: [
-      "Set along the serene landscapes of Khajuraho, IVARA Resorts is an expression of thoughtful hospitality, where the natural beauty of Central India meets the richness of its cultural heritage.",
-      "Spread across 14 acres of tranquil surroundings, the resort is designed to offer more than a place to stay. It is a space to pause, reconnect, and discover the luxury of unhurried living.",
+      "Set along the serene landscapes of Khajuraho, IVARA Resorts is an expression of thoughtful hospitality, where the natural beauty of Central India meets the richness of its cultural heritage. Spread across 14 acres of tranquil surroundings, the resort is designed to offer more than a place to stay. It is a space to pause, reconnect, and discover the luxury of unhurried living.",
       "From private riverfront cottages to curated experiences and personalised service, every element reflects a simple philosophy: true luxury is not about excess, but about how a place makes you feel.",
     ],
     listsText: [
-      "Family Hosted",
-      "Organic Vegetarian & Vegan Meals",
-      "<span class='font-body'>11</span> Rooms",
-      "Holistic Wellness",
+      "Private Golf Course",
+      "Riverfront Living",
+      "Spa, Yoga & Zen Garden",
+      "Private Luxury Cottages",
     ],
     buttons: [
       {

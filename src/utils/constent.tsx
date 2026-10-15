@@ -13,8 +13,8 @@ export const contact = {
   addressLink:
     "https://www.google.com/maps/search/?api=1&query=Next+to+Dulhadeva+Temple,+Khudar+Bridge,+Khajuraho,+Madhya+Pradesh+471606",
   socialMedia: {
-    facebook: "https://www.facebook.com",
-    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/people/Ivara-Resorts/61589891532813/",
+    instagram: "https://www.instagram.com/ivararesorts?stkn=MW4ydG4wNzVwZnh5MA==",
   },
   callCta: `tel:+919318366456`,
   WhatsappCta: `https://wa.me/+919318366456?text=${enCodeText}`,
