@@ -27,7 +27,7 @@ export const WebsiteNavData = {
     },
     {
       label: "Accommodation",
-      href: "/refined-living-spaces/",
+      href: "/accommodation/",
     },
     {
       label: "Experiences",
@@ -35,11 +35,11 @@ export const WebsiteNavData = {
     },
     {
       label: "Weddings & Events",
-      href: "/destination-wedding/",
+      href: "/weddings-and-events/",
     },
     {
       label: "Explore Khajuraho",
-      href: "/nearby-places/",
+      href: "/explore-khajuraho/",
     },
     {
       label: "Gallery",

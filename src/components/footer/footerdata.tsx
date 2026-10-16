@@ -109,7 +109,7 @@ export const websiteFooterData: WebsiteFooterData = {
       links: [
         { label: "Home", href: "/" },
         // { label: "About us", href: "/about-us" },
-        { label: "Accommodation", href: "/refined-living-spaces/" },
+        { label: "Accommodation", href: "/accommodation/" },
         { label: "Experiences", href: "/experiences" },
         { label: "Contact us", href: "/contact-us" },
       ],
@@ -123,8 +123,12 @@ export const websiteFooterData: WebsiteFooterData = {
         // { label: "Host your retreat", href: "/host-your-retreat" },
         // { label: "Blogs", href: "/blogs" },
         { label: "Gallery", href: "/gallery/" },
-        { label: "Destination Weddings", href: "/destination-wedding/" },
-        { label: "Explore Khajuraho", href: "/nearby-places/" },
+        // { label: "Destination Weddings", href: "/destination-wedding/" },
+        {
+          label: "Weddings & Events",
+          href: "/weddings-and-events/",
+        },
+        { label: "Explore Khajuraho", href: "/explore-khajuraho/" },
       ],
     },
     {
