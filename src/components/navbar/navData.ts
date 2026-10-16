@@ -1,7 +1,7 @@
 import { contact } from "@/utils/constent";
 
 export const navData = {
-  logo: "/new-website/logo.webp",
+  logo: "/new-logo.webp",
 
   buttons: [
     // { label: "CALL NOW", href: contact.callCta },
