@@ -48,7 +48,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
             <Link href="/" className="flex items-center gap-2">
               <div className="relative w-16 h-16 md:w-20 md:h-20 aspect-square">
                 <Image
-                  src="/new-website/new-logo.webp"
+                  src="/new-website/logo.webp"
                   alt="IVARA Resorts Logo"
                   fill
                   className="object-contain"
@@ -91,9 +91,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
               priority
               className="object-cover"
             />
-            {centeredTitle && (
-              <div className="absolute inset-0 bg-black/35" />
-            )}
+            {centeredTitle && <div className="absolute inset-0 bg-black/35" />}
           </div>
         ) : (
           <SwiperCarousel
@@ -129,8 +127,8 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
         )}
 
         {/* Hero Title: Centered Mode, Bottom-Left Mode, or Hidden */}
-        {showText && (
-          centeredTitle ? (
+        {showText &&
+          (centeredTitle ? (
             <div className="absolute inset-0 z-20 flex items-center justify-center px-4 pointer-events-none">
               <h1 className="pointer-events-auto select-text cursor-text font-fraunces text-3xl min-[360px]:text-4xl sm:text-5xl md:text-6xl font-bold tracking-normal text-white drop-shadow-md text-center">
                 {title || "Contact Us"}
@@ -151,7 +149,13 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
                       Luxury Resort in
                     </span>
                     <span className="font-fraunces font-light text-base min-[360px]:text-lg min-[440px]:text-xl sm:text-3xl md:text-5xl lg:text-[56px] leading-tight sm:leading-snug lg:leading-[64px] tracking-normal text-white drop-shadow-md whitespace-nowrap sm:whitespace-normal lg:whitespace-nowrap">
-                      <i className="italic !text-white" style={{ color: '#ffffff' }}>Khajuraho</i>, Anchored in Heritage
+                      <i
+                        className="italic !text-white"
+                        style={{ color: "#ffffff" }}
+                      >
+                        Khajuraho
+                      </i>
+                      , Anchored in Heritage
                     </span>
                   </h1>
                 </div>
@@ -175,8 +179,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
                 )}
               </div>
             </div>
-          )
-        )}
+          ))}
       </SectionWithContainer>
     </div>
   );
