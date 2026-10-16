@@ -90,7 +90,7 @@ export const homePageData = {
 
   wisdom: {
     title: "Where <i>Luxury</i> Meets <i>Serenity!</i>",
-    logo: "/new-website/new-logo.webp",
+    logo: "/new-website/logo.webp",
     image: "/landing-page/banner.png",
     description: `
       Discover a world of understated luxury at IVARA Resorts, where tranquil riverfront landscapes, thoughtfully designed cottages, and the timeless heritage of Khajuraho come together. An invitation to slow down, reconnect, and experience the extraordinary in complete privacy.
