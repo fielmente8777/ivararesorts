@@ -9,11 +9,7 @@ export default function ThankYou() {
         <div className="flex flex-col gap-6 items-center justify-center">
           <div className="w-28 h-28 relative aspect-square">
             <Image
-<<<<<<< HEAD
               src="/new-website/new-logo.webp"
-=======
-              src="/new-logo.webp"
->>>>>>> a594d45c0e0f6842ba5bfe1f34339a82b9245e8a
               alt="Image"
               fill
               className="object-contain"

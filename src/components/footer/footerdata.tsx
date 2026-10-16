@@ -168,11 +168,11 @@ export const websiteFooterData: WebsiteFooterData = {
           href: contact.socialMedia.instagram,
           icon: <OutLineInstagramIcon />,
         },
-        {
-          label: "youtube",
-          href: "",
-          icon: <YouTube />,
-        },
+        // {
+        //   label: "youtube",
+        //   href: "",
+        //   icon: <YouTube />,
+        // },
       ],
     },
   ],

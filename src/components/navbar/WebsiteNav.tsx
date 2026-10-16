@@ -63,15 +63,18 @@ const WebsiteNav = () => {
         transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]
         will-change-transform
         ${visible || isOpenNavBar ? "translate-y-0" : "-translate-y-full"}
-        ${scrolled || isOpenNavBar ? "bg-secondary/100 backdrop-blur-sm shadow-md" : "bg-transparent"
-          }
+        ${
+          scrolled || isOpenNavBar
+            ? "bg-secondary/100 backdrop-blur-sm shadow-md"
+            : "bg-transparent"
+        }
       `}
       >
         {/* Top Navbar */}
         <Container className="flex items-center justify-between gap-5 py-4">
           <Link href="/" className="relative block aspect-4/4 lg:w-25 w-15">
             <Image
-              src="/new-website/new-logo.webp"
+              src={WebsiteNavData.logo}
               alt="Logo"
               fill
               priority
@@ -115,7 +118,9 @@ const WebsiteNav = () => {
           />
 
           <div className="flex lg:hidden items-center gap-1 text-white">
-            <MenuButton color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"} />
+            <MenuButton
+              color={scrolled ? (isOpenNavBar ? "white" : "primary") : "white"}
+            />
           </div>
         </Container>
 
