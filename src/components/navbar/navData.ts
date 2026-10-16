@@ -54,13 +54,41 @@ export const WebsiteNavData = {
 
 export const newNavData = {
   navLinks: [
-    {
+    // {
+    //   label: "Home",
+    //   href: "/",
+    // },
+    // {
+    //   label: "Accommodation",
+    //   href: "/refined-living-spaces/",
+    // },
+    // {
+    //   label: "Experiences",
+    //   href: "/experiences/",
+    // },
+    // {
+    //   label: "Weddings & Events",
+    //   href: "/destination-wedding/",
+    // },
+    // {
+    //   label: "Explore Khajuraho",
+    //   href: "/nearby-places/",
+    // },
+    // {
+    //   label: "Gallery",
+    //   href: "/gallery/",
+    // },
+    // {
+    //   label: "Contact",
+    //   href: "/contact-us/",
+    // },
+        {
       label: "Home",
       href: "/",
     },
     {
       label: "Accommodation",
-      href: "/refined-living-spaces/",
+      href: "/accommodation/",
     },
     {
       label: "Experiences",
@@ -68,11 +96,11 @@ export const newNavData = {
     },
     {
       label: "Weddings & Events",
-      href: "/destination-wedding/",
+      href: "/weddings-and-events/",
     },
     {
       label: "Explore Khajuraho",
-      href: "/nearby-places/",
+      href: "/explore-khajuraho/",
     },
     {
       label: "Gallery",
@@ -85,8 +113,8 @@ export const newNavData = {
   ],
 
   logo: {
-    default: "/new-website/new-logo.webp",
-    scrolled: "/new-website/new-logo.webp",
+    default: "/new-website/logo.webp",
+    scrolled: "/new-website/logo.webp",
     alt: "IVARA Logo",
   },
 
